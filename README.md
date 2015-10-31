@@ -1,1 +1,1 @@
-# semi-sweet-2015-theme
+# SemiSweet 2015 Theme
