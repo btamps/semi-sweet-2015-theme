@@ -11,7 +11,6 @@ Tags: textures, retro
 Text Domain: semisweettheme
 */
 
-
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -161,7 +160,7 @@ figure {
     background-size: 100% auto;
     margin-left: -15px !important; } }
 .jumbotron {
-  background: url(../../imgs/cutter-hero2.jpg) no-repeat top center;
+  background: url(ui/cutter-hero.jpg) no-repeat top center;
   background-size: 100%;
   margin: 0;
   padding-bottom: 0; }
@@ -409,6 +408,52 @@ h2.title {
     min-width: 300px;
     border: 0; }
 
+@media (min-width: 767px) {
+  h2.title {
+    font-size: 1.4em;
+    margin-bottom: 40px; }
+
+  .basics .thumbnail {
+    height: auto;
+    margin-bottom: 20px; } }
+@media (min-width: 992px) {
+  .first-post-image {
+    background: red;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0; }
+
+  .caption.first-post-caption {
+    padding: 2.3em; }
+    .caption.first-post-caption h3 {
+      font-size: 1.8em; }
+    .caption.first-post-caption p {
+      font-size: 1.1em; } }
+.footer {
+  background: #524A43;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .footer h3 {
+    color: white; }
+
+.footer-nav {
+  margin-top: 8px;
+  margin-bottom: 30px;
+  padding-left: 0;
+  max-width: 300px; }
+  .footer-nav li {
+    display: inline;
+    margin-right: 20px;
+    padding: 0;
+    line-height: 2; }
+    .footer-nav li:last-child {
+      margin-right: 0; }
+  .footer-nav a {
+    font-size: 18px;
+    color: #F8F6F2;
+    display: inline-block; }
+
 .social-links {
   width: auto;
   display: block;
@@ -433,51 +478,6 @@ h2.title {
       transition: background .25s; }
       .social-links li a:hover {
         background: #99897D; }
-
-@media (min-width: 767px) {
-  h2.title {
-    font-size: 1.4em;
-    margin-bottom: 40px; }
-
-  .basics .thumbnail {
-    height: auto;
-    margin-bottom: 20px; }
-
-  .social-links {
-    float: right; } }
-@media (min-width: 992px) {
-  .first-post-image {
-    background: red;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 0;
-    padding-left: 0; }
-
-  .caption.first-post-caption {
-    padding: 2.3em; }
-    .caption.first-post-caption h3 {
-      font-size: 1.8em; }
-    .caption.first-post-caption p {
-      font-size: 1.1em; } }
-.footer {
-  background: #524A43;
-  padding-top: 30px;
-  padding-bottom: 30px; }
-
-.footer-nav {
-  margin-top: 8px;
-  margin-bottom: 30px;
-  padding-left: 0; }
-  .footer-nav li {
-    display: inline;
-    margin-right: 20px;
-    padding: 0; }
-    .footer-nav li:last-child {
-      margin-right: 0; }
-  .footer-nav a {
-    font-size: 18px;
-    color: #F8F6F2;
-    display: inline-block; }
 
 .copyright {
   background: #35302C;
@@ -556,7 +556,8 @@ h2.title {
     text-align: right; } }
 @media (min-width: 767px) {
   .footer-nav {
-    margin-bottom: 0; } }
+    margin-bottom: 0;
+    max-width: none; } }
 .content-wrapper .feature-image {
   display: block;
   margin-top: 0; }
@@ -767,6 +768,3 @@ h2.title {
 .sidebar-post-heading {
   font-weight: 600;
   margin: 0; }
-
-
-

@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- My Styles -->
-    <link rel="stylesheet" href="style/css/main.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="icon" type="image/png" href="http://www.semisweetdesigns.com/wp-content/uploads/2013/08/favicon.ico" />

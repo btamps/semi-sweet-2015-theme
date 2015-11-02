@@ -1,15 +1,29 @@
-<a href="/advertise" class="sponsors-button">
-  <h4>&#10025; Sponsors &#10025;</h4>
-</a>
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">SemiSweet</a>
+    </div>
 
-<div id='pf_29649' class='pf_ads'><script type='text/javascript' src='http://load.passionfruitads.com/a/a40b27761b76430ee208426442391dbf7aec9a9b.js'></script></div>
-
-<div id='pf_29650' class='pf_ads'><script type='text/javascript' src='http://load.passionfruitads.com/a/fc3722e456d60a9437684ebbe72dabe3538832b8.js'></script></div>
-
-<div id='pf_29651' class='pf_ads'><script type='text/javascript' src='http://load.passionfruitads.com/a/1551989db2f37a657cdef68e8c133e20a2b735bd.js'></script></div>
-
-<div id='pf_30056' class='pf_ads'><script type='text/javascript' src='http://load.passionfruitads.com/a/2a456989562a14b93a2b8cdb086974de5834e3f0.js'></script></div>
-
-<a href="/advertise" class="ad-260x125">
-  <img src="<?php bloginfo('template_url'); ?>/images/ui/ad-260x125.png" alt="">
-</a>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right nav-social">
+        <li><a href="https://twitter.com/SemiSweetMike"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/semisweetdesigns"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="http://instagram.com/semisweetmike/"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/blog">Blog <span class="sr-only">(current)</span></a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>          
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
