@@ -18,14 +18,15 @@
           <div class="row">
             <div class="wrapper-bg sidebar-post-box">
               <div class="search-box">
-                <form class="form-inline">
-                  <div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail3">Search Blog</label>
-                    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Search Blog">
+                <form role="search" method="get" id="searchform" class="searchform form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                  <div>
+                    <label class="sr-only" for="search">Search Blog</label>
+                    <input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s" />
+                    <button type="submit" id="searchsubmit" class="btn"><i class="fa fa-search"></i></button>
                   </div>
-                  <button type="submit" class="btn"><i class="fa fa-search"></i></button>
                 </form>
               </div>
+
 
 
         <?php

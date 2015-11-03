@@ -1,17 +1,29 @@
 <?php get_header(); ?>
+<!-- Blog Posts -->
+<div class="container-fluid blog-box">
+  <div class="row">
 
-<p>This is the page.php file.</p>
+    <!-- Content Wrapper -->
+    <div class="col-sm-8 content-wrapper">
+      <div class="row">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <article class="col-md-12 post-wrapper">
+	      <h1><?php the_title(); ?></h1>
+          <?php the_content(); ?>
+          
+        </article>
+        <?php endwhile; else: ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <p>There are no posts or pages here.</p>
 
-  <h3><?php the_title(); ?></h3>
-  <?php the_content(); ?>
-  <hr>
+        <?php endif; ?>
 
-<?php endwhile; else: ?>
+      </div>  <!-- row end -->
+    </div> <!-- content-wrapper end -->
 
-  <p>There are no posts or pages here.</p>
+    <?php get_sidebar(); ?>
 
-<?php endif; ?>
+  </div> <!-- row end -->
+</div> <!-- blog-box end -->
 
 <?php get_footer(); ?>

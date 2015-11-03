@@ -32,6 +32,20 @@ $query->set('post_type', 'post');
 return $query;
 }
 
+// Add featured image to RSS feed
+add_filter( 'the_content', 'featured_image_in_feed' );
+function featured_image_in_feed( $content ) {
+    global $post;
+    if( is_feed() ) {
+        if ( has_post_thumbnail( $post->ID ) ){
+            $output = get_the_post_thumbnail( $post->ID, 'medium', array( 'style' => 'float:right; margin:0 0 10px 10px;' ) );
+            $content = $output . $content;
+        }
+    }
+    return $content;
+}
+
+
 add_filter('pre_get_posts','SearchFilter');
 
 // Removes the width and height attributes in the image tag
