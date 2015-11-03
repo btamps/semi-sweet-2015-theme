@@ -211,7 +211,7 @@ figure {
     .hero-message-box p {
       font-family: "tisa pro", georgia, times, serif;
       font-size: 17px; } }
-.btn {
+.btn, .comment-respond .submit {
   color: #ef3b2e;
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 600;
@@ -223,10 +223,10 @@ figure {
   border-radius: 6px;
   margin-top: 10px;
   background: transparent; }
-  .btn.btn-primary, .comment-respond .btn.submit {
+  .btn.btn-primary, .comment-respond .submit {
     background: #ef3b2e;
     color: white; }
-    .btn.btn-primary:hover, .comment-respond .btn.submit:hover {
+    .btn.btn-primary:hover, .comment-respond .submit:hover {
       background: #307c9c; }
 
 .btn-more {
@@ -402,7 +402,7 @@ h2.title {
     margin: 50px auto 60px;
     text-align: center;
     float: none; }
-  .newsletter-box .form-inline .btn {
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit {
     margin: 0; }
   .newsletter-box .form-inline input {
     min-width: 300px;
@@ -690,10 +690,12 @@ h2.title {
     font-family: "Source Sans Pro", helvetica, sans-serif;
     font-weight: 600;
     color: #524A43; }
-  .comment-respond textarea {
+  .comment-respond textarea, .comment-respond input[type='text'] {
     width: 100%;
     border-radius: 6px;
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    font-family: "Source Sans Pro", helvetica, sans-serif;
+    padding: .5em; }
   .comment-respond .submit {
     margin-top: 0;
     margin-bottom: 20px; }
