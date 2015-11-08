@@ -22,7 +22,7 @@
         <?php
 
           $args = array(
-            'menu' => 'main-menu',
+            'menu' => 'header-menu',
             'echo' => false
           );
           echo strip_tags(wp_nav_menu( $args ), '<li><a>');

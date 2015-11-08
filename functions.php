@@ -32,6 +32,17 @@ $query->set('post_type', 'post');
 return $query;
 }
 
+// Add Nav Menus
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' ),
+      'footer-menu' => __( 'Footer Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+
 // Add featured image to RSS feed
 add_filter( 'the_content', 'featured_image_in_feed' );
 function featured_image_in_feed( $content ) {
