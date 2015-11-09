@@ -21,7 +21,7 @@
                 <form role="search" method="get" id="searchform" class="searchform form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                   <div>
                     <label class="sr-only" for="search">Search Blog</label>
-                    <input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s" />
+                    <input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search Blog" />
                     <button type="submit" id="searchsubmit" class="btn"><i class="fa fa-search"></i></button>
                   </div>
                 </form>

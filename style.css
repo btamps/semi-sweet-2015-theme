@@ -211,7 +211,7 @@ figure {
     .hero-message-box p {
       font-family: "tisa pro", georgia, times, serif;
       font-size: 17px; } }
-.btn, .comment-respond .submit {
+.btn, .comment-respond .submit, .products li .button {
   color: #ef3b2e;
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 600;
@@ -223,10 +223,10 @@ figure {
   border-radius: 6px;
   margin-top: 10px;
   background: transparent; }
-  .btn.btn-primary, .comment-respond .submit {
+  .btn.btn-primary, .comment-respond .submit, .products li .btn-primary.button, .products li .comment-respond .button.submit, .comment-respond .products li .button.submit {
     background: #ef3b2e;
     color: white; }
-    .btn.btn-primary:hover, .comment-respond .submit:hover {
+    .btn.btn-primary:hover, .comment-respond .submit:hover, .products li .btn-primary.button:hover {
       background: #307c9c; }
 
 .btn-more {
@@ -402,7 +402,7 @@ h2.title {
     margin: 50px auto 60px;
     text-align: center;
     float: none; }
-  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit {
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .products li .button, .products li .newsletter-box .form-inline .button {
     margin: 0; }
   .newsletter-box .form-inline input {
     min-width: 300px;
@@ -770,3 +770,56 @@ h2.title {
 .sidebar-post-heading {
   font-weight: 600;
   margin: 0; }
+
+.products {
+  padding: 0;
+  display: block;
+  width: 100%;
+  overflow: hidden; }
+  .products li {
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin: 0 2em 3em 0;
+    width: 47%; }
+    .products li:nth-child(even) {
+      margin-right: 0; }
+    .products li a:first-of-type {
+      display: block;
+      overflow: hidden; }
+    .products li img {
+      width: 100%;
+      margin-bottom: .5em; }
+    .products li .button {
+      display: block;
+      border: 1px solid #ef3b2e;
+      text-align: center; }
+      .products li .button:hover {
+        background: #ef3b2e;
+        color: white;
+        text-decoration: none; }
+  .products .onsale {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    font-weight: 600; }
+  .products h3 {
+    float: left;
+    display: block;
+    font-size: .95em; }
+  .products .price {
+    float: right;
+    display: block; }
+    .products .price del {
+      display: none; }
+    .products .price ins {
+      text-decoration: none; }
+
+.woocommerce-pagination {
+  display: block; }
+
+.woocommerce-result-count {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  float: right;
+  display: block; }
+

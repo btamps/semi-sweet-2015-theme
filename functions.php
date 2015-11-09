@@ -5,16 +5,6 @@ function theme_styles() {
   wp_enqueue_style( 'main', get_template_directory_uri() . '/style.css' );
 }
 
-// Load the Theme JS
-// function theme_js() {
-//   wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/custom.modernizr.js' )
-// }
-
-// Enable Theme JS from above
-// add_action( 'wp_enqueue_scripts', 'theme_js' );
-
-
-
 // Enable Theme CSS from above
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
@@ -23,6 +13,16 @@ add_theme_support( 'menus' );
 
 // Enable feature images
 add_theme_support( 'post-thumbnails' );
+
+// Add Woocommerce Support
+add_theme_support( 'woocommerce' );
+
+// Woocommerce - removed sorting dropdown
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// Woocommerce - removed sorting dropdown
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+
 
 // Removes pages from search results
 function SearchFilter($query) {
