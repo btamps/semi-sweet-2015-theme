@@ -777,13 +777,10 @@ h2.title {
   width: 100%;
   overflow: hidden; }
   .products li {
-    display: inline-block;
-    float: left;
     position: relative;
-    margin: 0 2em 3em 0;
-    width: 47%; }
-    .products li:nth-child(even) {
-      margin-right: 0; }
+    margin: 0 0 3em 0;
+    padding-left: 0;
+    padding-right: 0; }
     .products li a:first-of-type {
       display: block;
       overflow: hidden; }
@@ -798,11 +795,6 @@ h2.title {
         background: #ef3b2e;
         color: white;
         text-decoration: none; }
-  .products .onsale {
-    position: absolute;
-    top: .5em;
-    right: .5em;
-    font-weight: 600; }
   .products h3 {
     float: left;
     display: block;
@@ -815,6 +807,12 @@ h2.title {
     .products .price ins {
       text-decoration: none; }
 
+.onsale {
+  position: absolute;
+  top: .5em;
+  right: 1em;
+  font-weight: 600; }
+
 .woocommerce-pagination {
   display: block; }
 
@@ -822,4 +820,16 @@ h2.title {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   float: right;
   display: block; }
+
+@media (min-width: 768px) {
+  .products li:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 15px; }
+  .products li:nth-child(even) {
+    padding-left: 15px;
+    padding-right: 0; }
+
+  .onsale {
+    top: .5em;
+    right: 2em; } }
 
