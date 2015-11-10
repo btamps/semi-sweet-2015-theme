@@ -22,6 +22,8 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 
 // Woocommerce - removed sorting dropdown
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+// Woocommerce - removed breadcrumbs
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
 
 // Removes pages from search results
@@ -175,3 +177,5 @@ function stripComment($var) {
   return true;
 }
 ?>
+
+
