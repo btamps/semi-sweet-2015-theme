@@ -4,12 +4,12 @@
         <section class="col-md-5 newsletter-text">
           <h2><i class="fa fa-paper-plane"></i> Stay Current</h2>
           <p>Be the first to know about new products and blog posts.</p>
-          <form class="form-inline">
+          <form action="//semisweetdesigns.us12.list-manage.com/subscribe/post?u=fe76ad92bdd35d5808d870eb6&amp;id=d48439dd50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
             <div class="form-group">
-              <label class="sr-only" for="exampleInputEmail3">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
+              <label class="sr-only" for="mce-EMAIL">Email address</label>
+              <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Email Address" required>
             </div>
-            <button type="submit" class="btn btn-primary">Join</button>
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Join</button>
           </form>          
         </section>
       </div>
