@@ -5,12 +5,12 @@
               <div class="inner">
                 <h3>Join the Newsletter</h3>  
                 <h4>Get special offers &amp; new releases straight to your inbox.</h4>
-                <form class="form-inline">
+                <form action="//semisweetdesigns.us12.list-manage.com/subscribe/post?u=fe76ad92bdd35d5808d870eb6&amp;id=d48439dd50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
                   <div class="form-group">
                     <label class="sr-only" for="exampleInputEmail3">Email Address</label>
                     <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email Address">
                   </div>
-                  <button type="submit" class="btn"><i class="fa fa-envelope"></i></button>
+                  <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn"><i class="fa fa-envelope"></i></button>
                 </form>
               </div>
             </div>
