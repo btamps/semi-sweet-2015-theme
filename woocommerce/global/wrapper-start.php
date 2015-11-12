@@ -13,4 +13,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="col-sm-8 content-wrapper">
   <div class="row">
-	<article class="col-md-12 post-wrapper">
+	<article class="woo-store col-md-12 post-wrapper">
