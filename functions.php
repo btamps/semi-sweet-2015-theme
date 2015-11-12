@@ -25,7 +25,6 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 // Woocommerce - removed breadcrumbs
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
-
 // Removes pages from search results
 function SearchFilter($query) {
 if ($query->is_search) {
@@ -177,5 +176,3 @@ function stripComment($var) {
   return true;
 }
 ?>
-
-

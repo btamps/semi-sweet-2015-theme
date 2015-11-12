@@ -7,7 +7,7 @@
           <h4>New In Shop</h4>
           <h1>Cookie Cutters</h1>
           <p>The new shop is here! We have 5 custom cookie cutter designs now available.</p>
-          <p><a class="btn btn-primary btn-lg" href="/shop" role="button">Shop Now</a></p>
+          <p><a class="btn btn-primary btn-lg" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
         </div>
       </div>
     </div>
