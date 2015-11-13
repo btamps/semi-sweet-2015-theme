@@ -38,7 +38,7 @@ function ss_add_checkout_button() {
   global $woocommerce;
 
   if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) :
-    echo '<a href="' . $woocommerce->cart->get_checkout_url() . '" title="' . __( 'Proceed to Checkout →' ) . '">' . __( 'Proceed to Checkout →' ) . '</a>';
+    echo '<a href="' . $woocommerce->cart->get_checkout_url() . '" class="btn btn-primary btn-checkout" title="' . __( 'Proceed to Checkout' ) . '">' . __( 'Proceed to Checkout' ) . '</a>';
   endif;
 }
 
