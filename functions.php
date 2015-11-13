@@ -32,13 +32,15 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 // Woocommerce - removed single product rating
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
-// Woocommerce - remove sidebar from cart and checkout pages
-function remove_sidebar_shop() {
-if ( is_cart() ) {
-    remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
-    }
+// Woocommerce - add checkout button
+add_action('ss-checkout-button', 'ss_add_checkout_button');
+function ss_add_checkout_button() {
+  global $woocommerce;
+
+  if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) :
+    echo '<a href="' . $woocommerce->cart->get_checkout_url() . '" title="' . __( 'Proceed to Checkout →' ) . '">' . __( 'Proceed to Checkout →' ) . '</a>';
+  endif;
 }
-add_action('template_redirect', 'remove_sidebar_shop');
 
 // Removes pages from search results
 function SearchFilter($query) {
