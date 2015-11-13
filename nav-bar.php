@@ -19,6 +19,7 @@
         <li><a href="http://instagram.com/semisweetmike/"><i class="fa fa-instagram"></i></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( 'Cart (%d)', 'Cart (%d)', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></a></li>
         <?php
 
           $args = array(

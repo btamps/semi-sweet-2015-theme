@@ -33,15 +33,12 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
 // Woocommerce - remove sidebar from cart and checkout pages
-function ss_remove_sidebar() {
-    if( is_checkout() || is_cart() ){
-        remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+function remove_sidebar_shop() {
+if ( is_cart() ) {
+    remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
     }
 }
-add_action('wp_head', 'ss_remove_sidebar' );
-
-
-
+add_action('template_redirect', 'remove_sidebar_shop');
 
 // Removes pages from search results
 function SearchFilter($query) {
