@@ -32,6 +32,10 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 // Woocommerce - removed single product rating
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
+// Woocommerce - removed single product rating
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+
 // Woocommerce - add checkout button
 add_action('ss-checkout-button', 'ss_add_checkout_button');
 function ss_add_checkout_button() {

@@ -773,6 +773,17 @@ h2.title {
   font-weight: 600;
   margin: 0; }
 
+.ad-300x250 {
+  margin: 5px auto 30px;
+  width: 300px; }
+  .ad-300x250:before {
+    content: "Advertisement";
+    position: relative;
+    top: -5px;
+    color: #99897D;
+    font-size: .8em;
+    letter-spacing: 1px; }
+
 .woo-store header {
   position: relative;
   overflow: hidden;
@@ -1055,5 +1066,3 @@ h2.title {
   .woocommerce-cart .cart-collaterals {
     width: 50%;
     font-size: 1em; } }
-
-
