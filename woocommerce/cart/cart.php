@@ -121,9 +121,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 		?>
 		<tr>
 			<td colspan="6" class="actions">
-				<p>
-					<input type="submit" class="button button-update-cart" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
-					<?php do_action( 'ss-checkout-button' ); ?>
+				<p class="action-group">
+					<input type="submit" class="button button-update-cart" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" /><?php do_action( 'ss-checkout-button' ); ?>
 				</p>
 
 				<?php if ( WC()->cart->coupons_enabled() ) { ?>
