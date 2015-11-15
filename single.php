@@ -11,7 +11,7 @@
           <header>
             <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
             <meta itemprop="image" content="<?php echo $url; ?>" />
-            <figure href="" class="feature-image">
+            <figure class="feature-image">
               <?php the_post_thumbnail(); ?>
             </figure>
             <h1 itemprop="name">

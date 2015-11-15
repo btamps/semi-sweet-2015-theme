@@ -630,12 +630,16 @@ h2.title {
   font-size: .9em;
   color: #99897D; }
 
-.blog .thumbnail h3 a {
-  color: #524A43;
-  font-size: 1.3em;
-  line-height: 1.2em;
-  margin-top: .2em;
-  display: inline-block; }
+.blog .thumbnail > a figure {
+  margin-bottom: 0; }
+.blog .thumbnail h2 {
+  margin: .2em 0 .5em; }
+  .blog .thumbnail h2 a {
+    color: #524A43;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: 700;
+    display: inline-block; }
 
 .commentlist {
   list-style: none;
@@ -725,6 +729,39 @@ h2.title {
   .reply i {
     font-size: .85em; }
 
+.page_nav {
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  display: block; }
+  .page_nav a, .page_nav span {
+    display: none;
+    float: left;
+    background: white;
+    padding: 6px 12px;
+    margin-left: -1px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    line-height: 1.4; }
+    .page_nav a.prev, .page_nav a.next, .page_nav span.prev, .page_nav span.next {
+      display: block; }
+  .page_nav .page-numbers:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-left: 0; }
+  .page_nav .page-numbers:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px; }
+  .page_nav .dots {
+    color: #99897D; }
+  .page_nav .current {
+    background: none;
+    color: #99897D; }
+  .page_nav a:hover {
+    background: #ef3b2e;
+    color: white;
+    border-color: #ef3b2e; }
+
 @media (min-width: 767px) {
   .content-wrapper {
     margin-top: 2.5em;
@@ -739,6 +776,20 @@ h2.title {
   .woocommerce-checkout .woocommerce-shipping-fields header p.comment-count,
   .woocommerce-checkout .woocommerce-checkout-review-order header p.comment-count, .woocommerce-message header p.comment-count, .cart-collaterals header p.comment-count {
     float: right; }
+
+  .post-box {
+    padding: 0; }
+    .post-box:nth-child(odd) {
+      padding-left: 15px; }
+    .post-box:nth-child(even) {
+      padding-right: 15px; }
+    .post-box:first-child {
+      padding: 0; }
+    .post-box .thumbnail {
+      min-height: 700px; }
+
+  .page_nav a, .page_nav span {
+    display: block; }
 
   .comments-area {
     padding-left: 0;

@@ -24,76 +24,84 @@ Template Name: My Blog
         ?>
         <?php if ($post->ID == $recent_post_ID) : ?>
 
-        <article class="col-md-12 post-wrapper" itemscope itemtype="http://schema.org/Blog">
-          <header>
-            <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-            <meta itemprop="image" content="<?php echo $url; ?>" />
-            <figure href="" class="feature-image">
-              <?php the_post_thumbnail(); ?>
-            </figure>
-            <h1 itemprop="name">
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h1>
-            <p>By <a href="">Mike Tamplin</a> on <?php echo get_the_date( 'M j, Y' ); ?></p>
-            <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
-          </header>
-          <?php the_content(); ?>     
+        <article class="col-md-12 post-box" itemscope itemtype="http://schema.org/Blog">
+          <div class="thumbnail">
+              <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+              <meta itemprop="image" content="<?php echo $url; ?>" />
+              <a href="<?php the_permalink(); ?>">
+                <figure class="feature-image">
+                  <?php the_post_thumbnail(); ?>
+                </figure>
+              </a>
+              <div class="caption">
+                <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
+                <h2 itemprop="name">
+                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h2>
+                <?php the_content(); ?>
+              </div>
+          </div>   
         </article>
         
         <?php else : ?>
 
-          <article class="col-md-12 post-wrapper" itemscope itemtype="http://schema.org/Blog">
-          <header>
-            <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
-            <meta itemprop="image" content="<?php echo $url; ?>" />
-            <figure href="" class="feature-image">
-              <?php the_post_thumbnail(); ?>
-            </figure>
-            <h1 itemprop="name">
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h1>
-            <p>By <a href="">Mike Tamplin</a> on <?php echo get_the_date( 'M j, Y' ); ?></p>
-            <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
-          </header>
-          <?php the_content(); ?>     
+          <article class="col-md-6 post-box" itemscope itemtype="http://schema.org/Blog">
+          <div class="thumbnail">
+              <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+              <meta itemprop="image" content="<?php echo $url; ?>" />
+              <a href="<?php the_permalink(); ?>">
+                <figure class="feature-image">
+                  <?php the_post_thumbnail(); ?>
+                </figure>
+              </a>
+              <div class="caption">
+                <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
+                <h2 itemprop="name">
+                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h2>
+                <?php the_content(); ?>
+              </div>
+          </div>    
         </article>
 
       <?php endif; ?>
 
-      <?php endwhile; ?>
-
-      <?php
-        global $wp_query;
-
-        $total_pages = $wp_query->max_num_pages;
-
-        if ($total_pages > 1){
-
-          $current_page = max(1, get_query_var('paged'));
-
-          echo '<div class="page_nav">';
-
-          echo paginate_links(array(
-              'base' => get_pagenum_link(1) . '%_%',
-              'format' => '/page/%#%',
-              'current' => $current_page,
-              'total' => $total_pages,
-              'prev_text' => 'Newer <em>Posts</em>',
-              'next_text' => 'Older <em>Posts</em>'
-            ));
-
-          echo '</div>';
-
-        }
-       ?>
-
-<?php else: ?>
-
-  <p>There are no posts or pages here.</p>
-
-<?php endif; ?>
+      <?php endwhile; ?>     
 
       </div>  <!-- row end -->
+      <div class="row">
+        <?php
+          global $wp_query;
+
+          $total_pages = $wp_query->max_num_pages;
+
+          if ($total_pages > 1){
+
+            $current_page = max(1, get_query_var('paged'));
+
+            echo '<div class="page_nav">';
+
+            echo paginate_links(array(
+                'base' => get_pagenum_link(1) . '%_%',
+                'format' => '/page/%#%',
+                'current' => $current_page,
+                'total' => $total_pages,
+                'mid_size' => 1,
+                'prev_text' => '&laquo;',
+                'next_text' => '&raquo;'
+              ));
+
+            echo '</div>';
+
+          }
+         ?>
+
+        <?php else: ?>
+
+          <p>There are no posts or pages here.</p>
+
+        <?php endif; ?>
+        </div> <!-- row end -->
     </div> <!-- content-wrapper end -->
 
     <?php get_sidebar(); ?>

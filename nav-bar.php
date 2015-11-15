@@ -21,7 +21,7 @@
       <ul class="nav navbar-nav navbar-right">
         <?php 
           if ( WC()->cart->get_cart_contents_count() > 0 ) { ?>
-            <li><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( 'Cart (%d)', 'Cart (%d)', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></a></li>  
+            <li><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '<i class="fa fa-shopping-cart"></i> (%d)', '<i class="fa fa-shopping-cart"></i> (%d)', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></a></li>  
         <?php }
         ?>
         <?php
