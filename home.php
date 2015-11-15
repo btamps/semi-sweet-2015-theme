@@ -37,8 +37,10 @@ Template Name: My Blog
                 <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
                 <h2 itemprop="name">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </h2>
-                <?php the_content(); ?>
+                </h2><p><?php echo wp_trim_words( get_the_content(), 50, '...' ); ?></p>
+                <p>
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                </p>
               </div>
           </div>   
         </article>
@@ -59,7 +61,10 @@ Template Name: My Blog
                 <h2 itemprop="name">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-                <?php the_content(); ?>
+                <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
+                <p>
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                </p>
               </div>
           </div>    
         </article>

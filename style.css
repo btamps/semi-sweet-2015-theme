@@ -630,16 +630,23 @@ h2.title {
   font-size: .9em;
   color: #99897D; }
 
+.blog .blog-box {
+  padding-top: 1em; }
 .blog .thumbnail > a figure {
   margin-bottom: 0; }
 .blog .thumbnail h2 {
   margin: .2em 0 .5em; }
   .blog .thumbnail h2 a {
     color: #524A43;
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 1.1em;
+    line-height: 1.1em;
     font-weight: 700;
     display: inline-block; }
+.blog .btn-more {
+  border: 1px solid #ef3b2e; }
+  .blog .btn-more:hover {
+    background: #ef3b2e;
+    color: white; }
 
 .commentlist {
   list-style: none;
@@ -732,7 +739,7 @@ h2.title {
 .page_nav {
   overflow: hidden;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 2rem;
   display: block; }
   .page_nav a, .page_nav span {
     display: none;
@@ -777,14 +784,11 @@ h2.title {
   .woocommerce-checkout .woocommerce-checkout-review-order header p.comment-count, .woocommerce-message header p.comment-count, .cart-collaterals header p.comment-count {
     float: right; }
 
+  .blog .blog-box {
+    padding-top: 0; }
+
   .post-box {
     padding: 0; }
-    .post-box:nth-child(odd) {
-      padding-left: 15px; }
-    .post-box:nth-child(even) {
-      padding-right: 15px; }
-    .post-box:first-child {
-      padding: 0; }
     .post-box .thumbnail {
       min-height: 700px; }
 
@@ -808,6 +812,13 @@ h2.title {
   .sidebar {
     margin-left: 0;
     margin-right: 0; } }
+@media (min-width: 1000px) {
+  .post-box:nth-child(odd) {
+    padding-left: 15px; }
+  .post-box:nth-child(even) {
+    padding-right: 15px; }
+  .post-box:first-child {
+    padding: 0; } }
 .newsletter {
   margin-bottom: 30px;
   background-image: repeating-linear-gradient(135deg, #f3685e 0px, #f3685e 30px, transparent 30px, transparent 50px, #53a3c6 50px, #53a3c6 80px, transparent 80px, transparent 100px);
