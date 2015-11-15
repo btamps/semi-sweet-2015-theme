@@ -212,7 +212,7 @@ figure {
     .hero-message-box p {
       font-family: "tisa pro", georgia, times, serif;
       font-size: 17px; } }
-.btn, .comment-respond .submit, .woocommerce .button {
+.btn, .comment-respond .submit, .woocommerce .button, .woocommerce-checkout input#place_order {
   color: #ef3b2e;
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 600;
@@ -224,11 +224,11 @@ figure {
   border-radius: 6px;
   margin-top: 10px;
   background: transparent; }
-  .btn.btn-primary, .comment-respond .submit, .woocommerce .btn-primary.button {
+  .btn.btn-primary, .comment-respond .submit, .woocommerce .btn-primary.button, .woocommerce-checkout input#place_order {
     background: #ef3b2e;
     color: white;
     padding: 11px 18px 12px; }
-    .btn.btn-primary:hover, .comment-respond .submit:hover, .woocommerce .btn-primary.button:hover {
+    .btn.btn-primary:hover, .comment-respond .submit:hover, .woocommerce .btn-primary.button:hover, .woocommerce-checkout input#place_order:hover {
       background: #307c9c; }
 
 .btn-more {
@@ -404,7 +404,7 @@ h2.title {
     margin: 50px auto 60px;
     text-align: center;
     float: none; }
-  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce .button, .woocommerce .newsletter-box .form-inline .button {
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce .button, .woocommerce .newsletter-box .form-inline .button, .newsletter-box .form-inline .woocommerce-checkout input#place_order, .woocommerce-checkout .newsletter-box .form-inline input#place_order {
     margin: 0; }
   .newsletter-box .form-inline input {
     min-width: 300px;
@@ -566,29 +566,43 @@ h2.title {
   .content-wrapper .feature-image img {
     width: 100%; }
 
-.post-wrapper, .woocommerce-cart .woocommerce > form, .woocommerce-message, .cart-collaterals {
+.post-wrapper, .woocommerce-cart .woocommerce > form, .woocommerce-checkout .woocommerce-billing-fields,
+.woocommerce-checkout .woocommerce-shipping-fields,
+.woocommerce-checkout .woocommerce-checkout-review-order, .woocommerce-message, .cart-collaterals {
   background: white;
   box-shadow: 0 0 2px #ccc;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px; }
 
-.post-wrapper header, .woocommerce-cart .woocommerce > form header, .woocommerce-message header, .cart-collaterals header {
+.post-wrapper header, .woocommerce-cart .woocommerce > form header, .woocommerce-checkout .woocommerce-billing-fields header,
+.woocommerce-checkout .woocommerce-shipping-fields header,
+.woocommerce-checkout .woocommerce-checkout-review-order header, .woocommerce-message header, .cart-collaterals header {
   margin-bottom: 1em;
   border-bottom: 1px solid #E6DDCC;
   padding-bottom: 10px;
   margin-bottom: 2em; }
-  .post-wrapper header figure, .woocommerce-cart .woocommerce > form header figure, .woocommerce-message header figure, .cart-collaterals header figure {
+  .post-wrapper header figure, .woocommerce-cart .woocommerce > form header figure, .woocommerce-checkout .woocommerce-billing-fields header figure,
+  .woocommerce-checkout .woocommerce-shipping-fields header figure,
+  .woocommerce-checkout .woocommerce-checkout-review-order header figure, .woocommerce-message header figure, .cart-collaterals header figure {
     margin-left: -30px;
     margin-right: -30px; }
-  .post-wrapper header h1 a, .woocommerce-cart .woocommerce > form header h1 a, .woocommerce-message header h1 a, .cart-collaterals header h1 a, .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-message header p, .cart-collaterals header p {
+  .post-wrapper header h1 a, .woocommerce-cart .woocommerce > form header h1 a, .woocommerce-checkout .woocommerce-billing-fields header h1 a,
+  .woocommerce-checkout .woocommerce-shipping-fields header h1 a,
+  .woocommerce-checkout .woocommerce-checkout-review-order header h1 a, .woocommerce-message header h1 a, .cart-collaterals header h1 a, .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-checkout .woocommerce-billing-fields header p,
+  .woocommerce-checkout .woocommerce-shipping-fields header p,
+  .woocommerce-checkout .woocommerce-checkout-review-order header p, .woocommerce-message header p, .cart-collaterals header p {
     padding: 0;
     color: #524A43;
     font-family: "Source Sans Pro", helvetica, sans-serif;
     display: inline-block; }
-  .post-wrapper header h1 a:hover, .woocommerce-cart .woocommerce > form header h1 a:hover, .woocommerce-message header h1 a:hover, .cart-collaterals header h1 a:hover {
+  .post-wrapper header h1 a:hover, .woocommerce-cart .woocommerce > form header h1 a:hover, .woocommerce-checkout .woocommerce-billing-fields header h1 a:hover,
+  .woocommerce-checkout .woocommerce-shipping-fields header h1 a:hover,
+  .woocommerce-checkout .woocommerce-checkout-review-order header h1 a:hover, .woocommerce-message header h1 a:hover, .cart-collaterals header h1 a:hover {
     color: #53a3c6; }
-  .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-message header p, .cart-collaterals header p {
+  .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-checkout .woocommerce-billing-fields header p,
+  .woocommerce-checkout .woocommerce-shipping-fields header p,
+  .woocommerce-checkout .woocommerce-checkout-review-order header p, .woocommerce-message header p, .cart-collaterals header p {
     color: #807369;
     font-size: .95em; }
 
@@ -701,7 +715,7 @@ h2.title {
     border-radius: 6px;
     border: 1px solid #ccc;
     font-family: "Source Sans Pro", helvetica, sans-serif;
-    padding: .5em; }
+    padding: .25em; }
   .comment-respond .submit {
     margin-top: 0;
     margin-bottom: 20px; }
@@ -721,7 +735,9 @@ h2.title {
     padding-left: 15px;
     padding-right: 45px; }
 
-  .post-wrapper header p.comment-count, .woocommerce-cart .woocommerce > form header p.comment-count, .woocommerce-message header p.comment-count, .cart-collaterals header p.comment-count {
+  .post-wrapper header p.comment-count, .woocommerce-cart .woocommerce > form header p.comment-count, .woocommerce-checkout .woocommerce-billing-fields header p.comment-count,
+  .woocommerce-checkout .woocommerce-shipping-fields header p.comment-count,
+  .woocommerce-checkout .woocommerce-checkout-review-order header p.comment-count, .woocommerce-message header p.comment-count, .cart-collaterals header p.comment-count {
     float: right; }
 
   .comments-area {
@@ -919,14 +935,27 @@ h2.title {
   .single-product .images .thumbnails {
     margin: 2em 0; }
 
-.woocommerce-cart .content-wrapper {
+.woocommerce-cart .content-wrapper,
+.woocommerce-checkout .content-wrapper {
   width: 100%;
   padding-right: 15px; }
-  .woocommerce-cart .content-wrapper article.post-wrapper, .woocommerce-cart .content-wrapper article.woocommerce-message, .woocommerce-cart .content-wrapper article.cart-collaterals {
+  .woocommerce-cart .content-wrapper article.post-wrapper, .woocommerce-cart .content-wrapper .woocommerce-checkout article.woocommerce-billing-fields, .woocommerce-checkout .woocommerce-cart .content-wrapper article.woocommerce-billing-fields,
+  .woocommerce-cart .content-wrapper .woocommerce-checkout article.woocommerce-shipping-fields,
+  .woocommerce-checkout .woocommerce-cart .content-wrapper article.woocommerce-shipping-fields,
+  .woocommerce-cart .content-wrapper .woocommerce-checkout article.woocommerce-checkout-review-order,
+  .woocommerce-checkout .woocommerce-cart .content-wrapper article.woocommerce-checkout-review-order, .woocommerce-cart .content-wrapper article.woocommerce-message, .woocommerce-cart .content-wrapper article.cart-collaterals,
+  .woocommerce-checkout .content-wrapper article.post-wrapper,
+  .woocommerce-checkout .content-wrapper article.woocommerce-billing-fields,
+  .woocommerce-checkout .content-wrapper article.woocommerce-shipping-fields,
+  .woocommerce-checkout .content-wrapper article.woocommerce-checkout-review-order,
+  .woocommerce-checkout .content-wrapper article.woocommerce-message,
+  .woocommerce-checkout .content-wrapper article.cart-collaterals {
     background: none;
     box-shadow: none; }
-.woocommerce-cart .sidebar {
+.woocommerce-cart .sidebar,
+.woocommerce-checkout .sidebar {
   display: none; }
+
 .woocommerce-cart .shop_table {
   width: 100%;
   font-size: .85em; }
@@ -1008,6 +1037,77 @@ h2.title {
       margin: 0;
       display: inline-block; }
 
+.woocommerce-checkout article {
+  max-width: 700px;
+  margin: 0 auto;
+  float: none; }
+.woocommerce-checkout .woocommerce-info {
+  margin-bottom: 2rem; }
+.woocommerce-checkout .checkout input, .woocommerce-checkout .checkout textarea {
+  width: 100%;
+  padding: .25em .5em;
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  border: 1px solid #ccc; }
+.woocommerce-checkout .checkout h3, .woocommerce-checkout .checkout h3 label {
+  font-size: 28px;
+  font-weight: 400; }
+.woocommerce-checkout .woocommerce-billing-fields,
+.woocommerce-checkout .woocommerce-shipping-fields,
+.woocommerce-checkout .woocommerce-checkout-review-order {
+  padding: 3rem;
+  margin-bottom: 2em; }
+  .woocommerce-checkout .woocommerce-billing-fields label, .woocommerce-checkout .woocommerce-billing-fields strong,
+  .woocommerce-checkout .woocommerce-shipping-fields label,
+  .woocommerce-checkout .woocommerce-shipping-fields strong,
+  .woocommerce-checkout .woocommerce-checkout-review-order label,
+  .woocommerce-checkout .woocommerce-checkout-review-order strong {
+    display: block;
+    font-size: .9em;
+    font-family: "Source Sans Pro", helvetica, sans-serif;
+    color: #524A43; }
+.woocommerce-checkout .woocommerce-shipping-fields textarea {
+  min-height: 150px; }
+.woocommerce-checkout #order_review_heading {
+  font-weight: 700;
+  color: #524A43;
+  font-size: 2.1em; }
+.woocommerce-checkout .woocommerce-checkout-review-order table {
+  width: 100%; }
+  .woocommerce-checkout .woocommerce-checkout-review-order table tr {
+    border-bottom: 1px solid #E6DDCC; }
+  .woocommerce-checkout .woocommerce-checkout-review-order table th {
+    font-weight: 600;
+    font-size: 1.1em; }
+  .woocommerce-checkout .woocommerce-checkout-review-order table td {
+    padding: 1em; }
+  .woocommerce-checkout .woocommerce-checkout-review-order table thead th {
+    padding: 1em; }
+  .woocommerce-checkout .woocommerce-checkout-review-order table tfoot th {
+    background: #F4EBDA;
+    padding: 1em; }
+  .woocommerce-checkout .woocommerce-checkout-review-order table .amount {
+    font-size: 1.2em; }
+.woocommerce-checkout .woocommerce-checkout-review-order .payment_methods {
+  list-style: none;
+  padding: 0; }
+  .woocommerce-checkout .woocommerce-checkout-review-order .payment_methods .payment_box p {
+    font-family: "Source Sans Pro", helvetica, sans-serif; }
+.woocommerce-checkout input#place_order {
+  font-size: 1.2em; }
+
+#ship-to-different-address {
+  display: block;
+  width: 100%;
+  overflow: hidden; }
+  #ship-to-different-address br {
+    display: none; }
+  #ship-to-different-address label, #ship-to-different-address .input-checkbox {
+    float: left;
+    margin: 0; }
+  #ship-to-different-address .input-checkbox {
+    width: 30px;
+    margin: 15px 0 0 10px; }
+
 .woocommerce-message {
   border-top: 4px solid #ef3b2e;
   margin: 1em 0;
@@ -1025,16 +1125,18 @@ h2.title {
   .cart-collaterals h2 {
     font-weight: 700;
     margin-top: 1em; }
-  .cart-collaterals table tr {
-    border-top: 1px solid #E6DDCC; }
-  .cart-collaterals table th {
-    font-weight: 600; }
-  .cart-collaterals table td {
-    padding: 1em 0; }
-  .cart-collaterals table .shipping td {
-    text-align: right; }
-  .cart-collaterals table .amount {
-    float: right; }
+  .cart-collaterals table {
+    width: 100%; }
+    .cart-collaterals table tr {
+      border-top: 1px solid #E6DDCC; }
+    .cart-collaterals table th {
+      font-weight: 600; }
+    .cart-collaterals table td {
+      padding: 1em 0; }
+    .cart-collaterals table .shipping td {
+      text-align: right; }
+    .cart-collaterals table .amount {
+      float: right; }
   .cart-collaterals .wc-proceed-to-checkout {
     display: none; }
   .cart-collaterals tr.order-total {
