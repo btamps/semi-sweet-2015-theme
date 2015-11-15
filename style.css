@@ -572,24 +572,28 @@ h2.title {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px; }
-  .post-wrapper header, .woocommerce-cart .woocommerce > form header, .woocommerce-message header, .cart-collaterals header {
-    margin-bottom: 1em;
-    border-bottom: 1px solid #E6DDCC;
-    padding-bottom: 10px;
-    margin-bottom: 2em; }
-    .post-wrapper header figure, .woocommerce-cart .woocommerce > form header figure, .woocommerce-message header figure, .cart-collaterals header figure {
-      margin-left: -30px;
-      margin-right: -30px; }
-    .post-wrapper header h1 a, .woocommerce-cart .woocommerce > form header h1 a, .woocommerce-message header h1 a, .cart-collaterals header h1 a, .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-message header p, .cart-collaterals header p {
-      padding: 0;
-      color: #524A43;
-      font-family: "Source Sans Pro", helvetica, sans-serif;
-      display: inline-block; }
-    .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-message header p, .cart-collaterals header p {
-      color: #807369;
-      font-size: .95em; }
-      .post-wrapper header p a, .woocommerce-cart .woocommerce > form header p a, .woocommerce-message header p a, .cart-collaterals header p a {
-        color: #807369; }
+
+.post-wrapper header, .woocommerce-cart .woocommerce > form header, .woocommerce-message header, .cart-collaterals header {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #E6DDCC;
+  padding-bottom: 10px;
+  margin-bottom: 2em; }
+  .post-wrapper header figure, .woocommerce-cart .woocommerce > form header figure, .woocommerce-message header figure, .cart-collaterals header figure {
+    margin-left: -30px;
+    margin-right: -30px; }
+  .post-wrapper header h1 a, .woocommerce-cart .woocommerce > form header h1 a, .woocommerce-message header h1 a, .cart-collaterals header h1 a, .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-message header p, .cart-collaterals header p {
+    padding: 0;
+    color: #524A43;
+    font-family: "Source Sans Pro", helvetica, sans-serif;
+    display: inline-block; }
+  .post-wrapper header h1 a:hover, .woocommerce-cart .woocommerce > form header h1 a:hover, .woocommerce-message header h1 a:hover, .cart-collaterals header h1 a:hover {
+    color: #53a3c6; }
+  .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-message header p, .cart-collaterals header p {
+    color: #807369;
+    font-size: .95em; }
+
+.content-wrapper .embed-container {
+  margin-bottom: 2em; }
 
 .sidenote {
   border: 1px solid #E6DDCC;
@@ -717,6 +721,9 @@ h2.title {
     padding-left: 15px;
     padding-right: 45px; }
 
+  .post-wrapper header p.comment-count, .woocommerce-cart .woocommerce > form header p.comment-count, .woocommerce-message header p.comment-count, .cart-collaterals header p.comment-count {
+    float: right; }
+
   .comments-area {
     padding-left: 0;
     padding-right: 0; }
@@ -760,9 +767,12 @@ h2.title {
   padding: 40px 0 20px; }
   .sidebar-post .thumb {
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    display: block; }
   .sidebar-post img {
     width: 100%; }
+  .sidebar-post a:hover .sidebar-post-heading, .sidebar-post a:hover {
+    color: #53a3c6; }
 
 .sidebar-post-body {
   margin-top: 20px; }
@@ -771,7 +781,8 @@ h2.title {
 
 .sidebar-post-heading {
   font-weight: 600;
-  margin: 0; }
+  margin: 0;
+  color: #524A43; }
 
 .ad-300x250 {
   margin: 5px auto 30px;
@@ -782,7 +793,7 @@ h2.title {
     top: -5px;
     color: #99897D;
     font-size: .8em;
-    letter-spacing: 1px; }
+    letter-spacing: .5px; }
 
 .woo-store header {
   position: relative;

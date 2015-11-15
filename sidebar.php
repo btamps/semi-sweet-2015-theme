@@ -52,11 +52,10 @@
               <article class="sidebar-post">
                 <a href="<?php the_permalink(); ?>" class="thumb">
                   <?php the_post_thumbnail(); ?>
+                  <div class="sidebar-post-body">
+                    <h4 class="sidebar-post-heading"><?php the_title(); ?></h4>
+                  </div>
                 </a>
-                <div class="sidebar-post-body">
-                  <h4 class="sidebar-post-heading"><?php the_title(); ?></h4>
-                  <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
-                </div>
               </article>
 
               <?php endwhile; endif; ?>
@@ -83,11 +82,10 @@
               <article class="sidebar-post">
                 <a href="<?php the_permalink(); ?>" class="thumb">
                   <?php the_post_thumbnail(); ?>
+                  <div class="sidebar-post-body">
+                    <h4 class="sidebar-post-heading"><?php the_title(); ?></h4>
+                  </div>
                 </a>
-                <div class="sidebar-post-body">
-                  <h4 class="sidebar-post-heading"><?php the_title(); ?></h4>
-                  <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
-                </div>
               </article>
 
               <?php endwhile; endif; ?>

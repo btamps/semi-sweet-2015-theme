@@ -18,6 +18,7 @@
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h1>
             <p>By <a href="">Mike Tamplin</a> on <?php echo get_the_date( 'M j, Y' ); ?></p>
+            <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
           </header>
           <?php the_content(); ?>
           <h4>Tags:</h4>
