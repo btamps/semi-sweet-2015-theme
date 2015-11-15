@@ -14,9 +14,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right nav-social">
-        <li><a href="https://twitter.com/SemiSweetMike"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="https://www.facebook.com/semisweetdesigns"><i class="fa fa-facebook"></i></a></li>
         <li><a href="http://instagram.com/semisweetmike/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="http://pinterest.com/SemiSweetMike"><i class="fa fa-pinterest-p"></i></a></li>
+        <li><a href="https://www.facebook.com/semisweetdesigns"><i class="fa fa-facebook"></i></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php 

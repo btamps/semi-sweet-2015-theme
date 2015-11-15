@@ -471,10 +471,10 @@ h2.title {
       text-align: center;
       background: #807369;
       border-radius: 2rem;
-      font-size: 26px;
-      line-height: 40px;
-      width: 40px;
-      height: 40px;
+      font-size: 20px;
+      line-height: 30px;
+      width: 30px;
+      height: 30px;
       color: #524A43;
       -webkit-transition: background .25s;
       transition: background .25s; }
