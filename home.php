@@ -1,107 +1,104 @@
+<?php
+/*
+Template Name: My Blog
+*/
+?>
 <?php get_header(); ?>
+<!-- Blog Posts -->
+<div class="container-fluid blog-box">
+  <div class="row">
 
-<!-- Main jumbotron -->
-    <div class="jumbotron">
-      <div class="container-fluid">
-        <div class="hero-message-box">
-          <h4>New In Shop</h4>
-          <h1>Cookie Cutters</h1>
-          <p>The new shop is here! We have 5 custom cookie cutter designs now available.</p>
-          <p><a class="btn btn-primary btn-lg" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Blog Posts -->
-
-    <div class="container-fluid blog-box">
+    <!-- Content Wrapper -->
+    <div class="col-sm-8 content-wrapper">
       <div class="row">
-        <h2 class="title"><span>Fresh From the Blog</span></h2>
-        
+      
         <?php
-        global $post;
-        $args = array( 'posts_per_page' => 1 );
-        $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) : 
-          setup_postdata( $post ); ?>      
+          $query_args = array(
+          'showposts'     => 1 // here you can add limit by categry etc
+          );
+          $query = new WP_Query( $query_args );
+          $query->the_post();
+          $recent_post_ID = $post->ID; // this is your most recent post ID
 
-        <!-- First Post -->
-        <div class="col-sm-6 col-md-12">
-          <div class="thumbnail">
-            <div class="first-post row">    
-              <a href="<?php the_permalink(); ?>" class="first-post-image col-md-6">
-                <?php the_post_thumbnail(); ?>
-              </a>
-              <div class="caption first-post-caption col-md-6">
-                <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <?php the_excerpt(); ?>
-              <p>
-                <a href="<?php the_permalink(); ?>" Class="btn-more">Read More &raquo;</a>      
-              </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <?php endforeach; wp_reset_postdata(); ?>
-
-        <?php
-        global $post;
-        $args = array( 'posts_per_page' => 3, 'offset'=> 1, 'category' => 1 );
-        $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) : 
-          setup_postdata( $post ); ?>      
-
-        <!-- Rest of Posts -->
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail(); ?>
-            </a>
-            <div class="caption">
-              <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
-              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-              <?php the_excerpt(); ?>
-            <p>
-              <a href="<?php the_permalink(); ?>" class="btn-more">Read More &raquo;</a>      
-            </p>
-            </div>
-          </div>
-        </div>
-        <?php endforeach; wp_reset_postdata(); ?>
-
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <a href="/blog" class="btn btn-default btn-block">All Posts &raquo;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid basics">
-      <div class="row">
-        <h2 class="title"><span>Getting Started</span></h2>
-        <?php
-        $args = array(
-          'post_type' => 'post',
-          'category_name' => 'the-basics'
-        );
-        $the_query = new WP_Query( $args );
-
+          if ( have_posts() ) : while ( have_posts() ) : the_post();
         ?>
-        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-          <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-              <a href="<?php the_permalink(); ?>">                
-                <?php the_post_thumbnail(); ?>
-              </a>
-              <div class="caption">
-                <h4><a href="<?php the_permalink(); ?>">My Tools</a></h4>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-              </div>
-            </div>
-          </div>
-        <?php endwhile; endif; ?>
-      </div>
-    </div>
+        <?php if ($post->ID == $recent_post_ID) : ?>
+
+        <article class="col-md-12 post-wrapper" itemscope itemtype="http://schema.org/Blog">
+          <header>
+            <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+            <meta itemprop="image" content="<?php echo $url; ?>" />
+            <figure href="" class="feature-image">
+              <?php the_post_thumbnail(); ?>
+            </figure>
+            <h1 itemprop="name">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h1>
+            <p>By <a href="">Mike Tamplin</a> on <?php echo get_the_date( 'M j, Y' ); ?></p>
+            <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
+          </header>
+          <?php the_content(); ?>     
+        </article>
+        
+        <?php else : ?>
+
+          <article class="col-md-12 post-wrapper" itemscope itemtype="http://schema.org/Blog">
+          <header>
+            <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+            <meta itemprop="image" content="<?php echo $url; ?>" />
+            <figure href="" class="feature-image">
+              <?php the_post_thumbnail(); ?>
+            </figure>
+            <h1 itemprop="name">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h1>
+            <p>By <a href="">Mike Tamplin</a> on <?php echo get_the_date( 'M j, Y' ); ?></p>
+            <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
+          </header>
+          <?php the_content(); ?>     
+        </article>
+
+      <?php endif; ?>
+
+      <?php endwhile; ?>
+
+      <?php
+        global $wp_query;
+
+        $total_pages = $wp_query->max_num_pages;
+
+        if ($total_pages > 1){
+
+          $current_page = max(1, get_query_var('paged'));
+
+          echo '<div class="page_nav">';
+
+          echo paginate_links(array(
+              'base' => get_pagenum_link(1) . '%_%',
+              'format' => '/page/%#%',
+              'current' => $current_page,
+              'total' => $total_pages,
+              'prev_text' => 'Newer <em>Posts</em>',
+              'next_text' => 'Older <em>Posts</em>'
+            ));
+
+          echo '</div>';
+
+        }
+       ?>
+
+<?php else: ?>
+
+  <p>There are no posts or pages here.</p>
+
+<?php endif; ?>
+
+      </div>  <!-- row end -->
+    </div> <!-- content-wrapper end -->
+
+    <?php get_sidebar(); ?>
+
+  </div> <!-- row end -->
+</div> <!-- blog-box end -->
+
 <?php get_footer(); ?>
