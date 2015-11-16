@@ -14,7 +14,36 @@
                 </form>
               </div>
             </div>
-          </div>  
+          </div> 
+
+          <div class="row">
+            <div class="wrapper-bg sidebar-post-box">
+              <h3>Categories</h3>
+              <ul class="category-list">
+                <?php
+                $categories = get_categories();
+                foreach ($categories as $category) {
+                  $cat_link = get_category_link( $category->term_id );
+                  echo "<li><a href='{$cat_link}' title='{$category->name} Tag' class='{$category->slug}'>{$category->name}</a></li>";
+                }
+                ?>
+                 <?php //wp_list_categories(); ?>
+              </ul>
+            </div>
+
+            <div class="wrapper-bg sidebar-post-box">
+              <h3>Tags</h3>
+              <ul class="post-tags">
+                <?php
+                $tags = get_tags();
+                foreach ( $tags as $tag ) {
+                  $tag_link = get_tag_link( $tag->term_id );
+                  echo "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>{$tag->name}</a></li>";
+                }
+                ?>
+              </ul>
+            </div>
+          </div>
           <div class="row">
             <div class="wrapper-bg sidebar-post-box">
               <div class="search-box">

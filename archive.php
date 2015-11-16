@@ -4,84 +4,71 @@
 	Template Name: Archive Page
 
 */
-
 get_header(); ?>
 
-<div class="row">
-  <div id="content-body">
-    <!-- Main Content -->
-    <section id="main-content">
+<div class="container-fluid blog-box">
+  <div class="row">
 
-<h2>Need help finding something?</h2>
+    <!-- Content Wrapper -->
+    <div class="col-sm-8 content-wrapper">
+      <div class="row">
 
-<p class="search-instructions">Use the search box below to filter by keyword. Or click on a Category or Tag button to filter by theme.</p>
+      <h2>Need help finding something?</h2>
 
-  <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
-    <label>
-      <input type="search" class="search-field" placeholder="Search this site" value="" name="s" title="Search" />
-    </label>
-  </form>
+      <p class="search-instructions">Use the search box below to filter by keyword. Or click on a Category or Tag button to filter by theme.</p>
 
-  <h2>Categories</h2>
-  <ul class="category-list">
-    <?php
-    $categories = get_categories();
-    foreach ($categories as $category) {
-      $cat_link = get_category_link( $category->term_id );
-      echo "<li><a href='{$cat_link}' title='{$category->name} Tag' class='{$category->slug}'>{$category->name}</a></li>";
-    }
-    ?>
-     <?php //wp_list_categories(); ?>
-  </ul>
+      <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
+        <label>
+          <input type="search" class="search-field" placeholder="Search this site" value="" name="s" title="Search" />
+        </label>
+      </form>
 
-<div class="archive-tags">
-  <h2>Tags</h2>
-  <ul class="post-tags">
-    <?php
-    $tags = get_tags();
-    foreach ( $tags as $tag ) {
-      $tag_link = get_tag_link( $tag->term_id );
-      echo "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>{$tag->name}</a></li>";
-    }
-    ?>
-  </ul>
-</div>
-<?php
-  $current_cat = single_cat_title("", false);
-  echo "<h2 class='cat-result'>Category: “{$current_cat}”</h2>";
-?>
-<?php
-  $current_tag = single_tag_title("", false);
-  echo "<h2 class='tag-result'>All posts tagged with: “{$current_tag}”</h2>";
-?>
+      <?php
+        $current_cat = single_cat_title("", false);
+        echo "<h2 class='cat-result'>Category: “{$current_cat}”</h2>";
+      ?>
+      <?php
+        $current_tag = single_tag_title("", false);
+        echo "<h2 class='tag-result'>All posts tagged with: “{$current_tag}”</h2>";
+      ?>
 
-<?php
+      <?php
 
-	if($pagename == 'archives') {
-    // default page state
-    // showtop 20 posts here...
-    query_posts('posts_per_page=20');
-  }
+      	if($pagename == 'archive') {
+          // default page state
+          // showtop 20 posts here...
+          query_posts('posts_per_page=20');
+        }
 
-?>
+      ?>
 
-<?php while(have_posts()) : the_post(); ?>
+      <?php while(have_posts()) : the_post(); ?>
 
-      <article class="post">
-        <header>
-          <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
-          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-        </header>
-        <figure class="featured-image">
-          <a href="<?php the_permalink(); ?>">
-            <img src="<?php the_field('square_featured_image'); ?>" alt="<?php the_title(); ?>" />
-          </a>
-        </figure>
-      </article>
+        <article class="col-md-6 post-box" itemscope itemtype="http://schema.org/Blog">
+          <div class="thumbnail">
+              <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+              <meta itemprop="image" content="<?php echo $url; ?>" />
+              <a href="<?php the_permalink(); ?>">
+                <figure class="feature-image">
+                  <?php the_post_thumbnail(); ?>
+                </figure>
+              </a>
+              <div class="caption">
+                <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
+                <h2 itemprop="name">
+                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h2>
+                <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
+                <p>
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                </p>
+              </div>
+          </div>    
+        </article>
 
-<?php endwhile; ?>
-    <?php
-        if ($pagename !== 'archives') {
+      <?php endwhile; ?>
+      <?php
+        if ($pagename !== 'archive') {
 
           global $wp_query;
 
@@ -107,13 +94,12 @@ get_header(); ?>
           }
         }
        ?>
-    </section><!-- Main Content End -->
+      </div>  <!-- row end -->
+    </div> <!-- content-wrapper end -->
 
-    <?php get_sidebar(); ?>
+    <?php get_sidebar( 'archive' ); ?>
 
-  </div>
-</div>
-
-
+  </div> <!-- row end -->
+</div> <!-- blog-box end -->
 
 <?php get_footer(); ?>
