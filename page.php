@@ -7,8 +7,18 @@
     <div class="col-sm-8 content-wrapper">
       <div class="row">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
         <article class="col-md-12 post-wrapper">
-	      <h1><?php the_title(); ?></h1>
+        <header>
+            <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+            <meta itemprop="image" content="<?php echo $url; ?>" />
+            <figure class="feature-image">
+              <?php the_post_thumbnail(); ?>
+            </figure>
+            <h1 itemprop="name">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h1>
+        </header>
           <?php the_content(); ?>
           
         </article>
