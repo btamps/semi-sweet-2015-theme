@@ -3,8 +3,8 @@
           <div class="row">
             <div class="wrapper-bg newsletter">
               <div class="inner">
-                <h3>Join the Newsletter</h3>  
-                <h4>Get special offers &amp; new releases straight to your inbox.</h4>
+                <h3>Subcribe to the Newsletter</h3>  
+                <h4>Get new blog &amp; new cookie cutter updates delivered to your inbox.</h4>
                 <form action="//semisweetdesigns.us12.list-manage.com/subscribe/post?u=fe76ad92bdd35d5808d870eb6&amp;id=d48439dd50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
                   <div class="form-group">
                     <label class="sr-only" for="exampleInputEmail3">Email Address</label>

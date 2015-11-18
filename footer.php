@@ -2,8 +2,8 @@
     <div class="container-fluid newsletter-box">
       <div class="row">
         <section class="col-md-5 newsletter-text">
-          <h2><i class="fa fa-paper-plane"></i> Stay Current</h2>
-          <p>Be the first to know about new products and blog posts.</p>
+          <h2>Stay in the Mix</h2>
+          <p>Subscribe to receive blog and store updates delivered straight to your inbox.</p>
           <form action="//semisweetdesigns.us12.list-manage.com/subscribe/post?u=fe76ad92bdd35d5808d870eb6&amp;id=d48439dd50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
             <div class="form-group">
               <label class="sr-only" for="mce-EMAIL">Email address</label>
