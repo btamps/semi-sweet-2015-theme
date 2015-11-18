@@ -894,7 +894,11 @@ h2.title {
   padding-bottom: 5px; }
 
 .search-box {
-  padding: 10px 0 20px 0; }
+  padding: 0 0 30px; }
+  .search-box .archive-message {
+    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-size: .95em;
+    margin: 0 0 .5em 0; }
 
 .sidebar-post {
   border-top: 1px solid #E6DDCC;

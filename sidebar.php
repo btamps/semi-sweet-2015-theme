@@ -18,12 +18,12 @@
           <div class="row">
             <div class="wrapper-bg sidebar-post-box">
               <div class="search-box">
+                    <p class="archive-message"><a href="archive">Visit Archive</a></p>
                 <form role="search" method="get" id="searchform" class="searchform form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                   <div>
                     <label class="sr-only" for="search">Search Blog</label>
                     <input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search Blog" />
                     <button type="submit" id="searchsubmit" class="btn"><i class="fa fa-search"></i></button>
-                    <p class="archive-message">Or visit the <a href="archive">archive</a></p>
                   </div>
                 </form>
               </div>
