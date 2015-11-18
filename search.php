@@ -5,81 +5,100 @@
 
 get_header(); ?>
 
-<div class="row">
-  <div id="content-body">
-    <!-- Main Content -->
-    <section id="main-content">
-    <h2>Need help finding something?</h2>
+<div class="container-fluid blog-box">
+  <div class="row">
 
-<p class="search-instructions">Use the search box below to filter by keyword. Or click on a Category or Tag button to filter by theme.</p>
+    <!-- Content Wrapper -->
+    <div class="col-sm-8 content-wrapper">
+      <div class="row">
+      <div class="archive-search-box">
+        <h1>Search Archive</h1>
 
-  <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
-    <label>
-      <input type="search" class="search-field" placeholder="Search this site" value="" name="s" title="Search" />
-    </label>
-  </form>
-
-    <h2>Categories</h2>
-    <ul class="category-list">
+        <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
+          <label for="search-input"><i class="fa fa-search"></i></label>
+          <input type="search" id="search-input" class="form-control search-field" placeholder="Search all posts" value="" name="s" title="Search" />
+        </form>
+      </div>
+      
+      <h2 class="page-title"><?php printf( __( 'Search Results for: “%s”', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
       <?php
-      $categories = get_categories();
-      foreach ($categories as $category) {
-        $cat_link = get_category_link( $category->term_id );
-        echo "<li><a href='{$cat_link}' title='{$category->name} Tag' class='{$category->slug}'>{$category->name}</a></li>";
-      }
+        $current_cat = single_cat_title("", false);
+        echo "<h2 class='cat-result'>Category: “{$current_cat}”</h2>";
       ?>
-       <?php //wp_list_categories(); ?>
-    </ul>
-
-<div class="archive-tags">
-    <h2>Tags</h2>
-    <ul class="post-tags">
       <?php
-      $tags = get_tags();
-      foreach ( $tags as $tag ) {
-        $tag_link = get_tag_link( $tag->term_id );
-        echo "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>{$tag->name}</a></li>";
-      }
+        $current_tag = single_tag_title("", false);
+        echo "<h2 class='tag-result'>All posts tagged with: “{$current_tag}”</h2>";
       ?>
-    </ul>
-</div>
-<h2 class="page-title"><?php printf( __( 'Search Results for: “%s”', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 
-<?php while(have_posts()) : the_post(); ?>
+      <?php
 
-      <article class="post excerpt">
-        <header>
-          <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-          <div class="subhead">
-            <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
-            <div class="header-comments">
-                <?php
-                  comments_popup_link('<span class="comment-count">&nbsp;</span> No comments', '<span class="comment-count">1</span> Comment', '<span class="comment-count">%</span> Comments');
-                ?>
+        if($pagename == 'archive') {
+          // default page state
+          // showtop 20 posts here...
+          query_posts('posts_per_page=20');
+        }
+
+      ?>
+      </div>
+      <div class="row">
+      <?php while(have_posts()) : the_post(); ?>
+
+        <article class="col-md-6 post-box" itemscope itemtype="http://schema.org/Blog">
+          <div class="thumbnail">
+              <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+              <meta itemprop="image" content="<?php echo $url; ?>" />
+              <a href="<?php the_permalink(); ?>">
+                <figure class="feature-image">
+                  <?php the_post_thumbnail(); ?>
+                </figure>
+              </a>
+              <div class="caption">
+                <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
+                <h2 itemprop="name">
+                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h2>
+                <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
+                <p>
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                </p>
               </div>
-          </div>
-        </header>
+          </div>    
+        </article>
 
-        <figure class="featured-image">
-          <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail(); ?>
-          </a>
-        </figure>
-       <?php the_excerpt(); ?>
-       <p><a href="<?php the_permalink(); ?>" class="more-link">Continue reading</a></p>
+      <?php endwhile; ?>
+      <?php
+        if ($pagename !== 'archive') {
 
-      </article>
+          global $wp_query;
 
-<?php endwhile; ?>
+          $total_pages = $wp_query->max_num_pages;
 
+          if ($total_pages > 1){
 
-    </section><!-- Main Content End -->
+            $current_page = max(1, get_query_var('paged'));
 
-    <?php get_sidebar(); ?>
+            echo '<div class="page_nav">';
 
-  </div>
-</div>
+            echo paginate_links(array(
+                'base' => get_pagenum_link(1) . '%_%',
+                'format' => '/page/%#%',
+                'current' => $current_page,
+                'total' => $total_pages,
+                'prev_text' => 'Newer <em>Posts</em>',
+                'next_text' => 'Older <em>Posts</em>'
+              ));
 
+            echo '</div>';
 
+          }
+        }
+       ?>
+      </div>  <!-- row end -->
+    </div> <!-- content-wrapper end -->
+
+    <?php get_sidebar( 'archive' ); ?>
+
+  </div> <!-- row end -->
+</div> <!-- blog-box end -->
 
 <?php get_footer(); ?>

@@ -23,6 +23,7 @@
                     <label class="sr-only" for="search">Search Blog</label>
                     <input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search Blog" />
                     <button type="submit" id="searchsubmit" class="btn"><i class="fa fa-search"></i></button>
+                    <p class="archive-message">Or visit the <a href="archive">archive</a></p>
                   </div>
                 </form>
               </div>
