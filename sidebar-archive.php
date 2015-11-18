@@ -19,7 +19,7 @@
           <div class="row">
             <div class="wrapper-bg sidebar-post-box">
               <h3>Categories</h3>
-              <ul class="category-list">
+              <ul class="list-category">
                 <?php
                 $categories = get_categories();
                 foreach ($categories as $category) {
@@ -33,7 +33,7 @@
 
             <div class="wrapper-bg sidebar-post-box">
               <h3>Tags</h3>
-              <ul class="post-tags">
+              <ul class="list-tags">
                 <?php
                 $tags = get_tags();
                 foreach ( $tags as $tag ) {

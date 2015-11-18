@@ -12,17 +12,16 @@ get_header(); ?>
     <!-- Content Wrapper -->
     <div class="col-sm-8 content-wrapper">
       <div class="row">
+      <div class="archive-search-box">
+        <h1>Search Archive</h1>
 
-      <h2>Need help finding something?</h2>
-
-      <p class="search-instructions">Use the search box below to filter by keyword. Or click on a Category or Tag button to filter by theme.</p>
-
-      <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
-        <label>
-          <input type="search" class="search-field" placeholder="Search this site" value="" name="s" title="Search" />
-        </label>
-      </form>
-
+        <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
+          <label for="search-input"><i class="fa fa-search"></i></label>
+          <input type="search" id="search-input" class="form-control search-field" placeholder="Search all posts" value="" name="s" title="Search" />
+        </form>
+      </div>
+      
+      <h2 class="recent-result">Recent posts:</h2>
       <?php
         $current_cat = single_cat_title("", false);
         echo "<h2 class='cat-result'>Category: “{$current_cat}”</h2>";
@@ -41,7 +40,8 @@ get_header(); ?>
         }
 
       ?>
-
+      </div>
+      <div class="row">
       <?php while(have_posts()) : the_post(); ?>
 
         <article class="col-md-6 post-box" itemscope itemtype="http://schema.org/Blog">

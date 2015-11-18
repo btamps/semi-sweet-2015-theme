@@ -259,22 +259,22 @@ figure {
     background: #53a3c6;
     color: white; }
     .form-inline button:hover {
-      background: #ef3b2e;
+      background: #f14d41;
       color: white; }
 
 .form-control::-webkit-input-placeholder {
-  color: #ccc; }
+  color: #99897D; }
 
 .form-control:-moz-placeholder {
   /* Firefox 18- */
-  color: #ccc; }
+  color: #99897D; }
 
 .form-control::-moz-placeholder {
   /* Firefox 19+ */
-  color: #ccc; }
+  color: #99897D; }
 
 .form-control:-ms-input-placeholder {
-  color: #ccc; }
+  color: #99897D; }
 
 .list-step {
   margin-top: 2em;
@@ -300,6 +300,24 @@ figure {
     margin-right: 5px; }
   .list-step h4 {
     position: relative; }
+
+.list-category, .list-tags {
+  padding: 20px 0 0 0;
+  border-top: 1px solid #E6DDCC; }
+  .list-category li, .list-tags li {
+    display: inline-block;
+    margin: 0 14px 14px 0; }
+    .list-category li a, .list-tags li a {
+      text-decoration: none;
+      border: 1px solid #ef3b2e;
+      font-size: .9em;
+      padding: 3px 10px;
+      border-radius: 4px;
+      display: block;
+      text-transform: capitalize; }
+      .list-category li a:hover, .list-tags li a:hover {
+        background: #f14d41;
+        color: white; }
 
 h2.title {
   text-align: center;
@@ -566,7 +584,7 @@ h2.title {
   .content-wrapper .feature-image img {
     width: 100%; }
 
-.post-wrapper, .woocommerce-cart .woocommerce > form, .woocommerce-checkout .woocommerce-billing-fields,
+.post-wrapper, .archive-search-box, .woocommerce-cart .woocommerce > form, .woocommerce-checkout .woocommerce-billing-fields,
 .woocommerce-checkout .woocommerce-shipping-fields,
 .woocommerce-checkout .woocommerce-checkout-review-order, .woocommerce-message, .cart-collaterals {
   background: white;
@@ -575,32 +593,32 @@ h2.title {
   padding-right: 30px;
   padding-bottom: 30px; }
 
-.post-wrapper header, .woocommerce-cart .woocommerce > form header, .woocommerce-checkout .woocommerce-billing-fields header,
+.post-wrapper header, .archive-search-box header, .woocommerce-cart .woocommerce > form header, .woocommerce-checkout .woocommerce-billing-fields header,
 .woocommerce-checkout .woocommerce-shipping-fields header,
 .woocommerce-checkout .woocommerce-checkout-review-order header, .woocommerce-message header, .cart-collaterals header {
   margin-bottom: 1em;
   border-bottom: 1px solid #E6DDCC;
   padding-bottom: 10px;
   margin-bottom: 2em; }
-  .post-wrapper header figure, .woocommerce-cart .woocommerce > form header figure, .woocommerce-checkout .woocommerce-billing-fields header figure,
+  .post-wrapper header figure, .archive-search-box header figure, .woocommerce-cart .woocommerce > form header figure, .woocommerce-checkout .woocommerce-billing-fields header figure,
   .woocommerce-checkout .woocommerce-shipping-fields header figure,
   .woocommerce-checkout .woocommerce-checkout-review-order header figure, .woocommerce-message header figure, .cart-collaterals header figure {
     margin-left: -30px;
     margin-right: -30px; }
-  .post-wrapper header h1 a, .woocommerce-cart .woocommerce > form header h1 a, .woocommerce-checkout .woocommerce-billing-fields header h1 a,
+  .post-wrapper header h1 a, .archive-search-box header h1 a, .woocommerce-cart .woocommerce > form header h1 a, .woocommerce-checkout .woocommerce-billing-fields header h1 a,
   .woocommerce-checkout .woocommerce-shipping-fields header h1 a,
-  .woocommerce-checkout .woocommerce-checkout-review-order header h1 a, .woocommerce-message header h1 a, .cart-collaterals header h1 a, .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-checkout .woocommerce-billing-fields header p,
+  .woocommerce-checkout .woocommerce-checkout-review-order header h1 a, .woocommerce-message header h1 a, .cart-collaterals header h1 a, .post-wrapper header p, .archive-search-box header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-checkout .woocommerce-billing-fields header p,
   .woocommerce-checkout .woocommerce-shipping-fields header p,
   .woocommerce-checkout .woocommerce-checkout-review-order header p, .woocommerce-message header p, .cart-collaterals header p {
     padding: 0;
     color: #524A43;
     font-family: "Source Sans Pro", helvetica, sans-serif;
     display: inline-block; }
-  .post-wrapper header h1 a:hover, .woocommerce-cart .woocommerce > form header h1 a:hover, .woocommerce-checkout .woocommerce-billing-fields header h1 a:hover,
+  .post-wrapper header h1 a:hover, .archive-search-box header h1 a:hover, .woocommerce-cart .woocommerce > form header h1 a:hover, .woocommerce-checkout .woocommerce-billing-fields header h1 a:hover,
   .woocommerce-checkout .woocommerce-shipping-fields header h1 a:hover,
   .woocommerce-checkout .woocommerce-checkout-review-order header h1 a:hover, .woocommerce-message header h1 a:hover, .cart-collaterals header h1 a:hover {
     color: #53a3c6; }
-  .post-wrapper header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-checkout .woocommerce-billing-fields header p,
+  .post-wrapper header p, .archive-search-box header p, .woocommerce-cart .woocommerce > form header p, .woocommerce-checkout .woocommerce-billing-fields header p,
   .woocommerce-checkout .woocommerce-shipping-fields header p,
   .woocommerce-checkout .woocommerce-checkout-review-order header p, .woocommerce-message header p, .cart-collaterals header p {
     color: #807369;
@@ -630,23 +648,55 @@ h2.title {
   font-size: .9em;
   color: #99897D; }
 
-.blog .blog-box {
+.blog .blog-box, .page-template-archive .blog-box, .archive .blog-box {
   padding-top: 1em; }
-.blog .thumbnail > a figure {
+.blog .thumbnail > a figure, .page-template-archive .thumbnail > a figure, .archive .thumbnail > a figure {
   margin-bottom: 0; }
-.blog .thumbnail h2 {
+.blog .thumbnail h2, .page-template-archive .thumbnail h2, .archive .thumbnail h2 {
   margin: .2em 0 .5em; }
-  .blog .thumbnail h2 a {
+  .blog .thumbnail h2 a, .page-template-archive .thumbnail h2 a, .archive .thumbnail h2 a {
     color: #524A43;
     font-size: 1.1em;
     line-height: 1.1em;
     font-weight: 700;
     display: inline-block; }
-.blog .btn-more {
+.blog .btn-more, .page-template-archive .btn-more, .archive .btn-more {
   border: 1px solid #ef3b2e; }
-  .blog .btn-more:hover {
-    background: #ef3b2e;
+  .blog .btn-more:hover, .page-template-archive .btn-more:hover, .archive .btn-more:hover {
+    background: #f14d41;
     color: white; }
+
+.page-template-archive .search-field, .archive .search-field {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  font-size: 1.1em;
+  height: auto; }
+  .page-template-archive .search-field:before, .archive .search-field:before {
+    content: "<i class=" fa fa-search "></i>";
+    display: block; }
+.page-template-archive h2, .archive h2 {
+  margin: 1em 0; }
+
+.page-template-archive .cat-result, .page-template-archive .tag-result {
+  display: none; }
+
+.archive.category .tag-result, .archive.category .recent-result {
+  display: none; }
+.archive.tag .cat-result, .archive.tag .recent-result {
+  display: none; }
+
+.archive-search-box {
+  padding-top: 1.5em;
+  margin-bottom: 2em; }
+  .archive-search-box h1 {
+    margin: 0 0 .45em; }
+  .archive-search-box .search-form {
+    position: relative; }
+    .archive-search-box .search-form label {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 1.1em; }
 
 .commentlist {
   list-style: none;
@@ -779,12 +829,12 @@ h2.title {
     padding-left: 15px;
     padding-right: 45px; }
 
-  .post-wrapper header p.comment-count, .woocommerce-cart .woocommerce > form header p.comment-count, .woocommerce-checkout .woocommerce-billing-fields header p.comment-count,
+  .post-wrapper header p.comment-count, .archive-search-box header p.comment-count, .woocommerce-cart .woocommerce > form header p.comment-count, .woocommerce-checkout .woocommerce-billing-fields header p.comment-count,
   .woocommerce-checkout .woocommerce-shipping-fields header p.comment-count,
   .woocommerce-checkout .woocommerce-checkout-review-order header p.comment-count, .woocommerce-message header p.comment-count, .cart-collaterals header p.comment-count {
     float: right; }
 
-  .blog .blog-box {
+  .blog .blog-box, .page-template-archive .blog-box, .archive .blog-box, .page-template-archive .blog-box {
     padding-top: 0; }
 
   .post-box {
@@ -818,7 +868,14 @@ h2.title {
   .post-box:nth-child(even) {
     padding-right: 15px; }
   .post-box:first-child {
-    padding: 0; } }
+    padding: 0; }
+
+  .page-template-archive .post-box:nth-child(odd), .archive .post-box:nth-child(odd) {
+    padding-right: 15px !important;
+    padding-left: 0 !important; }
+  .page-template-archive .post-box:nth-child(even), .archive .post-box:nth-child(even) {
+    padding-left: 15px;
+    padding-right: 0; } }
 .newsletter {
   margin-bottom: 30px;
   background-image: repeating-linear-gradient(135deg, #f3685e 0px, #f3685e 30px, transparent 30px, transparent 50px, #53a3c6 50px, #53a3c6 80px, transparent 80px, transparent 100px);
@@ -1017,12 +1074,13 @@ h2.title {
 .woocommerce-checkout .content-wrapper {
   width: 100%;
   padding-right: 15px; }
-  .woocommerce-cart .content-wrapper article.post-wrapper, .woocommerce-cart .content-wrapper .woocommerce-checkout article.woocommerce-billing-fields, .woocommerce-checkout .woocommerce-cart .content-wrapper article.woocommerce-billing-fields,
+  .woocommerce-cart .content-wrapper article.post-wrapper, .woocommerce-cart .content-wrapper article.archive-search-box, .woocommerce-cart .content-wrapper .woocommerce-checkout article.woocommerce-billing-fields, .woocommerce-checkout .woocommerce-cart .content-wrapper article.woocommerce-billing-fields,
   .woocommerce-cart .content-wrapper .woocommerce-checkout article.woocommerce-shipping-fields,
   .woocommerce-checkout .woocommerce-cart .content-wrapper article.woocommerce-shipping-fields,
   .woocommerce-cart .content-wrapper .woocommerce-checkout article.woocommerce-checkout-review-order,
   .woocommerce-checkout .woocommerce-cart .content-wrapper article.woocommerce-checkout-review-order, .woocommerce-cart .content-wrapper article.woocommerce-message, .woocommerce-cart .content-wrapper article.cart-collaterals,
   .woocommerce-checkout .content-wrapper article.post-wrapper,
+  .woocommerce-checkout .content-wrapper article.archive-search-box,
   .woocommerce-checkout .content-wrapper article.woocommerce-billing-fields,
   .woocommerce-checkout .content-wrapper article.woocommerce-shipping-fields,
   .woocommerce-checkout .content-wrapper article.woocommerce-checkout-review-order,
