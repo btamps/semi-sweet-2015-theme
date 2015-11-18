@@ -52,7 +52,7 @@ Template Name: Front Page
 
         <?php
         global $post;
-        $args = array( 'posts_per_page' => 3, 'offset'=> 1, 'category' => 1 );
+        $args = array( 'posts_per_page' => 3, 'offset'=> 1 );
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : 
           setup_postdata( $post ); ?>      

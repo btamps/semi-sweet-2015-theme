@@ -624,6 +624,9 @@ h2.title {
     color: #807369;
     font-size: .95em; }
 
+.comment-count {
+  margin-bottom: 0; }
+
 .content-wrapper .embed-container {
   margin-bottom: 2em; }
 
@@ -832,7 +835,8 @@ h2.title {
   .post-wrapper header p.comment-count, .archive-search-box header p.comment-count, .woocommerce-cart .woocommerce > form header p.comment-count, .woocommerce-checkout .woocommerce-billing-fields header p.comment-count,
   .woocommerce-checkout .woocommerce-shipping-fields header p.comment-count,
   .woocommerce-checkout .woocommerce-checkout-review-order header p.comment-count, .woocommerce-message header p.comment-count, .cart-collaterals header p.comment-count {
-    float: right; }
+    float: right;
+    display: inline-block; }
 
   .blog .blog-box, .page-template-archive .blog-box, .archive .blog-box, .search-results .blog-box, .page-template-archive .blog-box {
     padding-top: 0; }
@@ -863,12 +867,26 @@ h2.title {
     margin-left: 0;
     margin-right: 0; } }
 @media (min-width: 1000px) {
+  .post-wrapper, .archive-search-box, .woocommerce-cart .woocommerce > form, .woocommerce-checkout .woocommerce-billing-fields,
+  .woocommerce-checkout .woocommerce-shipping-fields,
+  .woocommerce-checkout .woocommerce-checkout-review-order, .woocommerce-message, .cart-collaterals {
+    padding-left: 50px;
+    padding-right: 50px; }
+    .post-wrapper figure.feature-image, .archive-search-box figure.feature-image, .woocommerce-cart .woocommerce > form figure.feature-image, .woocommerce-checkout .woocommerce-billing-fields figure.feature-image,
+    .woocommerce-checkout .woocommerce-shipping-fields figure.feature-image,
+    .woocommerce-checkout .woocommerce-checkout-review-order figure.feature-image, .woocommerce-message figure.feature-image, .cart-collaterals figure.feature-image {
+      margin-bottom: 3em;
+      margin-left: -50px !important;
+      margin-right: -50px !important; }
+
   .post-box:nth-child(odd) {
     padding-left: 15px; }
   .post-box:nth-child(even) {
     padding-right: 15px; }
   .post-box:first-child {
     padding: 0; }
+    .post-box:first-child .caption {
+      padding: 40px 50px 30px; }
 
   .page-template-archive .post-box:nth-child(odd), .archive .post-box:nth-child(odd), .search-results .post-box:nth-child(odd) {
     padding-right: 15px !important;
