@@ -1,19 +1,5 @@
   <?php wp_footer() ?>
-    <div class="container-fluid newsletter-box">
-      <div class="row">
-        <section class="col-md-5 newsletter-text">
-          <h2><i class="fa fa-paper-plane"></i> Stay Current</h2>
-          <p>Be the first to know about new products and blog posts.</p>
-          <form action="//semisweetdesigns.us12.list-manage.com/subscribe/post?u=fe76ad92bdd35d5808d870eb6&amp;id=d48439dd50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
-            <div class="form-group">
-              <label class="sr-only" for="mce-EMAIL">Email address</label>
-              <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Email Address" required>
-            </div>
-            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Join</button>
-          </form>          
-        </section>
-      </div>
-    </div>
+    <?php get_template_part( 'newsletter', 'footer' ); ?>
 
     <div class="container-fluid footer">
       <div class="row">
@@ -29,13 +15,13 @@
                 echo strip_tags(wp_nav_menu( $args ), '<li><a>');
 
               ?>
+              <li><a href="archive">Archive</a></li>
               <li><a href="/disclosure">Disclosure</a></li>
-              <li><a href="archives.html">Archives</a></li>
               <li><a href="/about-me/#faqs">FAQs</a></li>
             </ul>
         </div>
         <div class="col-md-4">
-          <h3>Stay in the mix</h3>
+          <h3>Let’s Be Social</h3>
           <ul class="social-links">
             <li><a href="https://twitter.com/SemiSweetMike"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://www.facebook.com/semisweetdesigns"><i class="fa fa-facebook"></i></a></li>

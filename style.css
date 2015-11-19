@@ -361,9 +361,13 @@ h2.title {
   margin-left: -15px;
   margin-right: -15px; }
 
+.caption .date {
+  margin-bottom: 10px;
+  display: block; }
 .caption h3 {
   margin-bottom: .5em;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1.2; }
   .caption h3 a {
     font-size: 1.1em;
     color: #524A43; }
@@ -374,7 +378,7 @@ h2.title {
   border: 0;
   margin-bottom: 40px; }
   .thumbnail .caption {
-    padding: 20px; }
+    padding: 30px; }
 
 .blog-box {
   background: #F8F6F2;
@@ -412,14 +416,17 @@ h2.title {
   background: #53a3c6; }
   .newsletter-box h2 {
     font-weight: 600;
-    color: white; }
+    color: #524A43;
+    margin-bottom: .25em;
+    font-size: 1.75em; }
     .newsletter-box h2 i {
       color: #b1d7e7; }
   .newsletter-box p {
     font-family: "Source Sans Pro", helvetica, sans-serif;
-    color: white; }
+    color: #eee;
+    font-size: 1.2em; }
   .newsletter-box .newsletter-text {
-    margin: 50px auto 60px;
+    margin: 0 auto 20px;
     text-align: center;
     float: none; }
   .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce .button, .woocommerce .newsletter-box .form-inline .button, .newsletter-box .form-inline .woocommerce-checkout input#place_order, .woocommerce-checkout .newsletter-box .form-inline input#place_order {
@@ -427,6 +434,10 @@ h2.title {
   .newsletter-box .form-inline input {
     min-width: 300px;
     border: 0; }
+  .newsletter-box .no-joke {
+    text-align: center;
+    font-size: .9em;
+    margin: 1em 0 3em; }
 
 @media (min-width: 767px) {
   h2.title {
@@ -659,7 +670,7 @@ h2.title {
   margin: .2em 0 .5em; }
   .blog .thumbnail h2 a, .page-template-archive .thumbnail h2 a, .archive .thumbnail h2 a, .search-results .thumbnail h2 a {
     color: #524A43;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.1em;
     font-weight: 700;
     display: inline-block; }
@@ -679,6 +690,11 @@ h2.title {
     display: block; }
 .page-template-archive h2, .archive h2, .search-results h2 {
   margin: 1em 0; }
+
+.page-template-archive .blog-box {
+  padding-top: 0; }
+.page-template-archive .recent-result {
+  margin-left: 20px; }
 
 .page-template-archive .cat-result, .page-template-archive .tag-result, .search-results .cat-result, .search-results .tag-result {
   display: none; }
@@ -841,6 +857,13 @@ h2.title {
   .blog .blog-box, .page-template-archive .blog-box, .archive .blog-box, .search-results .blog-box, .page-template-archive .blog-box {
     padding-top: 0; }
 
+  .page-template-archive .recent-result {
+    margin-left: 0; }
+  .page-template-archive .post-box:first-child .caption {
+    padding: 30px; }
+    .page-template-archive .post-box:first-child .caption h2 {
+      font-size: 1.647em; }
+
   .post-box {
     padding: 0; }
     .post-box .thumbnail {
@@ -865,8 +888,15 @@ h2.title {
 
   .sidebar {
     margin-left: 0;
-    margin-right: 0; } }
-@media (min-width: 1000px) {
+    margin-right: 0; }
+
+  .post-box:first-child {
+    padding: 0 !important; }
+    .post-box:first-child h2 {
+      font-size: 2em; }
+    .post-box:first-child .caption {
+      padding: 40px 50px 30px; } }
+@media (min-width: 991px) {
   .post-wrapper, .archive-search-box, .woocommerce-cart .woocommerce > form, .woocommerce-checkout .woocommerce-billing-fields,
   .woocommerce-checkout .woocommerce-shipping-fields,
   .woocommerce-checkout .woocommerce-checkout-review-order, .woocommerce-message, .cart-collaterals {
@@ -883,10 +913,6 @@ h2.title {
     padding-left: 15px; }
   .post-box:nth-child(even) {
     padding-right: 15px; }
-  .post-box:first-child {
-    padding: 0; }
-    .post-box:first-child .caption {
-      padding: 40px 50px 30px; }
 
   .page-template-archive .post-box:nth-child(odd), .archive .post-box:nth-child(odd), .search-results .post-box:nth-child(odd) {
     padding-right: 15px !important;
@@ -941,7 +967,7 @@ h2.title {
   margin: 0;
   color: #524A43; }
 
-.row-ad {
+.ad-box {
   overflow: hidden; }
 
 .ad-300x250 {
@@ -972,6 +998,8 @@ h2.title {
     right: 0;
     margin-bottom: 10px; }
 
+.woocommerce form {
+  padding-top: 30px; }
 .woocommerce .button {
   display: block;
   border: 1px solid #ef3b2e;

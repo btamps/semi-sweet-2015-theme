@@ -16,13 +16,13 @@
                 echo strip_tags(wp_nav_menu( $args ), '<li><a>');
 
               ?>
+              <li><a href="archive">Archive</a></li>
               <li><a href="/disclosure">Disclosure</a></li>
-              <li><a href="archives.html">Archives</a></li>
               <li><a href="/about-me/#faqs">FAQs</a></li>
             </ul>
         </div>
         <div class="col-md-4">
-          <h3>Stay in the mix</h3>
+          <h3>Let’s Be Social</h3>
           <ul class="social-links">
             <li><a href="https://twitter.com/SemiSweetMike"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://www.facebook.com/semisweetdesigns"><i class="fa fa-facebook"></i></a></li>

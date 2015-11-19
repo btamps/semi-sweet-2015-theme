@@ -10,7 +10,7 @@
                     <label class="sr-only" for="mce-EMAIL">Email address</label>
                     <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Your email address" required>
                 </div>
-                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Subcribe</button>
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">Subscribe</button>
             </form>
 
             <p class="no-joke">It's free. No spam. Unsubscribe whenever you want.</p>   
