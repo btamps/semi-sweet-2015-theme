@@ -109,7 +109,7 @@ Template Name: My Blog
         </div> <!-- row end -->
     </div> <!-- content-wrapper end -->
 
-    <?php get_sidebar(); ?>
+    <?php get_sidebar( 'home' ); ?>
 
   </div> <!-- row end -->
 </div> <!-- blog-box end -->
