@@ -11,7 +11,7 @@ Template Name: Front Page
         <div class="hero-message-box">
           <h4>New In Shop</h4>
           <h1>Cookie Cutters</h1>
-          <p>The new shop is here! We have 5 custom cookie cutter designs now available.</p>
+          <p>The new shop is open for business! Check out all the new custom cookie cutter designs available now.</p>
           <p><a class="btn btn-primary btn-lg" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
         </div>
       </div>
