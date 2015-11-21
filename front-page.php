@@ -42,7 +42,7 @@ Template Name: Front Page
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
               <p>
-                <a href="<?php the_permalink(); ?>" Class="btn-more">Read More &raquo;</a>      
+                <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
               </p>
               </div>
             </div>
@@ -68,7 +68,7 @@ Template Name: Front Page
               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <?php the_excerpt(); ?>
             <p>
-              <a href="<?php the_permalink(); ?>" class="btn-more">Read More &raquo;</a>      
+              <a href="<?php the_permalink(); ?>" class="btn btn-more">Read More &raquo;</a>      
             </p>
             </div>
           </div>
