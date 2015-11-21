@@ -16,7 +16,7 @@
                 echo strip_tags(wp_nav_menu( $args ), '<li><a>');
 
               ?>
-              <li><a href="archive">Archive</a></li>
+              <li><a href="/archive">Archive</a></li>
               <li><a href="/disclosure">Disclosure</a></li>
               <li><a href="/about-me/#faqs">FAQs</a></li>
             </ul>
@@ -24,12 +24,12 @@
         <div class="col-md-4">
           <h3>Let’s Be Social</h3>
           <ul class="social-links">
-            <li><a href="https://twitter.com/SemiSweetMike"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/semisweetdesigns"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="http://instagram.com/semisweetmike/"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="http://pinterest.com/SemiSweetMike"><i class="fa fa-pinterest-p"></i></a></li>
-            <li><a href="https://plus.google.com/111747040285481172891"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="http://feeds.feedburner.com/semisweetdesigns/nxJT"><i class="fa fa-rss"></i></a></li>
+            <li><a href="//twitter.com/SemiSweetMike"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="//www.facebook.com/semisweetdesigns"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="//instagram.com/semisweetmike/"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="//pinterest.com/SemiSweetMike"><i class="fa fa-pinterest-p"></i></a></li>
+            <li><a href="//plus.google.com/111747040285481172891"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="//feeds.feedburner.com/semisweetdesigns/nxJT"><i class="fa fa-rss"></i></a></li>
           </ul>      
         </div>
       </div>
