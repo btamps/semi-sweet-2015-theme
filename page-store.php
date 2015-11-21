@@ -1,6 +1,6 @@
 <?php 
 /*
- * Template Name: Cart Page
+ * Template Name: Store Page
  * Description: Page template for woocommerce cart page
  */
 

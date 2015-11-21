@@ -1108,13 +1108,10 @@ h2.title {
 .woocommerce-checkout .content-wrapper {
   width: 100%;
   padding-right: 15px; }
-  .woocommerce-cart .content-wrapper article.post-wrapper,
-  .woocommerce-checkout .content-wrapper article.post-wrapper {
+  .woocommerce-cart .content-wrapper .post-wrapper,
+  .woocommerce-checkout .content-wrapper .post-wrapper {
     background: none;
     box-shadow: none; }
-.woocommerce-cart .sidebar,
-.woocommerce-checkout .sidebar {
-  display: none; }
 
 .woocommerce-cart .shop_table {
   width: 100%;
