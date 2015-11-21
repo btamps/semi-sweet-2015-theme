@@ -46,6 +46,8 @@ function ss_add_checkout_button() {
   endif;
 }
 
+// Removes p tags from the content
+remove_filter( 'the_content', 'wpautop' );
 
 // Removes pages from search results
 function SearchFilter($query) {

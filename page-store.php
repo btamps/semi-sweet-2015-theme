@@ -18,6 +18,7 @@ get_header(); ?>
         <header>
             <h1 itemprop="name"><?php the_title(); ?></h1>
         </header>
+          <?php remove_filter (’the_content’, ‘wpautop’); ?>
           <?php the_content(); ?>
           
         </article>
