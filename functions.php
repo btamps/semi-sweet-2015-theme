@@ -46,6 +46,7 @@ function ss_add_checkout_button() {
   endif;
 }
 
+
 // Removes pages from search results
 function SearchFilter($query) {
 if ($query->is_search) {
