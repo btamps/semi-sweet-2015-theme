@@ -29,7 +29,7 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 )
 // Woocommerce - removed single product rating
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 
-// Woocommerce - removed single product rating
+// Woocommerce - removed single product tabs
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
 // Woocommerce - removed single product rating
