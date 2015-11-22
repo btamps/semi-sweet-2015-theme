@@ -12,7 +12,7 @@
 }
    ?>" />
 
-    <script src="//use.typekit.net/ewa7xsh.js"></script>
+    <script src="https://use.typekit.net/ewa7xsh.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <title>
     <?php
