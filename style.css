@@ -622,7 +622,7 @@ h2.title {
 .woocommerce-checkout form.login,
 .woocommerce-checkout form.register, .woocommerce-checkout .woocommerce-billing-fields,
 .woocommerce-checkout .woocommerce-shipping-fields,
-.woocommerce-checkout .woocommerce-checkout-review-order, .woocommerce-order-received .woocommerce, .woocommerce-message, .cart-collaterals {
+.woocommerce-checkout .woocommerce-checkout-review-order, .woocommerce-order-received .woocommerce, .woocommerce-message, .cart-collaterals .cart_totals {
   background: white;
   box-shadow: 0 0 2px #ccc;
   padding: 30px; }
@@ -1080,12 +1080,14 @@ h2.title {
       width: 100%;
       margin-bottom: .5em; }
   .products h3 {
-    float: left;
     display: block;
-    font-size: .95em; }
+    font-size: .95em;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0 !important;
+    padding: 0 !important; }
   .products .price {
-    float: right;
-    display: block; }
+    text-align: center; }
     .products .price del {
       display: none; }
     .products .price ins {
@@ -1166,7 +1168,10 @@ h2.title {
 
 .woocommerce-cart .shop_table {
   width: 100%;
-  font-size: .85em; }
+  font-size: .85em;
+  margin-bottom: 0 !important;
+  border: none !important;
+  border-collapse: collapse !important; }
   .woocommerce-cart .shop_table thead th {
     padding: 2rem 0;
     font-weight: 600;
@@ -1188,7 +1193,7 @@ h2.title {
     .woocommerce-cart .shop_table .product-remove a {
       display: inline-block;
       background: #99897D;
-      color: white;
+      color: white !important;
       width: 14px;
       height: 14px;
       line-height: 14px;
@@ -1217,7 +1222,7 @@ h2.title {
       margin-bottom: 10px;
       font-family: "Source Sans Pro", helvetica, sans-serif;
       float: left;
-      width: 150px; }
+      width: 120px !important; }
     .woocommerce-cart .shop_table .coupon input[type="submit"] {
       float: left;
       margin: 0;
@@ -1357,7 +1362,6 @@ h2.title {
 
 .cart-collaterals {
   font-size: .85em;
-  float: right;
   margin: 3rem 0; }
   .cart-collaterals h2 {
     font-weight: 700;
@@ -1419,10 +1423,10 @@ h2.title {
       width: 50%; }
     .woocommerce-cart .shop_table .action-group {
       width: auto;
-      float: right; }
+      float: right;
+      margin-bottom: 0; }
       .woocommerce-cart .shop_table .action-group .btn-checkout {
         display: inline-block;
         margin: 0 0 0 1rem; }
   .woocommerce-cart .cart-collaterals {
-    width: 50%;
     font-size: 1em; } }
