@@ -42,6 +42,7 @@
       ga('create', 'UA-28123361-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <?php wp_head(); ?> 
   </head>
 
 <body <?php body_class($class); ?>>
