@@ -12,21 +12,13 @@
 }
    ?>" />
 
-    <script src="https://use.typekit.net/ewa7xsh.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    
     <title>
     <?php
       wp_title( '–', true, 'right' );
       //bloginfo( 'name' );
     ?>
    </title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/bootstrap.min.css">
-
-    <!-- My Styles -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="icon" type="image/png" href="//www.semisweetdesigns.com/wp-content/uploads/2013/08/favicon.ico" />
     <!--[if lt IE 9]>
@@ -42,7 +34,18 @@
       ga('create', 'UA-28123361-1', 'auto');
       ga('send', 'pageview');
     </script>
-    <?php wp_head(); ?> 
+    
+    <!-- TypeKit -->
+    <script src="https://use.typekit.net/ewa7xsh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/bootstrap.min.css">
+
+    <!-- My Styles -->
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <?php wp_head(); ?>
   </head>
 
 <body <?php body_class($class); ?>>
