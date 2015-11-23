@@ -35,6 +35,13 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 // Woocommerce - removed single product rating
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
+// Change number or products per row to 2
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+  function loop_columns() {
+    return 2; // 2 products per row
+  }
+}
 
 // Woocommerce - add checkout button
 add_action('ss-checkout-button', 'ss_add_checkout_button');

@@ -1063,63 +1063,56 @@ h2.title {
   font-weight: 600;
   border: 1px solid #ccc; }
 
-.products {
+.woocommerce ul.products {
   padding: 0;
   display: block;
   width: 100%;
   overflow: hidden; }
-  .products li {
+  .woocommerce ul.products li.product {
     position: relative;
-    margin: 0 0 3em 0;
-    padding-left: 0;
-    padding-right: 0; }
-    .products li a:first-of-type {
+    margin-bottom: 1em !important;
+    width: 48% !important; }
+    .woocommerce ul.products li.product a:first-of-type {
       display: block;
       overflow: hidden; }
-    .products li img {
+    .woocommerce ul.products li.product img {
       width: 100%;
       margin-bottom: .5em; }
-  .products h3 {
+  .woocommerce ul.products h3 {
     display: block;
     font-size: .95em;
     text-align: center;
     width: 100%;
     margin-bottom: 0 !important;
     padding: 0 !important; }
-  .products .price {
-    text-align: center; }
-    .products .price del {
+  .woocommerce ul.products .price {
+    text-align: center;
+    color: #53a3c6 !important; }
+    .woocommerce ul.products .price del {
       display: none; }
-    .products .price ins {
+    .woocommerce ul.products .price ins {
       text-decoration: none; }
 
 .woocommerce-pagination {
   display: block;
   overflow: hidden; }
   .woocommerce-pagination ul.page-numbers {
-    display: block;
-    padding-left: 0;
-    margin: 20px 0;
     border-radius: 4px;
-    margin: 0 auto;
-    width: 180px; }
+    border: 0 !important; }
     .woocommerce-pagination ul.page-numbers li {
-      display: inline; }
+      border: 0 !important; }
       .woocommerce-pagination ul.page-numbers li span, .woocommerce-pagination ul.page-numbers li a {
         position: relative;
         float: left;
-        padding: 6px 12px;
-        margin-left: -1px;
-        line-height: 1.42857143;
+        margin-left: -1px !important;
         color: #ef3b2e;
-        text-decoration: none;
         background-color: #fff;
         border: 1px solid #ddd;
         cursor: pointer; }
         .woocommerce-pagination ul.page-numbers li span:hover, .woocommerce-pagination ul.page-numbers li a:hover {
           cursor: pointer;
-          background: #ef3b2e;
-          color: white;
+          background: #ef3b2e !important;
+          color: white !important;
           border-color: #ef3b2e; }
       .woocommerce-pagination ul.page-numbers li:first-child span {
         margin-left: 0;
@@ -1384,13 +1377,6 @@ h2.title {
     font-size: 1.25em; }
 
 @media (min-width: 768px) {
-  .products li:nth-child(odd) {
-    padding-left: 0;
-    padding-right: 15px; }
-  .products li:nth-child(even) {
-    padding-left: 15px;
-    padding-right: 0; }
-
   .single-product .images .woocommerce-main-image {
     width: 75%;
     float: left; }
