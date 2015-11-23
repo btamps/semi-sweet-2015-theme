@@ -212,7 +212,10 @@ figure {
     .hero-message-box p {
       font-family: "tisa pro", georgia, times, serif;
       font-size: 17px; } }
-.btn, .comment-respond .submit, .woocommerce .button, .woocommerce-checkout input#place_order {
+.btn, .comment-respond .submit, .woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button, .woocommerce-checkout input#place_order {
   color: #ef3b2e;
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-weight: 600;
@@ -224,11 +227,23 @@ figure {
   border-radius: 6px;
   margin-top: 10px;
   background: transparent; }
-  .btn.btn-primary, .comment-respond .submit, .woocommerce .btn-primary.button, .woocommerce-checkout input#place_order {
+  .btn.btn-primary, .comment-respond .submit, .woocommerce #respond input.btn-primary#submit, .woocommerce #respond .comment-respond input#submit.submit, .comment-respond .woocommerce #respond input#submit.submit,
+  .woocommerce a.btn-primary.button,
+  .woocommerce .comment-respond a.button.submit,
+  .comment-respond .woocommerce a.button.submit,
+  .woocommerce button.btn-primary.button,
+  .woocommerce .comment-respond button.button.submit,
+  .comment-respond .woocommerce button.button.submit,
+  .woocommerce input.btn-primary.button,
+  .woocommerce .comment-respond input.button.submit,
+  .comment-respond .woocommerce input.button.submit, .woocommerce-checkout input#place_order {
     background: #ef3b2e;
     color: white;
     padding: 11px 18px 12px; }
-    .btn.btn-primary:hover, .comment-respond .submit:hover, .woocommerce .btn-primary.button:hover, .woocommerce-checkout input#place_order:hover {
+    .btn.btn-primary:hover, .comment-respond .submit:hover, .woocommerce #respond input.btn-primary#submit:hover, .woocommerce #respond .comment-respond input#submit.submit:hover, .comment-respond .woocommerce #respond input#submit.submit:hover,
+    .woocommerce a.btn-primary.button:hover,
+    .woocommerce button.btn-primary.button:hover,
+    .woocommerce input.btn-primary.button:hover, .woocommerce-checkout input#place_order:hover {
       background: #307c9c; }
 
 .btn-more {
@@ -429,7 +444,13 @@ h2.title {
     margin: 0 auto 20px;
     text-align: center;
     float: none; }
-  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce .button, .woocommerce .newsletter-box .form-inline .button, .newsletter-box .form-inline .woocommerce-checkout input#place_order, .woocommerce-checkout .newsletter-box .form-inline input#place_order {
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
+  .newsletter-box .form-inline .woocommerce a.button,
+  .woocommerce .newsletter-box .form-inline a.button,
+  .newsletter-box .form-inline .woocommerce button.button,
+  .woocommerce .newsletter-box .form-inline button.button,
+  .newsletter-box .form-inline .woocommerce input.button,
+  .woocommerce .newsletter-box .form-inline input.button, .newsletter-box .form-inline .woocommerce-checkout input#place_order, .woocommerce-checkout .newsletter-box .form-inline input#place_order {
     margin: 0; }
   .newsletter-box .form-inline input {
     min-width: 300px;
@@ -595,7 +616,11 @@ h2.title {
   .content-wrapper .feature-image img {
     width: 100%; }
 
-.box-wrapper, .post-wrapper, .archive-search-box, .woocommerce-cart .woocommerce > form, .woocommerce-checkout .woocommerce-billing-fields,
+.box-wrapper, .post-wrapper, .archive-search-box, .woocommerce .woocommerce-info,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error, .woocommerce-cart .woocommerce > form, .woocommerce-checkout form.checkout_coupon,
+.woocommerce-checkout form.login,
+.woocommerce-checkout form.register, .woocommerce-checkout .woocommerce-billing-fields,
 .woocommerce-checkout .woocommerce-shipping-fields,
 .woocommerce-checkout .woocommerce-checkout-review-order, .woocommerce-order-received .woocommerce, .woocommerce-message, .cart-collaterals {
   background: white;
@@ -853,15 +878,20 @@ h2.title {
   .archive.category .tag-result,
   .archive.tag .recent-result,
   .archive.tag .cat-result,
-  .archive.tag .tag-result {
+  .archive.tag .tag-result,
+  .search .recent-result,
+  .search .cat-result,
+  .search .tag-result {
     margin-left: 0; }
   .page-template-archive .post-box:first-child .caption,
   .archive.category .post-box:first-child .caption,
-  .archive.tag .post-box:first-child .caption {
+  .archive.tag .post-box:first-child .caption,
+  .search .post-box:first-child .caption {
     padding: 30px; }
     .page-template-archive .post-box:first-child .caption h2,
     .archive.category .post-box:first-child .caption h2,
-    .archive.tag .post-box:first-child .caption h2 {
+    .archive.tag .post-box:first-child .caption h2,
+    .search .post-box:first-child .caption h2 {
       font-size: 1.647em; }
 
   .post-box {
@@ -995,11 +1025,22 @@ h2.title {
     right: 0;
     margin-bottom: 10px; }
 
-.woocommerce .button {
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error {
+  margin-bottom: 2rem; }
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
   display: block;
   border: 1px solid #ef3b2e;
-  text-align: center; }
-  .woocommerce .button:hover {
+  text-align: center;
+  font-family: "Source Sans Pro", helvetica, sans-serif; }
+  .woocommerce #respond input#submit:hover,
+  .woocommerce a.button:hover,
+  .woocommerce button.button:hover,
+  .woocommerce input.button:hover {
     background: #ef3b2e;
     color: white;
     text-decoration: none; }
@@ -1049,12 +1090,6 @@ h2.title {
       display: none; }
     .products .price ins {
       text-decoration: none; }
-
-.onsale {
-  position: absolute;
-  top: .5em;
-  right: 1em;
-  font-weight: 600; }
 
 .woocommerce-pagination {
   display: block;
@@ -1211,12 +1246,9 @@ h2.title {
       display: inline-block; }
 
 .woocommerce-checkout article, .woocommerce-order-received article {
-  max-width: 700px;
   margin: 0 auto;
   float: none; }
 
-.woocommerce-checkout .woocommerce-info {
-  margin-bottom: 2rem; }
 .woocommerce-checkout .checkout input, .woocommerce-checkout .checkout textarea {
   width: 100%;
   padding: .25em .5em;
@@ -1257,7 +1289,7 @@ h2.title {
   .woocommerce-checkout .woocommerce-checkout-review-order table thead th {
     padding: 1em; }
   .woocommerce-checkout .woocommerce-checkout-review-order table tfoot th {
-    background: #F4EBDA;
+    background: #F8F6F2;
     padding: 1em; }
   .woocommerce-checkout .woocommerce-checkout-review-order table .amount {
     font-size: 1.2em; }
@@ -1267,7 +1299,11 @@ h2.title {
   .woocommerce-checkout .woocommerce-checkout-review-order .payment_methods .payment_box p {
     font-family: "Source Sans Pro", helvetica, sans-serif; }
 .woocommerce-checkout input#place_order {
-  font-size: 1.2em; }
+  font-size: 1.1em;
+  padding: 18px 22px;
+  max-width: 250px;
+  margin: 0 auto;
+  float: none !important; }
 
 .woocommerce-order-received .post-wrapper {
   padding-left: 15px;
@@ -1350,10 +1386,6 @@ h2.title {
   .products li:nth-child(even) {
     padding-left: 15px;
     padding-right: 0; }
-
-  .onsale {
-    top: .5em;
-    right: 2em; }
 
   .single-product .images .woocommerce-main-image {
     width: 75%;
