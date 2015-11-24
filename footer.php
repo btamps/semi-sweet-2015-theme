@@ -1,6 +1,4 @@
-  <?php wp_footer() ?>
-    
-  <?php get_template_part( 'newsletter', 'footer' ); ?>
+<?php get_template_part( 'newsletter', 'footer' ); ?>
 
     <div class="container-fluid footer">
       <div class="row">
