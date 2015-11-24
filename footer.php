@@ -40,14 +40,10 @@
         <p class="col-sm-6 made-by">Made with <span class="heart pulse2">♥</span> by BTAMPS</p>
       </div>
     </div>
+    <?php wp_footer(); ?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
-
-    <?php wp_footer(); ?>
   </body>
 </html>

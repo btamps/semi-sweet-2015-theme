@@ -7,12 +7,11 @@
     <meta property="og:image"
     content="<?php
       if (has_post_thumbnail()) {
-    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail_name');
-    echo $thumb[0]; // thumbnail url
-}
-   ?>" />
+        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail_name');
+        echo $thumb[0]; // thumbnail url
+      }
+    ?>" />
 
-    
     <title>
     <?php
       wp_title( '–', true, 'right' );
@@ -29,7 +28,7 @@
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-28123361-1', 'auto');
       ga('send', 'pageview');
@@ -39,12 +38,9 @@
     <script src="https://use.typekit.net/ewa7xsh.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/bootstrap.min.css">
-
-    <!-- My Styles -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <?php wp_head(); ?>
   </head>
 

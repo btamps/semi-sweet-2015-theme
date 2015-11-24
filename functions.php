@@ -2,11 +2,15 @@
 
 // Load the Theme CSS
 function theme_styles() {
+  wp_enqueue_style( 'ss_bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+  wp_enqueue_script( 'ss_bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js' );
+  wp_enqueue_script( 'imagegallery', get_template_directory_uri() . '/js/imagegallery.js' );
   wp_enqueue_style( 'main', get_template_directory_uri() . '/style.css' );
 }
-
-// Enable Theme CSS from above
+// Enable Theme CSS and JS from above
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
+
+
 
 // Enable custom menus
 add_theme_support( 'menus' );

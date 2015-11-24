@@ -40,43 +40,8 @@
       </div>
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-    // Adds thumbnail hover to main product img
-    jQuery(document).ready(function($) {
-      // Get the main WC image as a variable
-      var wcih_main_imgage = $( 'a.woocommerce-main-image' ).attr( 'href' );
-      // This is what will happen when you hover a product thumb
-      $("a.zoom").hover(
-        // Swap out the main image with the thumb
-        function(){       
-            var photo_fullsize = $(this).attr('href');
-            $('.woocommerce-main-image img').attr('src', photo_fullsize);
-          },
-          // Return the main image to the original
-          function(){
-            $('.woocommerce-main-image img').attr('src', wcih_main_imgage);
-        }
-      ).bind('click',false);
-    });
-    </script>
-
-    <script>
-    $(document).ready(function(){
-      $('#ship-to-different-address-checkbox').click(function() {
-        if( $(this).is(':checked')) {
-          $(".shipping_address").show();
-        } else {
-          $(".shipping_address").hide();
-        }
-      });
-    });
-    </script>
   <?php wp_footer(); ?>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </body>
 </html>
