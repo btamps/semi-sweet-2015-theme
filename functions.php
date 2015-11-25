@@ -48,17 +48,18 @@ if (!function_exists('loop_columns')) {
 }
 
 // Woocommerce - add checkout button
-add_action('ss-checkout-button', 'ss_add_checkout_button');
-function ss_add_checkout_button() {
-  global $woocommerce;
+// add_action('ss-checkout-button', 'ss_add_checkout_button');
+// function ss_add_checkout_button() {
+//   global $woocommerce;
 
-  if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) :
-    echo '<a href="' . $woocommerce->cart->get_checkout_url() . '" class="btn btn-primary btn-checkout" title="' . __( 'Proceed to Checkout' ) . '">' . __( 'Proceed to Checkout' ) . '</a>';
-  endif;
-}
+//   if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) :
+//     echo '<a href="' . $woocommerce->cart->get_checkout_url() . '" class="btn btn-primary btn-checkout" title="' . __( 'Proceed to Checkout' ) . '">' . __( 'Proceed to Checkout' ) . '</a>';
+//   endif;
+// }
 
-// Removes p tags from the content
+// Removes automatic br and p tags in the_content
 remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 12);
 
 // Removes pages from search results
 function SearchFilter($query) {
@@ -103,10 +104,6 @@ function remove_width_attribute( $html ) {
    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
    return $html;
 }
-
-// Removes automatic br and p tags in the_content
-remove_filter( 'the_content', 'wpautop' );
-add_filter( 'the_content', 'wpautop' , 12);
 
 /**
  * Replacing the default WordPress search form with an HTML5 version
