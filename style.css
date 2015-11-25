@@ -451,9 +451,13 @@ h2.title {
   .woocommerce .newsletter-box .form-inline button.button,
   .newsletter-box .form-inline .woocommerce input.button,
   .woocommerce .newsletter-box .form-inline input.button, .newsletter-box .form-inline .woocommerce-checkout input#place_order, .woocommerce-checkout .newsletter-box .form-inline input#place_order {
-    margin: 0; }
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: .9em; }
   .newsletter-box .form-inline input {
-    min-width: 300px;
     border: 0; }
   .newsletter-box .no-joke {
     text-align: center;
@@ -467,7 +471,20 @@ h2.title {
 
   .basics .thumbnail {
     height: auto;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
+  .newsletter-box .form-inline .woocommerce a.button,
+  .woocommerce .newsletter-box .form-inline a.button,
+  .newsletter-box .form-inline .woocommerce button.button,
+  .woocommerce .newsletter-box .form-inline button.button,
+  .newsletter-box .form-inline .woocommerce input.button,
+  .woocommerce .newsletter-box .form-inline input.button, .newsletter-box .form-inline .woocommerce-checkout input#place_order, .woocommerce-checkout .newsletter-box .form-inline input#place_order {
+    display: block;
+    position: absolute;
+    margin: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; } }
 @media (min-width: 992px) {
   .first-post-image {
     background: red;
