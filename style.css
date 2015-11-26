@@ -28,7 +28,7 @@ a {
     color: #53a3c6; }
 
 h1, .jumbotron h1 {
-  font-size: 2.1em;
+  font-size: 1.8em;
   font-weight: 700;
   color: #524A43; }
   h1 a, .jumbotron h1 a {
@@ -59,6 +59,9 @@ p {
   font-size: 1.05em;
   margin-bottom: 1em; }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.1em; } }
 html {
   background: #E6DDCC url("ui/ricepaper_@2X.png") top left;
   background-size: 240px auto; }
@@ -236,14 +239,14 @@ figure {
   .comment-respond .woocommerce button.button.submit,
   .woocommerce input.btn-primary.button,
   .woocommerce .comment-respond input.button.submit,
-  .comment-respond .woocommerce input.button.submit, .woocommerce-checkout input#place_order {
+  .comment-respond .woocommerce input.button.submit, .woocommerce-checkout input.btn-primary#place_order, .woocommerce-checkout .comment-respond input#place_order.submit, .comment-respond .woocommerce-checkout input#place_order.submit {
     background: #ef3b2e;
     color: white;
     padding: 11px 18px 12px; }
     .btn.btn-primary:hover, .comment-respond .submit:hover, .woocommerce #respond input.btn-primary#submit:hover, .woocommerce #respond .comment-respond input#submit.submit:hover, .comment-respond .woocommerce #respond input#submit.submit:hover,
     .woocommerce a.btn-primary.button:hover,
     .woocommerce button.btn-primary.button:hover,
-    .woocommerce input.btn-primary.button:hover, .woocommerce-checkout input#place_order:hover {
+    .woocommerce input.btn-primary.button:hover, .woocommerce-checkout input.btn-primary#place_order:hover, .woocommerce-checkout .comment-respond input#place_order.submit:hover, .comment-respond .woocommerce-checkout input#place_order.submit:hover {
       background: #307c9c; }
 
 .btn-more {
@@ -1300,7 +1303,7 @@ h2.title {
 .woocommerce-checkout .woocommerce-billing-fields,
 .woocommerce-checkout .woocommerce-shipping-fields,
 .woocommerce-checkout .woocommerce-checkout-review-order {
-  padding: 3rem;
+  padding: 15px;
   margin-bottom: 2em; }
   .woocommerce-checkout .woocommerce-billing-fields label, .woocommerce-checkout .woocommerce-billing-fields strong,
   .woocommerce-checkout .woocommerce-shipping-fields label,
@@ -1313,17 +1316,20 @@ h2.title {
     color: #524A43; }
 .woocommerce-checkout .woocommerce-shipping-fields textarea {
   min-height: 150px; }
+.woocommerce-checkout .state_select {
+  font-family: "Source Sans Pro", helvetica, sans-serif !important; }
 .woocommerce-checkout #order_review_heading {
   font-weight: 700;
   color: #524A43;
-  font-size: 2.1em; }
+  font-size: 1.8em; }
 .woocommerce-checkout .woocommerce-checkout-review-order table {
-  width: 100%; }
+  width: 100%;
+  border-collapse: collapse;
+  border: 0; }
   .woocommerce-checkout .woocommerce-checkout-review-order table tr {
     border-bottom: 1px solid #E6DDCC; }
   .woocommerce-checkout .woocommerce-checkout-review-order table th {
-    font-weight: 600;
-    font-size: 1.1em; }
+    font-weight: 600; }
   .woocommerce-checkout .woocommerce-checkout-review-order table td {
     padding: 1em; }
   .woocommerce-checkout .woocommerce-checkout-review-order table thead th {
@@ -1343,34 +1349,45 @@ h2.title {
   padding: 18px 22px;
   max-width: 250px;
   margin: 0 auto;
-  float: none !important; }
+  float: none !important;
+  color: white !important;
+  background: #ef3b2e !important; }
+  .woocommerce-checkout input#place_order:hover {
+    background: #307c9c !important; }
 
 .woocommerce-order-received .post-wrapper {
   padding-left: 15px;
   padding-right: 15px; }
-.woocommerce-order-received .woocommerce h2 {
-  border-bottom: 1px solid #E6DDCC;
-  padding-bottom: 1.5rem; }
-.woocommerce-order-received .woocommerce table {
-  width: 100%; }
-  .woocommerce-order-received .woocommerce table th, .woocommerce-order-received .woocommerce table td {
-    padding: 1rem 0; }
-.woocommerce-order-received .woocommerce header {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-.woocommerce-order-received .woocommerce .customer_details {
-  margin-bottom: 2rem; }
+.woocommerce-order-received .woocommerce {
+  padding: 30px 15px; }
+  .woocommerce-order-received .woocommerce h2 {
+    border-bottom: 1px solid #E6DDCC;
+    padding-bottom: 1.5rem; }
+  .woocommerce-order-received .woocommerce table {
+    width: 100%;
+    border-collapse: collapse !important;
+    border: 0; }
+    .woocommerce-order-received .woocommerce table th, .woocommerce-order-received .woocommerce table td {
+      padding: 1rem 0;
+      border-color: #E6DDCC !important; }
+  .woocommerce-order-received .woocommerce header {
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .woocommerce-order-received .woocommerce .customer_details {
+    margin-bottom: 2rem; }
+  .woocommerce-order-received .woocommerce .thank-you-text {
+    font-size: 1.2em; }
 .woocommerce-order-received ul.order_details {
   padding-left: 0;
   list-style: none;
-  border-bottom: 1px solid #E6DDCC;
   padding-bottom: 2rem;
   margin-bottom: 2rem; }
   .woocommerce-order-received ul.order_details li {
     line-height: 2;
     color: #333;
-    font-size: 18px; }
+    font-size: 14px;
+    border: 0; }
 
 #ship-to-different-address {
   display: block;
@@ -1432,6 +1449,13 @@ h2.title {
     background: #307c9c !important;
     border-color: #307c9c !important; }
 
+@media (max-width: 481px) {
+  .woocommerce-billing-fields .form-row,
+  .woocommerce-shipping-fields .form-row,
+  .woocommerce-checkout-review-order .form-row {
+    display: block;
+    float: none !important;
+    width: 100% !important; } }
 @media (min-width: 768px) {
   .woocommerce.single-product .images .woocommerce-main-image {
     width: 75%;
@@ -1476,4 +1500,15 @@ h2.title {
         display: inline-block;
         margin: 0 0 0 1rem; }
   .woocommerce-cart .cart-collaterals {
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  .woocommerce-checkout .woocommerce-billing-fields,
+  .woocommerce-checkout .woocommerce-shipping-fields,
+  .woocommerce-checkout .woocommerce-checkout-review-order {
+    padding: 3rem;
+    margin-bottom: 2em; }
+  .woocommerce-checkout #order_review_heading {
+    font-size: 2.1em; }
+
+  .woocommerce-order-received .woocommerce {
+    padding: 30px; } }
