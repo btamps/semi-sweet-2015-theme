@@ -47,15 +47,29 @@ if (!function_exists('loop_columns')) {
   }
 }
 
-// Woocommerce - add checkout button
-// add_action('ss-checkout-button', 'ss_add_checkout_button');
-// function ss_add_checkout_button() {
-//   global $woocommerce;
+// Woocommerce change price range to "Starting at: lowest price"
+add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
+add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
+function wc_wc20_variation_price_format( $price, $product ) {
+// Main Price
+$prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
+$price = $prices[0] !== $prices[1] ? sprintf( __( 'Starting at: %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+// Sale Price
+$prices = array( $product->get_variation_regular_price( 'min', true ), $product->get_variation_regular_price( 'max', true ) );
+sort( $prices );
+$saleprice = $prices[0] !== $prices[1] ? sprintf( __( 'Starting at: %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+if ( $price !== $saleprice ) {
+$price = '<del>' . $saleprice . '</del> <ins>' . $price . '</ins>';
+}
+return $price;
+}
 
-//   if ( sizeof( $woocommerce->cart->cart_contents) > 0 ) :
-//     echo '<a href="' . $woocommerce->cart->get_checkout_url() . '" class="btn btn-primary btn-checkout" title="' . __( 'Proceed to Checkout' ) . '">' . __( 'Proceed to Checkout' ) . '</a>';
-//   endif;
-// }
+
+// Redirect to a specific page when clicking on Continue Shopping in the cart
+function wc_custom_redirect_continue_shopping() {
+    return 'https://semisweetdesigns.com/shop/';
+}
+add_filter( 'woocommerce_continue_shopping_redirect', 'wc_custom_redirect_continue_shopping' );
 
 // Removes automatic br and p tags in the_content
 remove_filter( 'the_content', 'wpautop' );

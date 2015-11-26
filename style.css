@@ -1071,9 +1071,8 @@ h2.title {
   padding-bottom: 1em;
   width: 100% !important; }
   .woocommerce .summary .price {
-    color: #99897D;
-    font-family: "Source Sans Pro", helvetica, sans-serif;
-    font-size: 24px; }
+    color: #99897D !important;
+    font-family: "Source Sans Pro", helvetica, sans-serif; }
     .woocommerce .summary .price ins, .woocommerce .summary .price del {
       color: #807369; }
 .woocommerce .upsells, .woocommerce .related {
@@ -1191,6 +1190,9 @@ h2.title {
 .reset_variations {
   margin-top: .5em;
   font-size: .9em; }
+
+p.stock.in-stock {
+  display: none; }
 
 .woocommerce-cart .content-wrapper,
 .woocommerce-checkout .content-wrapper,
