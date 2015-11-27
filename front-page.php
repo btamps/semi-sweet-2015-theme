@@ -86,27 +86,43 @@ Template Name: Front Page
     <div class="container-fluid basics">
       <div class="row">
         <h2 class="title"><span>Getting Started</span></h2>
-        <?php
-        $args = array(
-          'post_type' => 'post',
-          'category_name' => 'the-basics'
-        );
-        $the_query = new WP_Query( $args );
-
-        ?>
-        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        
           <div class="col-sm-4 col-md-4">
             <div class="thumbnail">
-              <a href="<?php the_permalink(); ?>">                
-                <?php the_post_thumbnail(); ?>
+              <a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">                
+                <img src="https://semisweetdesigns.com/wp-content/uploads/2014/09/cookie-decorating-supplies-title.jpg" alt="A Beginner’s Guide to Cookie Decorating Supplies">
               </a>
               <div class="caption">
-                <h4><a href="<?php the_permalink(); ?>">My Tools</a></h4>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h4><a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">Tools</a></h4>
+                <h3><a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">A Beginner’s Guide to Cookie Decorating Supplies</a></h3>
               </div>
             </div>
           </div>
-        <?php endwhile; endif; ?>
+
+          <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+              <a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">                
+                <img src="https://semisweetdesigns.com/wp-content/uploads/2014/08/royal-icing-recipe-title-new.jpg" alt="Royal Icing Recipe">
+              </a>
+              <div class="caption">
+                <h4><a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">Icing</a></h4>
+                <h3><a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">Royal Icing Recipe</a></h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+              <a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">                
+                <img src="https://semisweetdesigns.com/wp-content/uploads/2013/09/sugar_cookie_recipe-title.jpg" alt="Roll-Out Sugar Cookie Recipe">
+              </a>
+              <div class="caption">
+                <h4><a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">Dough</a></h4>
+                <h3><a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">Roll-Out Sugar Cookie Recipe</a></h3>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
 <?php get_footer(); ?>
