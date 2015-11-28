@@ -12,7 +12,7 @@ Template Name: Front Page
           <h4>New In Shop</h4>
           <h1>Cookie Cutters</h1>
           <p>The new shop is open for business! Check out all the new custom cookie cutter designs available now.</p>
-          <p><a class="btn btn-primary btn-lg" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
+          <p><a class="btn btn-primary btn-lg disabled" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
         </div>
       </div>
     </div>
