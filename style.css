@@ -16,7 +16,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-family: "source-sans-pro", helvetica, sans-serif;
   font-size: 17px; }
 
 img {
@@ -54,7 +54,7 @@ h4 {
   margin-bottom: .5em; }
 
 p {
-  font-family: "tisa pro", georgia, times, serif;
+  font-family: "ff-tisa-web-pro", georgia, times, serif;
   line-height: 1.5;
   font-size: 1.05em;
   margin-bottom: 1em; }
@@ -189,7 +189,7 @@ figure {
       background: #99897D;
       margin: 20px auto; }
   .hero-message-box p {
-    font-family: "tisa pro", georgia, times, serif;
+    font-family: "ff-tisa-web-pro", georgia, times, serif;
     font-size: 17px; }
 
 @media (min-width: 768px) {
@@ -213,14 +213,14 @@ figure {
         background: #99897D;
         margin: 20px auto; }
     .hero-message-box p {
-      font-family: "tisa pro", georgia, times, serif;
+      font-family: "ff-tisa-web-pro", georgia, times, serif;
       font-size: 17px; } }
 .btn, .comment-respond .submit, .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce-checkout input#place_order {
   color: #ef3b2e;
-  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-family: "source-sans-pro", helvetica, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -250,7 +250,7 @@ figure {
       background: #307c9c; }
 
 .btn-more {
-  font-family: "Source Sans Pro", helvetica, sans-serif; }
+  font-family: "source-sans-pro", helvetica, sans-serif; }
 
 .form-inline {
   position: relative; }
@@ -440,7 +440,7 @@ h2.title {
     .newsletter-box h2 i {
       color: #b1d7e7; }
   .newsletter-box p {
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     color: #eee;
     font-size: 1.2em; }
   .newsletter-box .newsletter-text {
@@ -557,7 +557,7 @@ h2.title {
   padding-bottom: 10px; }
   .copyright p {
     color: #F8F6F2;
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     font-size: 12px;
     letter-spacing: .5px; }
 
@@ -660,7 +660,7 @@ h2.title {
   .post-wrapper header h1 a, .post-wrapper header p {
     padding: 0;
     color: #524A43;
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     display: inline-block; }
   .post-wrapper header p {
     color: #807369;
@@ -685,7 +685,7 @@ h2.title {
     margin-right: .1em;
     color: #807369; }
   .sidenote p {
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     color: #99897D; }
 
 .sidebar {
@@ -827,14 +827,14 @@ h2.title {
   .comment-respond .comment-form-comment {
     display: block; }
   .comment-respond label {
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     font-weight: 600;
     color: #524A43; }
   .comment-respond textarea, .comment-respond input[type='text'] {
     width: 100%;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     padding: .25em; }
   .comment-respond .submit {
     margin-top: 0;
@@ -990,7 +990,7 @@ h2.title {
 .search-box {
   padding: 0 0 30px; }
   .search-box .archive-message {
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     font-size: .95em;
     margin: 0 0 .5em 0; }
 
@@ -1040,7 +1040,7 @@ h2.title {
     float: left;
     margin-bottom: 10px; }
   .woo-store header .woocommerce-result-count {
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     float: right;
     display: block;
     font-size: .9em;
@@ -1060,7 +1060,7 @@ h2.title {
   display: block;
   border: 1px solid #ef3b2e;
   text-align: center;
-  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-family: "source-sans-pro", helvetica, sans-serif;
   background: white !important;
   color: #ef3b2e !important;
   margin-top: 0; }
@@ -1075,7 +1075,7 @@ h2.title {
   width: 100% !important; }
   .woocommerce .summary .price {
     color: #99897D !important;
-    font-family: "Source Sans Pro", helvetica, sans-serif; }
+    font-family: "source-sans-pro", helvetica, sans-serif; }
     .woocommerce .summary .price ins, .woocommerce .summary .price del {
       color: #807369; }
 .woocommerce .upsells, .woocommerce .related {
@@ -1202,7 +1202,7 @@ p.stock.in-stock {
   .dimension-box h3 {
     margin-bottom: .25em; }
   .dimension-box p {
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     font-size: .9em;
     color: #807369;
     margin-bottom: 0; }
@@ -1268,7 +1268,7 @@ p.stock.in-stock {
     display: block !important;
     float: none !important; }
   .woocommerce-cart .shop_table .variation p {
-    font-family: "Source Sans Pro", helvetica, sans-serif; }
+    font-family: "source-sans-pro", helvetica, sans-serif; }
   .woocommerce-cart .shop_table .product-thumbnail a {
     display: block; }
   .woocommerce-cart .shop_table .product-thumbnail img {
@@ -1278,7 +1278,7 @@ p.stock.in-stock {
     overflow: hidden;
     float: left; }
     .woocommerce-cart .shop_table .coupon label {
-      font-family: "Source Sans Pro", helvetica, sans-serif;
+      font-family: "source-sans-pro", helvetica, sans-serif;
       color: #99897D;
       font-weight: 600;
       display: none; }
@@ -1286,7 +1286,7 @@ p.stock.in-stock {
       padding: 6px;
       margin-right: 10px;
       margin-bottom: 10px;
-      font-family: "Source Sans Pro", helvetica, sans-serif;
+      font-family: "source-sans-pro", helvetica, sans-serif;
       float: left;
       width: 120px !important; }
     .woocommerce-cart .shop_table .coupon input[type="submit"] {
@@ -1315,7 +1315,7 @@ p.stock.in-stock {
 .woocommerce-checkout .checkout input, .woocommerce-checkout .checkout textarea {
   width: 100%;
   padding: .25em .5em;
-  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-family: "source-sans-pro", helvetica, sans-serif;
   border: 1px solid #ccc; }
 .woocommerce-checkout .checkout h3, .woocommerce-checkout .checkout h3 label {
   font-size: 28px;
@@ -1332,12 +1332,12 @@ p.stock.in-stock {
   .woocommerce-checkout .woocommerce-checkout-review-order strong {
     display: block;
     font-size: .9em;
-    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-family: "source-sans-pro", helvetica, sans-serif;
     color: #524A43; }
 .woocommerce-checkout .woocommerce-shipping-fields textarea {
   min-height: 150px; }
 .woocommerce-checkout .state_select {
-  font-family: "Source Sans Pro", helvetica, sans-serif !important; }
+  font-family: "source-sans-pro", helvetica, sans-serif !important; }
 .woocommerce-checkout #order_review_heading {
   font-weight: 700;
   color: #524A43;
@@ -1363,7 +1363,7 @@ p.stock.in-stock {
   list-style: none;
   padding: 0; }
   .woocommerce-checkout .woocommerce-checkout-review-order .payment_methods .payment_box p {
-    font-family: "Source Sans Pro", helvetica, sans-serif; }
+    font-family: "source-sans-pro", helvetica, sans-serif; }
 .woocommerce-checkout input#place_order {
   font-size: 1.1em;
   padding: 18px 22px;
