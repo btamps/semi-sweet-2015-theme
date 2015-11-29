@@ -47,6 +47,16 @@ if (!function_exists('loop_columns')) {
   }
 }
 
+// Change page title for Shop Archive page
+add_filter( 'wp_title', 'title_for_shop' );
+function title_for_shop( $title )
+{
+  if ( is_shop() ) {
+    return __( 'Shop' );
+  }
+  return $title;
+}
+
 // Woocommerce change price range to "Starting at: lowest price"
 add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
 add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
