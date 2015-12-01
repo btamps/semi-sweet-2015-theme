@@ -299,23 +299,25 @@ figure {
   list-style: none; }
   .list-step li {
     margin: 0 0 4em 0;
-    position: relative; }
+    position: relative;
+    counter-increment: step-counter; }
     .list-step li figure {
       margin: 2em 0 2em -40px; }
+    .list-step li:before {
+      content: counter(step-counter);
+      display: inline-block;
+      background: #f14d41;
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 2em;
+      line-height: 26px;
+      font-weight: 600;
+      text-align: center;
+      left: -40px;
+      position: absolute; }
   .list-step .step-number {
-    position: absolute;
-    top: 0;
-    left: -40px;
-    display: inline-block;
-    background: #807369;
-    color: white;
-    width: 26px;
-    height: 26px;
-    border-radius: 2em;
-    line-height: 26px;
-    font-weight: 600;
-    text-align: center;
-    margin-right: 5px; }
+    display: none; }
   .list-step h4 {
     position: relative; }
 
@@ -336,6 +338,38 @@ figure {
       .list-category li a:hover, .list-tags li a:hover {
         background: #f14d41;
         color: white; }
+
+.ingredient-list {
+  list-style: none;
+  padding: 0; }
+  .ingredient-list li {
+    margin-bottom: .5em;
+    display: block;
+    overflow: hidden; }
+  .ingredient-list .number {
+    float: left;
+    width: 100px;
+    color: #807369; }
+  .ingredient-list .item {
+    float: left;
+    width: 50%; }
+
+.letter-list {
+  list-style: none; }
+  .letter-list li {
+    position: relative; }
+    .letter-list li .letter {
+      display: inline-block;
+      background: #f14d41;
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 2em;
+      line-height: 26px;
+      font-weight: 600;
+      text-align: center;
+      left: -40px;
+      position: absolute; }
 
 h2.title {
   text-align: center;
@@ -893,6 +927,17 @@ h2.title {
     .post-wrapper header p.comment-count {
       float: right;
       display: inline-block; }
+
+  .post-wrapper figure figcaption {
+    font-size: .95em; }
+  .post-wrapper figure.half {
+    width: 50%; }
+    .post-wrapper figure.half.right {
+      margin: 10px 0 20px 30px;
+      float: right; }
+    .post-wrapper figure.half.left {
+      margin: 10px 30px 20px 0;
+      float: left; }
 
   .blog .blog-box, .page-template-archive .blog-box, .archive .blog-box, .search-results .blog-box, .page-template-archive .blog-box {
     padding-top: 0; }
