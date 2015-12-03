@@ -731,6 +731,19 @@ h2.title {
   font-size: .9em;
   color: #99897D; }
 
+figure.width-300 {
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto; }
+figure.width-400 {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto; }
+figure.width-500 {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto; }
+
 .blog .blog-box, .page-template-archive .blog-box, .archive .blog-box, .search-results .blog-box {
   padding-top: 1em; }
 .blog .thumbnail > a figure, .page-template-archive .thumbnail > a figure, .archive .thumbnail > a figure, .search-results .thumbnail > a figure {
