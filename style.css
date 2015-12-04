@@ -981,6 +981,17 @@ figure.width-500 {
     padding: 0; }
     .post-box .thumbnail {
       min-height: 700px; }
+    .post-box:first-child {
+      padding: 0 !important; }
+      .post-box:first-child h2 {
+        font-size: 2em; }
+      .post-box:first-child .caption {
+        padding: 40px 50px 30px; }
+
+  .paged .post-box:first-child h2 {
+    font-size: 1.647em; }
+  .paged .post-box:first-child .caption {
+    padding: 30px; }
 
   .page_nav a, .page_nav span {
     display: block; }
@@ -1001,14 +1012,7 @@ figure.width-500 {
 
   .sidebar {
     margin-left: 0;
-    margin-right: 0; }
-
-  .post-box:first-child {
-    padding: 0 !important; }
-    .post-box:first-child h2 {
-      font-size: 2em; }
-    .post-box:first-child .caption {
-      padding: 40px 50px 30px; } }
+    margin-right: 0; } }
 @media (min-width: 991px) {
   .post-wrapper {
     padding: 20px 40px; }
@@ -1021,6 +1025,14 @@ figure.width-500 {
     padding-left: 15px; }
   .post-box:nth-child(even) {
     padding-right: 15px; }
+
+  .paged .post-box:nth-child(odd) {
+    padding-right: 15px !important; }
+  .paged .post-box:nth-child(even) {
+    padding-left: 15px !important; }
+  .paged .post-box:first-child {
+    padding-left: 15px !important;
+    padding-right: 15px !important; }
 
   .page-template-archive .post-box:nth-child(odd), .archive .post-box:nth-child(odd), .search-results .post-box:nth-child(odd) {
     padding-right: 15px !important;
