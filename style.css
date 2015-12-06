@@ -105,11 +105,15 @@ figure {
 
 .navbar-inverse .navbar-nav > li > a {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   -webkit-transition: color .2s;
-  transition: color .2s; }
+  transition: color .2s;
+  letter-spacing: .25px; }
   .navbar-inverse .navbar-nav > li > a:hover {
     background: #307c9c; }
+
+.navbar-inverse .navbar-nav > li.current_page_item a {
+  font-weight: 700; }
 
 .navbar-brand {
   text-indent: -100%;
