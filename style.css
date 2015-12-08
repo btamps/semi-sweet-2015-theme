@@ -11,7 +11,6 @@ Tags: textures, retro
 Text Domain: semisweettheme
 */
 
-@charset "UTF-8";
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -1156,7 +1155,8 @@ figure.width-500 {
   border-top: 1px solid #E6DDCC;
   clear: both; }
 .woocommerce span.amount {
-  color: #807369; }
+  color: #807369;
+  display: block; }
 .woocommerce form.cart .input-text {
   max-width: 70px;
   height: 36px;
@@ -1525,7 +1525,7 @@ p.stock.in-stock {
     .cart-collaterals table .shipping td {
       text-align: right; }
     .cart-collaterals table .amount {
-      float: right; }
+      display: block; }
   .cart-collaterals tr.order-total {
     font-size: 1.25em; }
 
@@ -1534,11 +1534,6 @@ p.stock.in-stock {
   position: relative;
   background: #ef3b2e !important;
   padding: 15px; }
-  .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:after {
-    content: "⟶";
-    margin-left: 5px;
-    position: relative;
-    top: -1px; }
   .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
     background: #307c9c !important;
     border-color: #307c9c !important; }
