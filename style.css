@@ -1286,6 +1286,11 @@ p.stock.in-stock {
   margin-bottom: 2em;
   list-style: none; }
 
+p.demo_store {
+  bottom: 0;
+  position: fixed;
+  top: auto !important; }
+
 .woocommerce-cart .content-wrapper,
 .woocommerce-checkout .content-wrapper,
 .woocommerce-order-received .content-wrapper {
