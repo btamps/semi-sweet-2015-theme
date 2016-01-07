@@ -50,7 +50,7 @@
           <p>There are no posts or pages here.</p>
 
         <?php endif; ?>
-
+        <?php echo do_shortcode( '[manual_related_posts]' ); ?>
         <?php comments_template(); ?>
 
       </div>  <!-- row end -->
