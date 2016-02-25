@@ -28,7 +28,7 @@
             <li><a href="//pinterest.com/SemiSweetMike"><i class="fa fa-pinterest-p"></i></a></li>
             <li><a href="//plus.google.com/111747040285481172891"><i class="fa fa-google-plus"></i></a></li>
             <li><a href="//semisweetdesigns.com/feed/atom/"><i class="fa fa-rss"></i></a></li>
-          </ul>      
+          </ul>
         </div>
       </div>
     </div>

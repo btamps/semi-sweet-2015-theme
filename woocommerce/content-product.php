@@ -45,7 +45,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 
 <?php
 	// Adding new classes to the li
-	$classes[] = 'col-sm-6'
+	$classes[] = 'col-sm-4'
 ?>
 
 <li <?php post_class( $classes ); ?>>

@@ -16,19 +16,76 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); ?>
 <div class="container-fluid blog-box">
   <div class="row">
-	<?php
-		/**
-		 * woocommerce_before_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
+		<div class="col-sm-3 shop-sidebar">
+        <h1>Shop</h1>
+				<?php
+// Hey Billy, I added this function so you can easily check if the current slug is within the current URL path
+// so slug=cookies then path=/tags/cookies/whatever/ it should get the selected class
+function isInURL($slug) {
+  $url = $_SERVER["REQUEST_URI"]; // get current URL
+  $path = parse_url($url, PHP_URL_PATH);
+  $segments = explode('/', rtrim($path, '/'));
+  // check if slug is within path, if so return selected class
+  if ( strpos($path, $slug) ) {
+    return 'selected';
+  }
+}
+?>
+
+<ul class="product-categories">
+  <?php // you could clean this up so it's a little more readable like this
+  $wcatTerms = get_terms(
+        'product_cat', array(
+          'hide_empty' => 0,
+          'orderby' => 'ASC',
+          'parent' =>0)
+          //, 'exclude' => '17,77'
+        );
+foreach($wcatTerms as $wcatTerm) :
+  $wthumbnail_id = get_woocommerce_term_meta( $wcatTerm->term_id, 'thumbnail_id', true );
+  $wimage = wp_get_attachment_url( $wthumbnail_id );
+?>
+  <li class="top-level">
+    <?php
+    // here I added the class and function call isInURL($slug) to check if the slug is within the current URL
+    // this might need tweaking depending on your URLs and taxonomy
+    ?>
+    <a class="<?php echo isInURL($wcatTerm->slug); ?>" href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+    <ul class="wsubcategs">
+    <?php
+    $wsubargs = array(
+       'hierarchical' => 1,
+       'show_option_none' => '',
+       'hide_empty' => 0,
+       'parent' => $wcatTerm->term_id,
+       'taxonomy' => 'product_cat'
+    );
+    $wsubcats = get_categories($wsubargs);
+    foreach ($wsubcats as $wsc):
+    ?>
+      <li class="sub-level"><a class="<?php echo isInURL($wsc->slug); ?>" href="<?php echo get_term_link( $wsc->slug, $wsc->taxonomy );?>"><?php echo $wsc->name;?></a></li>
+    <?php
+    endforeach;
+    ?>
+    </ul>
+  </li>
+<?php
+  endforeach;
+?>
+</ul>
+
+        <div class="cart-buttons">
+          <a href="" class="btn btn-default cart">View Cart</a>
+        </div>
+      </div>
+      <!-- sidebar end -->
+		<div class="col-sm-9 content-wrapper">
+		  <div class="row">
+			<article class="woo-store col-md-12">
 		<header>
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+			<h2 class="shop-title"><?php woocommerce_page_title(); ?></h2>
 
 		<?php endif; ?>
 
@@ -41,8 +98,8 @@ get_header( 'shop' ); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 		?>
-			
-		
+
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php
@@ -54,8 +111,7 @@ get_header( 'shop' ); ?>
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
-			</header> 
-
+			</header>
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
@@ -83,23 +139,12 @@ get_header( 'shop' ); ?>
 
 		<?php endif; ?>
 
-	<?php
-		/**
-		 * woocommerce_after_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
+		</article>
+		</div>
+		</div>
+
+
   </div> <!-- row end -->
 </div> <!-- blog-box end -->
 <?php get_footer( 'shop' ); ?>

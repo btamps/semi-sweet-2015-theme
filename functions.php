@@ -22,7 +22,23 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'woocommerce' );
 
 // Woocommerce - removed sorting dropdown
-remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+// remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+// Modify the default WooCommerce orderby dropdown
+//
+// Options: menu_order, popularity, rating, date, price, price-desc
+// In this example I'm removing price & price-desc but you can remove any of the options
+function my_woocommerce_catalog_orderby( $orderby ) {
+	unset($orderby["rating"]);
+	return $orderby;
+}
+add_filter( "woocommerce_catalog_orderby", "my_woocommerce_catalog_orderby", 20 );
+
+// Woocommerce - removed product count
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+
+// Display 12 products per page. Goes in functions.php
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
 
 // Woocommerce - removed shop product rating
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
@@ -39,11 +55,11 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_p
 // Woocommerce - removed single product rating
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
-// Change number or products per row to 2
+// Change number or products per row to 3
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
   function loop_columns() {
-    return 2; // 2 products per row
+    return 3; // 3 products per row
   }
 }
 
