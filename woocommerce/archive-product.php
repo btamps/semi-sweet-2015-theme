@@ -75,8 +75,11 @@ foreach($wcatTerms as $wcatTerm) :
 </ul>
 
         <div class="cart-buttons">
-          <a href="" class="btn btn-default cart">View Cart</a>
+          <a href="<?php echo WC()->cart->get_cart_url(); ?>" class="btn btn-default cart">View Cart</a>
         </div>
+
+
+			  <?php get_template_part( 'google', 'tall' ); ?>
       </div>
       <!-- sidebar end -->
 		<div class="col-sm-9 content-wrapper">
