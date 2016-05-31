@@ -44,7 +44,7 @@ h3 {
   font-weight: 600;
   font-size: 1.294em;
   line-height: 1.4;
-  color: #807369; }
+  color: #524A43; }
 
 h4 {
   font-weight: 400;
@@ -1189,7 +1189,7 @@ figure.width-500 {
   padding-right: 15px; }
 
 .woocommerce-ordering select {
-  border: 1px solid #E6DDCC;
+  border: 1px solid #99897D;
   background: white;
   height: 30px;
   font-size: 14px;
@@ -1375,7 +1375,7 @@ p.stock.in-stock {
     margin-bottom: .25em; }
   .dimension-box p {
     font-family: "source-sans-pro", helvetica, sans-serif;
-    font-size: .9em;
+    font-size: 1.15em;
     color: #807369;
     margin-bottom: 0; }
 

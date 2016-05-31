@@ -20,7 +20,7 @@ get_header(); ?>
           <input type="search" id="search-input" class="form-control search-field" placeholder="Search all posts" value="" name="s" title="Search" />
         </form>
       </div>
-      
+
       <h2 class="recent-result">Recent posts:</h2>
       <?php
         $current_cat = single_cat_title("", false);
@@ -58,12 +58,12 @@ get_header(); ?>
                 <h2 itemprop="name">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-                <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
+                <p><?php echo wp_trim_words( get_the_content(), 24, '...' ); ?></p>
                 <p>
-                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
                 </p>
               </div>
-          </div>    
+          </div>
         </article>
 
       <?php endwhile; ?>
