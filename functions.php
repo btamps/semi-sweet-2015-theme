@@ -21,8 +21,34 @@ add_theme_support( 'post-thumbnails' );
 // Add Woocommerce Support
 add_theme_support( 'woocommerce' );
 
-// Woocommerce - removed sorting dropdown
-// remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+//Reposition WooCommerce related products
+function woocommerce_remove_related_products(){
+remove_action(
+    'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+}
+add_action(
+    'woocommerce_after_single_product_summary', 'woocommerce_remove_related_products'
+);
+
+function woocommerce_custom_related_products(){
+    woocommerce_output_related_products();
+}
+add_action( 'woo_custom_related_products', 'woocommerce_custom_related_products' );
+
+
+function woo_related_products_limit() {
+  global $product;
+
+	$args['posts_per_page'] = 6;
+	return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+  function jk_related_products_args( $args ) {
+	$args['posts_per_page'] = 4; // 4 related products
+	$args['columns'] = 4; // arranged in 2 columns
+	return $args;
+}
 
 // Modify the default WooCommerce orderby dropdown
 //
@@ -43,14 +69,79 @@ add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 )
 // Woocommerce - removed shop product rating
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 
-// Woocommerce - removed breadcrumbs
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+// Woocommerce - change breadcrumbs home url
+add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+function woo_custom_breadrumb_home_url() {
+    return 'https://semisweetdesigns.com/shop/';
+}
+
+// Woocommerce - change breadcrumbs defaults
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
+function jk_woocommerce_breadcrumbs() {
+    return array(
+            'delimiter'   => ' <i class="fa fa-caret-right" aria-hidden="true"></i> ',
+            'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
+            'wrap_after'  => '</nav>',
+            'before'      => '<span>',
+            'after'       => '</span>',
+            'home'        => _x( 'Shop', 'breadcrumb', 'woocommerce' ),
+        );
+}
 
 // Woocommerce - removed single product rating
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 
-// Woocommerce - removed single product tabs
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+// Woocommerce - removed "reviews" in product tabs
+
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function woo_remove_product_tabs( $tabs ) {
+    unset( $tabs['reviews'] ); 			// Remove the reviews tab
+    return $tabs;
+}
+
+// Woocommerce - rename "Description" tab
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+function woo_rename_tabs( $tabs ) {
+
+	$tabs['description']['title'] = __( 'Overview' );		// Rename the description tab
+
+	return $tabs;
+}
+
+// Woocommerce - add "Shipping" tab
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+function woo_new_product_tab( $tabs ) {
+
+	// Adds the new tab
+
+	$tabs['test_tab'] = array(
+		'title' 	=> __( 'Shipping', 'woocommerce' ),
+		'priority' 	=> 40,
+		'callback' 	=> 'woo_shipping_tab_content'
+	);
+
+  $tabs['test_tab2'] = array(
+		'title' 	=> __( 'Product Info', 'woocommerce' ),
+		'priority' 	=> 50,
+		'callback' 	=> 'woo_material_tab_content'
+	);
+
+	return $tabs;
+
+}
+function woo_shipping_tab_content() {
+	// The tab content
+	echo '<h2>Shipping</h2>';
+	echo '<p>Here\'s your new product tab.</p>';
+}
+function woo_material_tab_content() {
+	// The tab content
+	echo '<h2>Product Info</h2>';
+	echo '<p>This cookie cutter is made from food safe PLA plastic. Because of its sensitivity to high temperatures, this cookie cutter is to be HAND WASH ONLY. It should not be washed in the dishwasher, not to be left soaking in hot water, not to be used on hot cookies, and not to be left in a warm vehicle. Avoid any exposure to heat.</p>
+
+<p>Each cookie cutter has a blade height just over half an inch. The cutting blade is thin, yet very durable. It should have no problem cutting into dough up to 3/8” in thickness.</p>';
+}
 
 // Woocommerce - removed single product rating
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );

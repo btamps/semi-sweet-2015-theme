@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<div class="container-fluid blog-box">
+<div class="container-fluid content-box">
   <div class="row">
 	<?php
 		/**
@@ -40,8 +40,15 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
+	<?php
+		/**
+		 * @hooked woocommerce_output_related_products - 20
+		 */
+		do_action( 'woo_custom_related_products' );
+	?>
 
-	
 	</div> <!-- row end -->
-</div> <!-- blog-box end -->
+</div> <!-- content-box end -->
+
+
 <?php get_footer( 'shop' ); ?>

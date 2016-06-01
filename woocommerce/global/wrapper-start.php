@@ -11,6 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
-<div class="col-sm-8 content-wrapper">
+<div class="col-sm-12 content-wrapper">
   <div class="row">
-	<article class="woo-store col-md-12 post-wrapper">
+	<article class="woo-store col-md-12 product-wrapper">

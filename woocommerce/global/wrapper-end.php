@@ -13,5 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 </article>
+
 </div>
 </div>
