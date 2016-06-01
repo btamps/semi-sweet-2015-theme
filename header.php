@@ -33,10 +33,9 @@
       ga('create', 'UA-28123361-1', 'auto');
       ga('send', 'pageview');
     </script>
-    
-    <!-- TypeKit -->
-    <script src="https://use.typekit.net/ewa7xsh.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
