@@ -16,8 +16,8 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: "Lato", helvetica, sans-serif;
-  font-size: 17px; }
+  font-family: "Lato", helvetica, verdana, sans-serif;
+  font-size: 16px; }
 
 img {
   vertical-align: middle; }
@@ -71,7 +71,7 @@ body {
   max-width: 1200px;
   margin: 0 auto; }
 
-.wrapper-bg {
+.wrapper-bg, .archive .shop-sidebar .product-categories, .woocommerce ul.products li.product a {
   background: white;
   box-shadow: 0 0 2px #ccc;
   overflow: hidden;
@@ -194,7 +194,7 @@ nav .container-fluid {
       margin: 20px auto; }
   .hero-message-box p {
     font-family: "ff-tisa-web-pro", georgia, times, serif;
-    font-size: 17px; }
+    font-size: 16px; }
 
 @media (min-width: 768px) {
   .jumbotron {
@@ -218,13 +218,13 @@ nav .container-fluid {
         margin: 20px auto; }
     .hero-message-box p {
       font-family: "ff-tisa-web-pro", georgia, times, serif;
-      font-size: 17px; } }
+      font-size: 16px; } }
 .btn, .comment-respond .submit, .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce-checkout input#place_order {
   color: #FF5252;
-  font-family: "Lato", helvetica, sans-serif;
+  font-family: "Lato", helvetica, verdana, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -255,7 +255,7 @@ nav .container-fluid {
       background: #307c9c; }
 
 .btn-more {
-  font-family: "Lato", helvetica, sans-serif; }
+  font-family: "Lato", helvetica, verdana, sans-serif; }
 
 .form-inline {
   position: relative; }
@@ -478,7 +478,7 @@ h2.title {
     .newsletter-box h2 i {
       color: #b1d7e7; }
   .newsletter-box p {
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     color: #eee;
     font-size: 1.2em; }
   .newsletter-box .newsletter-text {
@@ -595,7 +595,7 @@ h2.title {
   padding-bottom: 10px; }
   .copyright p {
     color: #F8F6F2;
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     font-size: 12px;
     letter-spacing: .5px; }
 
@@ -709,7 +709,7 @@ h2.title {
   .product-wrapper header p {
     padding: 0;
     color: #524A43;
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     display: inline-block; }
   .post-wrapper header p,
   .product-wrapper header p {
@@ -735,7 +735,7 @@ h2.title {
     margin-right: .1em;
     color: #807369; }
   .sidenote p {
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     color: #99897D; }
 
 .sidebar {
@@ -890,14 +890,14 @@ figure.width-500 {
   .comment-respond .comment-form-comment {
     display: block; }
   .comment-respond label {
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     font-weight: 700;
     color: #524A43; }
   .comment-respond textarea, .comment-respond input[type='text'] {
     width: 100%;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     padding: .25em; }
   .comment-respond .submit {
     margin-top: 0;
@@ -978,7 +978,8 @@ figure.width-500 {
     padding-right: 45px; }
 
   .product-wrapper {
-    margin-top: 0; }
+    margin-top: 0;
+    padding: 10px 30px 15px; }
 
   .post-wrapper header {
     margin-bottom: 2em; }
@@ -1108,7 +1109,7 @@ figure.width-500 {
 .search-box {
   padding: 0 0 30px; }
   .search-box .archive-message {
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     font-size: .95em;
     margin: 0 0 .5em 0; }
 
@@ -1151,9 +1152,7 @@ figure.width-500 {
     letter-spacing: .5px; }
 
 .archive .shop-sidebar {
-  float: left;
-  margin-top: 10px;
-  width: 100%; }
+  margin-top: 10px; }
   .archive .shop-sidebar h2 {
     display: none; }
   .archive .shop-sidebar h1 {
@@ -1164,21 +1163,24 @@ figure.width-500 {
     margin-bottom: 20px;
     display: none; }
   .archive .shop-sidebar .product-categories {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding: 0; }
   .archive .shop-sidebar ul {
     display: none;
     list-style: none;
     padding: 0; }
     .archive .shop-sidebar ul li {
-      line-height: 28px; }
-      .archive .shop-sidebar ul li.top-level {
-        margin-bottom: 10px; }
-        .archive .shop-sidebar ul li.top-level a {
-          font-weight: 900; }
-          .archive .shop-sidebar ul li.top-level a.selected {
-            color: #FF5252; }
+      line-height: 40px;
+      border-top: 1px solid #99897D;
+      padding-left: 10px; }
+      .archive .shop-sidebar ul li.top-level a {
+        font-weight: 900; }
+        .archive .shop-sidebar ul li.top-level a.selected {
+          color: #FF5252; }
+      .archive .shop-sidebar ul li.top-level:first-child {
+        border-top: 0 !important; }
       .archive .shop-sidebar ul li.sub-level {
-        padding-left: .75em; }
+        margin-left: -10px; }
         .archive .shop-sidebar ul li.sub-level a {
           font-weight: 400; }
           .archive .shop-sidebar ul li.sub-level a.selected {
@@ -1199,7 +1201,6 @@ figure.width-500 {
   display: block; }
 
 .archive .content-wrapper {
-  float: right;
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -1221,7 +1222,7 @@ figure.width-500 {
   .woo-store header h2 {
     display: none; }
   .woo-store header .woocommerce-result-count {
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     float: right;
     display: block;
     font-size: .9em;
@@ -1241,7 +1242,7 @@ figure.width-500 {
   display: block;
   border: 1px solid #FF5252;
   text-align: center;
-  font-family: "Lato", helvetica, sans-serif;
+  font-family: "Lato", helvetica, verdana, sans-serif;
   background: white !important;
   color: #FF5252 !important;
   margin-top: 0; }
@@ -1255,16 +1256,19 @@ figure.width-500 {
   padding-bottom: 1em; }
   .woocommerce .summary .price {
     color: #99897D !important;
-    font-family: "Lato", helvetica, sans-serif; }
+    font-family: "Lato", helvetica, verdana, sans-serif; }
     .woocommerce .summary .price ins, .woocommerce .summary .price del {
       color: #807369; }
+  .woocommerce .summary span.amount {
+    font-size: 32px; }
 .woocommerce .upsells, .woocommerce .related {
   clear: both; }
 .woocommerce span.amount {
   color: #FF5252;
   font-weight: 900;
-  font-size: 32px;
-  display: block; }
+  font-size: 1.2em;
+  display: block;
+  margin: 5px 0 10px; }
 .woocommerce form.cart .input-text {
   max-width: 70px;
   height: 44px;
@@ -1285,12 +1289,18 @@ figure.width-500 {
   max-width: 200px;
   display: inline-block; }
 
+.archive.woocommerce ul.products li.product {
+  margin: 0 0 2.992em 0;
+  width: 48%; }
+
 .woocommerce ul.products {
   padding: 0;
   display: block;
   width: 100%;
   overflow: hidden;
   list-style: none; }
+  .woocommerce ul.products li.product a {
+    padding: 0; }
   .woocommerce ul.products li.product a:first-of-type {
     display: block;
     overflow: hidden; }
@@ -1426,7 +1436,7 @@ p.stock.in-stock {
   .dimension-box h3 {
     margin-bottom: .25em; }
   .dimension-box p {
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     font-size: 1em;
     color: #807369;
     margin-bottom: 0; }
@@ -1478,6 +1488,7 @@ p.stock.in-stock {
     content: "Advertisement";
     position: absolute;
     bottom: -5px;
+    right: 0;
     color: #99897D;
     font-size: .8em;
     letter-spacing: .5px; }
@@ -1543,7 +1554,7 @@ p.demo_store {
     display: block !important;
     float: none !important; }
   .woocommerce-cart .shop_table .variation p {
-    font-family: "Lato", helvetica, sans-serif; }
+    font-family: "Lato", helvetica, verdana, sans-serif; }
   .woocommerce-cart .shop_table .product-thumbnail a {
     display: block; }
   .woocommerce-cart .shop_table .product-thumbnail img {
@@ -1553,7 +1564,7 @@ p.demo_store {
     overflow: hidden;
     float: left; }
     .woocommerce-cart .shop_table .coupon label {
-      font-family: "Lato", helvetica, sans-serif;
+      font-family: "Lato", helvetica, verdana, sans-serif;
       color: #99897D;
       font-weight: 700;
       display: none; }
@@ -1561,7 +1572,7 @@ p.demo_store {
       padding: 6px;
       margin-right: 10px;
       margin-bottom: 10px;
-      font-family: "Lato", helvetica, sans-serif;
+      font-family: "Lato", helvetica, verdana, sans-serif;
       float: left;
       width: 120px !important; }
     .woocommerce-cart .shop_table .coupon input[type="submit"] {
@@ -1590,7 +1601,7 @@ p.demo_store {
 .woocommerce-checkout .checkout input, .woocommerce-checkout .checkout textarea {
   width: 100%;
   padding: .25em .5em;
-  font-family: "Lato", helvetica, sans-serif;
+  font-family: "Lato", helvetica, verdana, sans-serif;
   border: 1px solid #ccc; }
 .woocommerce-checkout .checkout h3, .woocommerce-checkout .checkout h3 label {
   font-size: 28px;
@@ -1607,12 +1618,12 @@ p.demo_store {
   .woocommerce-checkout .woocommerce-checkout-review-order strong {
     display: block;
     font-size: .9em;
-    font-family: "Lato", helvetica, sans-serif;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     color: #524A43; }
 .woocommerce-checkout .woocommerce-shipping-fields textarea {
   min-height: 150px; }
 .woocommerce-checkout .state_select {
-  font-family: "Lato", helvetica, sans-serif !important; }
+  font-family: "Lato", helvetica, verdana, sans-serif !important; }
 .woocommerce-checkout #order_review_heading {
   font-weight: 900;
   color: #524A43;
@@ -1638,7 +1649,7 @@ p.demo_store {
   list-style: none;
   padding: 0; }
   .woocommerce-checkout .woocommerce-checkout-review-order .payment_methods .payment_box p {
-    font-family: "Lato", helvetica, sans-serif; }
+    font-family: "Lato", helvetica, verdana, sans-serif; }
 .woocommerce-checkout input#place_order {
   font-size: 1.1em;
   padding: 18px 22px;
@@ -1759,22 +1770,33 @@ p.demo_store {
     float: none !important;
     width: 100% !important; } }
 @media (min-width: 768px) {
+  .archive.woocommerce ul.products li.product {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 33.33333333%; }
+
+  .archive.woocommerce ul.products li.product.last {
+    padding-left: 15px;
+    padding-right: 0; }
+
+  .archive.woocommerce ul.products li.product.first {
+    padding-left: 0;
+    padding-right: 15px; }
+
   .tax-product_cat .woo-store header h2.shop-title {
     display: block;
     margin: 0;
     float: left; }
 
-  .archive .shop-sidebar {
-    width: 25%; }
-    .archive .shop-sidebar form {
-      display: block; }
-    .archive .shop-sidebar ul {
-      display: block; }
-    .archive .shop-sidebar .cart-buttons .cart {
-      display: block; }
-      .archive .shop-sidebar .cart-buttons .cart:hover {
-        background: #FF5252;
-        color: white; }
+  .archive .shop-sidebar form {
+    display: block; }
+  .archive .shop-sidebar ul {
+    display: block; }
+  .archive .shop-sidebar .cart-buttons .cart {
+    display: block; }
+    .archive .shop-sidebar .cart-buttons .cart:hover {
+      background: #FF5252;
+      color: white; }
 
   .archive .content-wrapper {
     padding-left: 30px; }

@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<div class="container-fluid blog-box">
+<div class="container-fluid content-box">
   <div class="row">
-		<div class="col-sm-3 shop-sidebar">
+		<div class="col-md-3 shop-sidebar">
         <h1>Shop</h1>
 				<?php
 // Hey Billy, I added this function so you can easily check if the current slug is within the current URL path
@@ -82,7 +82,7 @@ foreach($wcatTerms as $wcatTerm) :
 			  <?php get_template_part( 'google', 'tall' ); ?>
       </div>
       <!-- sidebar end -->
-		<div class="col-sm-9 content-wrapper">
+		<div class="col-md-9 content-wrapper">
 		  <div class="row">
 			<article class="woo-store col-md-12">
 		<header>
