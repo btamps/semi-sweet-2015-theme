@@ -6,7 +6,7 @@
 */
 get_header(); ?>
 
-<div class="container-fluid blog-box">
+<div class="container-fluid content-box">
   <div class="row">
 
     <!-- Content Wrapper -->

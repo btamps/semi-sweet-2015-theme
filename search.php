@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<div class="container-fluid blog-box">
+<div class="container-fluid content-box">
   <div class="row">
 
     <!-- Content Wrapper -->
@@ -19,7 +19,7 @@ get_header(); ?>
           <input type="search" id="search-input" class="form-control search-field" placeholder="Search all posts" value="" name="s" title="Search" />
         </form>
       </div>
-      
+
       <h2 class="page-title"><?php printf( __( 'Search Results for: “%s”', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
       <?php
         $current_cat = single_cat_title("", false);
@@ -59,10 +59,10 @@ get_header(); ?>
                 </h2>
                 <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
                 <p>
-                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
                 </p>
               </div>
-          </div>    
+          </div>
         </article>
 
       <?php endwhile; ?>

@@ -5,13 +5,13 @@ Template Name: My Blog
 ?>
 <?php get_header(); ?>
 <!-- Blog Posts -->
-<div class="container-fluid blog-box">
+<div class="container-fluid content-box">
   <div class="row">
 
     <!-- Content Wrapper -->
     <div class="col-sm-8 content-wrapper">
       <div class="row">
-      
+
         <?php
           $query_args = array(
           'showposts'     => 1 // here you can add limit by categry etc
@@ -40,12 +40,12 @@ Template Name: My Blog
                 </h2>
                 <p><?php echo wp_trim_words( get_the_content(), 50, '...' ); ?></p>
                 <p>
-                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
                 </p>
               </div>
-          </div>   
+          </div>
         </article>
-        
+
         <?php else : ?>
 
           <article class="col-md-6 post-box" itemscope itemtype="http://schema.org/Blog">
@@ -64,15 +64,15 @@ Template Name: My Blog
                 </h2>
                 <p><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
                 <p>
-                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
                 </p>
               </div>
-          </div>    
+          </div>
         </article>
 
       <?php endif; ?>
 
-      <?php endwhile; ?>     
+      <?php endwhile; ?>
 
       </div>  <!-- row end -->
       <div class="row">

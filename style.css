@@ -69,7 +69,7 @@ body {
   max-width: 1200px;
   margin: 0 auto; }
 
-.wrapper-bg, .archive .shop-sidebar .product-categories, .product-search-field, .woocommerce ul.products li.product a {
+.wrapper-bg, .post-box .thumbnail, .archive .shop-sidebar .product-categories, .product-search-field, .woocommerce ul.products li.product a {
   background: white;
   box-shadow: 0 0 2px #ccc;
   overflow: hidden;
@@ -740,6 +740,9 @@ h2.title {
     font-family: "Lato", helvetica, verdana, sans-serif;
     color: #99897D; }
 
+.post-box .thumbnail {
+  padding: 0; }
+
 .sidebar {
   margin-top: 2.5em;
   margin-left: 15px;
@@ -762,8 +765,6 @@ figure.width-500 {
   margin-right: auto;
   margin-left: auto; }
 
-.blog .blog-box, .page-template-archive .blog-box, .archive .blog-box, .search-results .blog-box {
-  padding-top: 1em; }
 .blog .thumbnail > a figure, .page-template-archive .thumbnail > a figure, .archive .thumbnail > a figure, .search-results .thumbnail > a figure {
   margin-bottom: 0; }
 .blog .thumbnail h2, .page-template-archive .thumbnail h2, .archive .thumbnail h2, .search-results .thumbnail h2 {
@@ -792,9 +793,6 @@ figure.width-500 {
 .page-template-archive h2, .archive h2, .search-results h2 {
   margin: 1em 0; }
 
-.page-template-archive .blog-box,
-.archive .blog-box {
-  padding-top: 0; }
 .page-template-archive .recent-result, .page-template-archive .cat-result, .page-template-archive .tag-result,
 .archive .recent-result,
 .archive .cat-result,
@@ -975,7 +973,7 @@ figure.width-500 {
   .content-wrapper {
     margin-top: 2.5em; }
 
-  .blog-box .content-wrapper {
+  .content-box .content-wrapper {
     padding-left: 15px;
     padding-right: 45px; }
 
@@ -1000,7 +998,7 @@ figure.width-500 {
       margin: 10px 30px 20px 0;
       float: left; }
 
-  .blog .blog-box, .page-template-archive .blog-box, .archive .blog-box, .search-results .blog-box, .page-template-archive .blog-box {
+  .blog .content-box, .page-template-archive .content-box, .archive .content-box, .search-results .content-box, .page-template-archive .content-box {
     padding-top: 0; }
 
   .page-template-archive .recent-result, .page-template-archive .cat-result, .page-template-archive .tag-result,
@@ -1159,7 +1157,7 @@ figure.width-500 {
   .archive .shop-sidebar .menu-title {
     background: #FF5252;
     color: white;
-    padding: 0 0	0 15px;
+    padding: 0 0	0 20px;
     line-height: 50px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1225,7 +1223,7 @@ figure.width-500 {
 .archive.tax-product_cat h2 {
   display: block; }
 
-.archive .content-wrapper {
+.archive.woocommerce .content-wrapper {
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -1825,7 +1823,7 @@ p.demo_store {
       background: #FF5252;
       color: white; }
 
-  .archive .content-wrapper {
+  .archive.woocommerce .content-wrapper {
     padding-left: 30px; }
 
   .woocommerce.single-product .images, .woocommerce.single-product .summary {

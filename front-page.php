@@ -16,24 +16,24 @@ Template Name: Front Page
         </div>
       </div>
     </div>
-    
+
     <!-- Blog Posts -->
 
-    <div class="container-fluid blog-box">
+    <div class="container-fluid content-box">
       <div class="row">
         <h2 class="title"><span>Fresh From the Blog</span></h2>
-        
+
         <?php
         global $post;
         $args = array( 'posts_per_page' => 1 );
         $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) : 
-          setup_postdata( $post ); ?>      
+        foreach ( $myposts as $post ) :
+          setup_postdata( $post ); ?>
 
         <!-- First Post -->
         <div class="col-sm-6 col-md-12">
           <div class="thumbnail">
-            <div class="first-post row">    
+            <div class="first-post row">
               <a href="<?php the_permalink(); ?>" class="first-post-image col-md-6">
                 <?php the_post_thumbnail(); ?>
               </a>
@@ -42,7 +42,7 @@ Template Name: Front Page
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <?php the_excerpt(); ?>
               <p>
-                <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>      
+                <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
               </p>
               </div>
             </div>
@@ -54,8 +54,8 @@ Template Name: Front Page
         global $post;
         $args = array( 'posts_per_page' => 3, 'offset'=> 1 );
         $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) : 
-          setup_postdata( $post ); ?>      
+        foreach ( $myposts as $post ) :
+          setup_postdata( $post ); ?>
 
         <!-- Rest of Posts -->
         <div class="col-sm-6 col-md-4">
@@ -68,7 +68,7 @@ Template Name: Front Page
               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <?php the_excerpt(); ?>
             <p>
-              <a href="<?php the_permalink(); ?>" class="btn btn-more">Read More &raquo;</a>      
+              <a href="<?php the_permalink(); ?>" class="btn btn-more">Read More &raquo;</a>
             </p>
             </div>
           </div>
@@ -86,10 +86,10 @@ Template Name: Front Page
     <div class="container-fluid basics">
       <div class="row">
         <h2 class="title"><span>Getting Started</span></h2>
-        
+
           <div class="col-sm-4 col-md-4">
             <div class="thumbnail">
-              <a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">                
+              <a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">
                 <img src="https://semisweetdesigns.com/wp-content/uploads/2014/09/cookie-decorating-supplies-title.jpg" alt="A Beginner’s Guide to Cookie Decorating Supplies">
               </a>
               <div class="caption">
@@ -101,7 +101,7 @@ Template Name: Front Page
 
           <div class="col-sm-4 col-md-4">
             <div class="thumbnail">
-              <a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">                
+              <a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">
                 <img src="https://semisweetdesigns.com/wp-content/uploads/2014/08/royal-icing-recipe-title-new.jpg" alt="Royal Icing Recipe">
               </a>
               <div class="caption">
@@ -113,7 +113,7 @@ Template Name: Front Page
 
           <div class="col-sm-4 col-md-4">
             <div class="thumbnail">
-              <a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">                
+              <a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">
                 <img src="https://semisweetdesigns.com/wp-content/uploads/2013/09/sugar_cookie_recipe-title.jpg" alt="Roll-Out Sugar Cookie Recipe">
               </a>
               <div class="caption">

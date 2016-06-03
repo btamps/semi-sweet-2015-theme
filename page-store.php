@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * Template Name: Store Page
  * Description: Page template for woocommerce cart page
@@ -6,7 +6,7 @@
 
 get_header(); ?>
 <!-- Blog Posts -->
-<div class="container-fluid blog-box">
+<div class="container-fluid content-box">
   <div class="row">
 
     <!-- Content Wrapper -->
@@ -20,7 +20,7 @@ get_header(); ?>
         </header>
           <?php remove_filter (’the_content’, ‘wpautop’); ?>
           <?php the_content(); ?>
-          
+
         </article>
         <?php endwhile; else: ?>
 
