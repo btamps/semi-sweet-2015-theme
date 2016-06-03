@@ -22,15 +22,28 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'woocommerce' );
 
 // Add Woocommerce classes to archive page
-add_filter( 'body_class', 'b5f_modify_body_classes', 10, 2 );
+add_filter( 'body_class', 'archive_modify_body_classes', 10, 2 );
 
-function b5f_modify_body_classes( $classes, $class )
+function archive_modify_body_classes( $classes, $class )
 {
     // Modify the array $classes to your needs
     if( is_archive() )
     {
         $classes[] = 'woocommerce';
         $classes[] = 'woocommerce-page';
+    }
+    return $classes;
+}
+
+// Add "blog" classes to single page
+add_filter( 'body_class', 'blog_modify_body_classes', 10, 2 );
+
+function blog_modify_body_classes( $classes, $class )
+{
+    // Modify the array $classes to your needs
+    if( is_single() )
+    {
+        $classes[] = 'blog';
     }
     return $classes;
 }
