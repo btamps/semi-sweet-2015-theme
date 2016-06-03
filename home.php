@@ -38,17 +38,14 @@ Template Name: My Blog
                 <h2 itemprop="name">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-                <p><?php echo wp_trim_words( get_the_content(), 50, '...' ); ?></p>
-                <p>
-                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
-                </p>
+                <?php the_content( 'Read More', TRUE ); ?>
               </div>
           </div>
         </article>
 
         <?php else : ?>
 
-          <article class="col-md-6 post-box" itemscope itemtype="http://schema.org/Blog">
+          <article class="col-md-12 post-box" itemscope itemtype="http://schema.org/Blog">
           <div class="thumbnail">
               <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
               <meta itemprop="image" content="<?php echo $url; ?>" />
@@ -62,10 +59,7 @@ Template Name: My Blog
                 <h2 itemprop="name">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-                <p><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
-                <p>
-                  <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
-                </p>
+                <?php the_content( 'Read More', TRUE ); ?>
               </div>
           </div>
         </article>
