@@ -132,7 +132,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<?php do_action( 'woocommerce_cart_coupon' ); ?>
 					</div>
-				<?php } ?>				
+				<?php } ?>
 
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -149,9 +149,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <div class="cart-collaterals">
-
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
-
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
