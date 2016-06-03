@@ -26,7 +26,7 @@ function isInURL($slug) {
 ?>
 
 <ul class="product-categories">
-	<li class="menu-title">Shop Categories</li>
+	<li class="menu-title"><a href="/shop">Shop Categories</a></li>
   <?php // you could clean this up so it's a little more readable like this
   $wcatTerms = get_terms(
         'product_cat', array(
