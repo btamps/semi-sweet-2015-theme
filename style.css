@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: "Lato", helvetica, verdana, sans-serif;
-  font-size: 16px; }
+  font-size: 15px; }
 
 img {
   vertical-align: middle; }
@@ -54,10 +54,10 @@ h4, .woocommerce div.product form.cart .variations td.label label {
   margin-bottom: .5em; }
 
 p {
-  line-height: 1.6;
-  font-size: 1.1em;
+  line-height: 1.7;
+  font-size: 1.05em;
   margin-bottom: 1em;
-  font-family: "PT Serif", georgia, times, serif; }
+  font-family: "Noto Serif", georgia, times, serif; }
 
 @media screen and (min-width: 768px) {
   h1 {
@@ -81,10 +81,6 @@ figure {
   figure img {
     width: 100%; }
 
-@media (min-width: 767px) {
-  .archive .container-fluid {
-    padding-left: 30px;
-    padding-right: 15px; } }
 nav .container-fluid {
   max-width: 1200px;
   margin: 0 auto; }
@@ -108,7 +104,7 @@ nav .container-fluid {
 
 .navbar-inverse .navbar-nav > li > a {
   color: white;
-  font-weight: 400;
+  font-weight: 700;
   -webkit-transition: color .2s;
   transition: color .2s;
   letter-spacing: .25px; }
@@ -196,8 +192,8 @@ nav .container-fluid {
       background: #99897D;
       margin: 20px auto; }
   .hero-message-box p {
-    font-family: "PT Serif", georgia, times, serif;
-    font-size: 16px; }
+    font-family: "Noto Serif", georgia, times, serif;
+    font-size: 15px; }
 
 @media (min-width: 768px) {
   .jumbotron {
@@ -220,9 +216,9 @@ nav .container-fluid {
         background: #99897D;
         margin: 20px auto; }
     .hero-message-box p {
-      font-family: "PT Serif", georgia, times, serif;
-      font-size: 16px; } }
-.btn, .comment-respond .submit, .woocommerce #respond input#submit,
+      font-family: "Noto Serif", georgia, times, serif;
+      font-size: 15px; } }
+.btn, .post-box .thumbnail .more-link, .comment-respond .submit, .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce-checkout input#place_order {
@@ -232,13 +228,13 @@ nav .container-fluid {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
-  border: 0;
+  border: 1px solid #FF5252;
   padding: 10px 18px;
   border-radius: 3px;
   margin-top: 10px;
   height: 44px;
   background: transparent; }
-  .btn.btn-primary, .comment-respond .submit, .woocommerce #respond input.btn-primary#submit, .woocommerce #respond .comment-respond input#submit.submit, .comment-respond .woocommerce #respond input#submit.submit,
+  .btn.btn-primary, .post-box .thumbnail .btn-primary.more-link, .post-box .thumbnail .comment-respond .more-link.submit, .comment-respond .post-box .thumbnail .more-link.submit, .comment-respond .submit, .woocommerce #respond input.btn-primary#submit, .woocommerce #respond .comment-respond input#submit.submit, .comment-respond .woocommerce #respond input#submit.submit,
   .woocommerce a.btn-primary.button,
   .woocommerce .comment-respond a.button.submit,
   .comment-respond .woocommerce a.button.submit,
@@ -251,14 +247,16 @@ nav .container-fluid {
     background: #FF5252;
     color: white;
     padding: 11px 18px 12px; }
-    .btn.btn-primary:hover, .comment-respond .submit:hover, .woocommerce #respond input.btn-primary#submit:hover, .woocommerce #respond .comment-respond input#submit.submit:hover, .comment-respond .woocommerce #respond input#submit.submit:hover,
+    .btn.btn-primary:hover, .post-box .thumbnail .btn-primary.more-link:hover, .comment-respond .submit:hover, .woocommerce #respond input.btn-primary#submit:hover, .woocommerce #respond .comment-respond input#submit.submit:hover, .comment-respond .woocommerce #respond input#submit.submit:hover,
     .woocommerce a.btn-primary.button:hover,
     .woocommerce button.btn-primary.button:hover,
     .woocommerce input.btn-primary.button:hover, .woocommerce-checkout input.btn-primary#place_order:hover, .woocommerce-checkout .comment-respond input#place_order.submit:hover, .comment-respond .woocommerce-checkout input#place_order.submit:hover {
       background: #307c9c; }
 
-.btn-more {
-  font-family: "Lato", helvetica, verdana, sans-serif; }
+.btn-more:hover, .post-box .thumbnail .more-link:hover {
+  background: #f14d41;
+  color: white;
+  text-decoration: none; }
 
 .form-inline {
   position: relative; }
@@ -282,7 +280,8 @@ nav .container-fluid {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background: #53a3c6;
-    color: white; }
+    color: white;
+    border: 0 !important; }
     .form-inline button:hover {
       background: #f14d41;
       color: white; }
@@ -488,7 +487,7 @@ h2.title {
     margin: 0 auto 20px;
     text-align: center;
     float: none; }
-  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .post-box .thumbnail .more-link, .post-box .thumbnail .newsletter-box .form-inline .more-link, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
   .newsletter-box .form-inline .woocommerce a.button,
   .woocommerce .newsletter-box .form-inline a.button,
   .newsletter-box .form-inline .woocommerce button.button,
@@ -500,7 +499,8 @@ h2.title {
     margin: 0 auto;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    font-size: .9em; }
+    font-size: .9em;
+    border: 0; }
   .newsletter-box .form-inline input {
     border: 0; }
   .newsletter-box .no-joke {
@@ -517,7 +517,7 @@ h2.title {
     height: auto;
     margin-bottom: 20px; }
 
-  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .post-box .thumbnail .more-link, .post-box .thumbnail .newsletter-box .form-inline .more-link, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
   .newsletter-box .form-inline .woocommerce a.button,
   .woocommerce .newsletter-box .form-inline a.button,
   .newsletter-box .form-inline .woocommerce button.button,
@@ -719,6 +719,10 @@ h2.title {
     color: #807369;
     font-size: .95em; }
 
+.post-wrapper header {
+  border-bottom: 1px solid #F4EBDA;
+  margin-bottom: 30px; }
+
 .comment-count {
   margin-bottom: 0; }
 
@@ -743,6 +747,11 @@ h2.title {
 
 .post-box .thumbnail {
   padding: 0; }
+  .post-box .thumbnail .more-link {
+    display: block;
+    margin: 2em auto 0;
+    width: 180px;
+    text-align: center; }
 
 .sidebar {
   margin-top: 2.5em;
@@ -776,12 +785,6 @@ figure.width-500 {
     line-height: 1.1em;
     font-weight: 900;
     display: inline-block; }
-
-.btn-more {
-  border: 1px solid #FF5252; }
-  .btn-more:hover {
-    background: #f14d41;
-    color: white; }
 
 .page-template-archive .search-field, .archive .search-field, .search-results .search-field {
   width: 100%;
@@ -942,6 +945,10 @@ figure.width-500 {
     color: white;
     border-color: #FF5252; }
 
+.blog .content-box {
+  padding-top: 20px;
+  padding-bottom: 30px; }
+
 .bawmrp {
   overflow: hidden; }
   .bawmrp ul {
@@ -974,15 +981,47 @@ figure.width-500 {
   .content-wrapper {
     margin-top: 2.5em; }
 
-  .blog .content-box .content-wrapper, .page-template-archive .content-box .content-wrapper, .archive .content-box .content-wrapper, .search-results .content-box .content-wrapper {
-    padding-left: 15px;
-    padding-right: 45px; }
+  .blog .content-box {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px; }
+    .blog .content-box .content-wrapper {
+      padding-left: 15px;
+      padding-right: 45px; }
+
+  .page-template-page-store .content-wrapper,
+  .woocommerce-page .content-wrapper {
+    padding-left: 15px !important;
+    padding-right: 15px !important; }
+    .page-template-page-store .content-wrapper .post-wrapper,
+    .woocommerce-page .content-wrapper .post-wrapper {
+      padding: 0 15px 15px; }
+
+  .archive.woocommerce.category .content-wrapper,
+  .archive.woocommerce.tag .content-wrapper {
+    padding-right: 45px;
+    padding-left: 15px; }
+
+  .home .content-wrapper .feature-image,
+  .page-template-archive .content-wrapper .feature-image,
+  .search .content-wrapper .feature-image {
+    height: 300px;
+    overflow: hidden;
+    text-align: center; }
+    .home .content-wrapper .feature-image img,
+    .page-template-archive .content-wrapper .feature-image img,
+    .search .content-wrapper .feature-image img {
+      position: relative;
+      left: 100%;
+      margin-left: -200%;
+      top: 100%;
+      margin-top: -60%; }
 
   .product-wrapper {
     margin-top: 0;
     padding: 10px 30px 15px; }
 
-  .blog .post-wrapper header p.comment-count, .page-template-archive .post-wrapper header p.comment-count, .archive .post-wrapper header p.comment-count, .search-results .post-wrapper header p.comment-count {
+  .blog .post-wrapper header p.comment-count {
     float: right;
     display: inline-block; }
 
@@ -997,7 +1036,7 @@ figure.width-500 {
       margin: 10px 30px 20px 0;
       float: left; }
 
-  .blog .content-box, .page-template-archive .content-box, .archive .content-box, .search-results .content-box, .page-template-archive .content-box {
+  .blog .content-box, .page-template-archive .content-box {
     padding-top: 0; }
 
   .page-template-archive .recent-result, .page-template-archive .cat-result, .page-template-archive .tag-result,
@@ -1011,27 +1050,13 @@ figure.width-500 {
   .search .cat-result,
   .search .tag-result {
     margin-left: 0; }
-  .page-template-archive .post-box:first-child .caption,
-  .archive.category .post-box:first-child .caption,
-  .archive.tag .post-box:first-child .caption,
-  .search .post-box:first-child .caption {
-    padding: 30px; }
-    .page-template-archive .post-box:first-child .caption h2,
-    .archive.category .post-box:first-child .caption h2,
-    .archive.tag .post-box:first-child .caption h2,
-    .search .post-box:first-child .caption h2 {
-      font-size: 1.647em; }
 
   .post-box {
     padding: 0; }
-    .post-box .thumbnail {
-      min-height: 700px; }
-    .post-box:first-child {
-      padding: 0 !important; }
-      .post-box:first-child h2 {
+    .post-box .thumbnail .caption {
+      padding: 40px 50px 30px; }
+      .post-box .thumbnail .caption h2 {
         font-size: 2em; }
-      .post-box:first-child .caption {
-        padding: 40px 50px 30px; }
 
   .paged .post-box:first-child h2 {
     font-size: 1.647em; }
@@ -1059,35 +1084,19 @@ figure.width-500 {
     margin-left: 0;
     margin-right: 0; } }
 @media (min-width: 991px) {
-  .blog .post-wrapper, .page-template-archive .post-wrapper, .archive .post-wrapper, .search-results .post-wrapper {
+  .blog .post-wrapper {
     padding: 20px 40px; }
-    .blog .post-wrapper figure.feature-image, .page-template-archive .post-wrapper figure.feature-image, .archive .post-wrapper figure.feature-image, .search-results .post-wrapper figure.feature-image {
+    .blog .post-wrapper figure.feature-image {
       margin-bottom: 3em;
       margin-left: -40px !important;
       margin-right: -40px !important; }
 
   .product-wrapper {
-    max-width: none; }
-
-  .post-box:nth-child(odd) {
-    padding-left: 15px; }
-  .post-box:nth-child(even) {
-    padding-right: 15px; }
-
-  .paged .post-box:nth-child(odd) {
-    padding-right: 15px !important; }
-  .paged .post-box:nth-child(even) {
-    padding-left: 15px !important; }
-  .paged .post-box:first-child {
-    padding-left: 15px !important;
-    padding-right: 15px !important; }
-
-  .page-template-archive .post-box:nth-child(odd), .archive .post-box:nth-child(odd), .search-results .post-box:nth-child(odd) {
-    padding-right: 15px !important;
-    padding-left: 0 !important; }
-  .page-template-archive .post-box:nth-child(even), .archive .post-box:nth-child(even), .search-results .post-box:nth-child(even) {
+    max-width: none; } }
+@media (min-width: 1199px) {
+  .blog .content-box {
     padding-left: 15px;
-    padding-right: 0; } }
+    padding-right: 15px; } }
 .newsletter {
   margin-bottom: 30px;
   background-image: repeating-linear-gradient(135deg, #ff8585 0px, #ff8585 30px, transparent 30px, transparent 50px, #53a3c6 50px, #53a3c6 80px, transparent 80px, transparent 100px);
@@ -1134,7 +1143,10 @@ figure.width-500 {
   font-weight: 700;
   margin: 0;
   color: #524A43;
-  line-height: 1.2; }
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-size: 20px;
+  text-transform: none; }
 
 .ad-box {
   overflow: hidden; }
@@ -1323,7 +1335,7 @@ figure.width-500 {
   padding: 0;
   display: block;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   list-style: none; }
   .woocommerce ul.products li.product a {
     padding: 0; }
@@ -1333,8 +1345,10 @@ figure.width-500 {
   .woocommerce ul.products li.product img {
     width: 100%;
     margin-bottom: .5em; }
-  .woocommerce ul.products li.product a:hover h3, .woocommerce ul.products li.product a:hover .price, .woocommerce ul.products li.product a:hover .price span {
-    color: #53a3c6 !important; }
+  .woocommerce ul.products li.product a:hover {
+    box-shadow: 0 0 10px #999; }
+    .woocommerce ul.products li.product a:hover h3, .woocommerce ul.products li.product a:hover .price, .woocommerce ul.products li.product a:hover .price span {
+      color: #53a3c6 !important; }
   .woocommerce ul.products h3 {
     display: block;
     font-size: .95em;
@@ -1798,6 +1812,10 @@ p.demo_store {
   .product-search-box {
     display: block; }
 
+  .archive .content-box {
+    padding-left: 30px;
+    padding-right: 15px; }
+
   .archive.woocommerce ul.products li.product {
     padding-left: 8px;
     padding-right: 8px;
@@ -1882,3 +1900,6 @@ p.demo_store {
 
   .related-block {
     margin-top: 4.5em; } }
+@media (min-width: 1199px) {
+  .archive .content-box {
+    padding-left: 15px; } }

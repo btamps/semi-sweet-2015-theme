@@ -45,6 +45,18 @@ function blog_modify_body_classes( $classes, $class )
     {
         $classes[] = 'blog';
     }
+    if( is_home() )
+    {
+        $classes[] = 'home';
+    }
+    if( is_page() )
+    {
+        $classes[] = 'blog';
+    }
+    if( is_search() )
+    {
+        $classes[] = 'blog';
+    }
     return $classes;
 }
 
