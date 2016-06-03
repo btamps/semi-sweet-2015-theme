@@ -104,7 +104,7 @@ function woo_remove_product_tabs( $tabs ) {
 add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
 function woo_rename_tabs( $tabs ) {
 
-	$tabs['description']['title'] = __( 'Overview' );		// Rename the description tab
+	$tabs['description']['title'] = __( 'Details' );
 
 	return $tabs;
 }
@@ -122,7 +122,7 @@ function woo_new_product_tab( $tabs ) {
 	);
 
   $tabs['test_tab2'] = array(
-		'title' 	=> __( 'Product Info', 'woocommerce' ),
+		'title' 	=> __( 'Specs', 'woocommerce' ),
 		'priority' 	=> 50,
 		'callback' 	=> 'woo_material_tab_content'
 	);
@@ -133,11 +133,13 @@ function woo_new_product_tab( $tabs ) {
 function woo_shipping_tab_content() {
 	// The tab content
 	echo '<h2>Shipping</h2>';
-	echo '<p>Here\'s your new product tab.</p>';
+	echo '<p>Please allow 2 to 3 business days to process your order before shipping. However, I will do my best to ship orders earlier than that time frame.</p>
+
+<p>Orders are shipped via USPS domestically and internationally. For US domestic orders, First Class mail is 3 to 5 days business days, while Priority Mail is 2 to 3  business days. For international orders, please allow 2 to 3 weeks for shipping.</p>';
 }
 function woo_material_tab_content() {
 	// The tab content
-	echo '<h2>Product Info</h2>';
+	echo '<h2>Product Specs</h2>';
 	echo '<p>This cookie cutter is made from food safe PLA plastic. Because of its sensitivity to high temperatures, this cookie cutter is to be HAND WASH ONLY. It should not be washed in the dishwasher, not to be left soaking in hot water, not to be used on hot cookies, and not to be left in a warm vehicle. Avoid any exposure to heat.</p>
 
 <p>Each cookie cutter has a blade height just over half an inch. The cutting blade is thin, yet very durable. It should have no problem cutting into dough up to 3/8” in thickness.</p>';
