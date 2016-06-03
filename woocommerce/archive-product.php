@@ -17,7 +17,15 @@ get_header( 'shop' ); ?>
 <div class="container-fluid content-box">
   <div class="row">
 		<div class="col-md-3 shop-sidebar">
-        <h1>Shop</h1>
+			<div class="product-search-box">
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<?php
+				  if ( function_exists( 'woocommerce_product_search' ) ) {
+				    echo woocommerce_product_search( array( 'limit' => 6 ) );
+				  }
+				?>
+			</div>
+
 				<?php
 // Hey Billy, I added this function so you can easily check if the current slug is within the current URL path
 // so slug=cookies then path=/tags/cookies/whatever/ it should get the selected class
@@ -33,6 +41,7 @@ function isInURL($slug) {
 ?>
 
 <ul class="product-categories">
+	<li class="menu-title">Shop Categories</li>
   <?php // you could clean this up so it's a little more readable like this
   $wcatTerms = get_terms(
         'product_cat', array(
@@ -92,15 +101,7 @@ foreach($wcatTerms as $wcatTerm) :
 
 		<?php endif; ?>
 
-		<?php
-			/**
-			 * woocommerce_archive_description hook
-			 *
-			 * @hooked woocommerce_taxonomy_archive_description - 10
-			 * @hooked woocommerce_product_archive_description - 10
-			 */
-			do_action( 'woocommerce_archive_description' );
-		?>
+
 
 
 		<?php if ( have_posts() ) : ?>

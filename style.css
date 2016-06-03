@@ -10,8 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: textures, retro
 Text Domain: semisweettheme
 */
-
-@charset "UTF-8";
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -71,7 +69,7 @@ body {
   max-width: 1200px;
   margin: 0 auto; }
 
-.wrapper-bg, .archive .shop-sidebar .product-categories, .woocommerce ul.products li.product a {
+.wrapper-bg, .archive .shop-sidebar .product-categories, .product-search-field, .woocommerce ul.products li.product a {
   background: white;
   box-shadow: 0 0 2px #ccc;
   overflow: hidden;
@@ -82,6 +80,10 @@ figure {
   figure img {
     width: 100%; }
 
+@media (min-width: 767px) {
+  .archive .container-fluid {
+    padding-left: 30px;
+    padding-right: 15px; } }
 nav .container-fluid {
   max-width: 1200px;
   margin: 0 auto; }
@@ -1152,50 +1154,73 @@ figure.width-500 {
     letter-spacing: .5px; }
 
 .archive .shop-sidebar {
-  margin-top: 10px; }
-  .archive .shop-sidebar h2 {
-    display: none; }
-  .archive .shop-sidebar h1 {
-    border-bottom: 1px solid #E6DDCC;
-    padding-bottom: 20px;
-    margin-bottom: 20px; }
-  .archive .shop-sidebar form {
-    margin-bottom: 20px;
-    display: none; }
+  margin-top: 2em;
+  padding-left: 0; }
+  .archive .shop-sidebar .menu-title {
+    background: #FF5252;
+    color: white;
+    padding: 0 0	0 15px;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px; }
   .archive .shop-sidebar .product-categories {
-    margin-bottom: 20px;
+    margin: 30px 0;
     padding: 0; }
   .archive .shop-sidebar ul {
     display: none;
     list-style: none;
     padding: 0; }
-    .archive .shop-sidebar ul li {
-      line-height: 40px;
-      border-top: 1px solid #99897D;
-      padding-left: 10px; }
-      .archive .shop-sidebar ul li.top-level a {
-        font-weight: 900; }
-        .archive .shop-sidebar ul li.top-level a.selected {
+    .archive .shop-sidebar ul > li {
+      line-height: 1; }
+      .archive .shop-sidebar ul > li.top-level a {
+        font-weight: 900;
+        padding: 20px 0 20px 20px; }
+        .archive .shop-sidebar ul > li.top-level a.selected {
           color: #FF5252; }
-      .archive .shop-sidebar ul li.top-level:first-child {
-        border-top: 0 !important; }
-      .archive .shop-sidebar ul li.sub-level {
-        margin-left: -10px; }
-        .archive .shop-sidebar ul li.sub-level a {
-          font-weight: 400; }
-          .archive .shop-sidebar ul li.sub-level a.selected {
+      .archive .shop-sidebar ul > li.sub-level {
+        background: #F8F6F2; }
+        .archive .shop-sidebar ul > li.sub-level a {
+          font-weight: 400;
+          padding: 15px 0 15px 20px; }
+          .archive .shop-sidebar ul > li.sub-level a.selected {
             color: #FF5252; }
-            .archive .shop-sidebar ul li.sub-level a.selected:after {
-              content: "»";
-              margin-left: 10px; }
+        .archive .shop-sidebar ul > li.sub-level:first-child a {
+          padding-top: 30px; }
+        .archive .shop-sidebar ul > li.sub-level:last-child a {
+          padding-bottom: 30px; }
     .archive .shop-sidebar ul a {
-      color: #99897D; }
+      color: #99897D;
+      display: block; }
       .archive .shop-sidebar ul a:hover {
         color: #53a3c6; }
   .archive .shop-sidebar .cart-buttons .cart {
     border: 1px solid #FF5252;
     width: 100%;
     display: none; }
+
+.product-search-field {
+  padding: 14px 20px;
+  width: 100% !important;
+  border: 0;
+  outline: 0; }
+
+.product-search-box {
+  position: relative;
+  display: none; }
+  .product-search-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    color: #99897D;
+    font-size: 20px;
+    z-index: 10; }
+
+.product-search-results .entry a span.title {
+  color: #99897D; }
+
+.product-image .thumbnail {
+  margin-bottom: 0; }
 
 .archive.tax-product_cat h2 {
   display: block; }
@@ -1227,9 +1252,6 @@ figure.width-500 {
     display: block;
     font-size: .9em;
     color: #99897D; }
-
-.archive .blog-box {
-  background: white; }
 
 .woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message,
@@ -1770,6 +1792,9 @@ p.demo_store {
     float: none !important;
     width: 100% !important; } }
 @media (min-width: 768px) {
+  .product-search-box {
+    display: block; }
+
   .archive.woocommerce ul.products li.product {
     padding-left: 8px;
     padding-right: 8px;
@@ -1783,10 +1808,12 @@ p.demo_store {
     padding-left: 0;
     padding-right: 15px; }
 
-  .tax-product_cat .woo-store header h2.shop-title {
+  .woo-store header h2.shop-title {
     display: block;
     margin: 0;
-    float: left; }
+    float: left;
+    font-size: 32px;
+    font-weight: 900; }
 
   .archive .shop-sidebar form {
     display: block; }
