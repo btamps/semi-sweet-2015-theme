@@ -21,6 +21,19 @@ add_theme_support( 'post-thumbnails' );
 // Add Woocommerce Support
 add_theme_support( 'woocommerce' );
 
+// Add Woocommerce classes to archive page
+add_filter( 'body_class', 'b5f_modify_body_classes', 10, 2 );
+
+function b5f_modify_body_classes( $classes, $class )
+{
+    // Modify the array $classes to your needs
+    if( is_archive() )
+    {
+        $classes[] = 'woocommerce';
+        $classes[] = 'woocommerce-page';
+    }
+    return $classes;
+}
 
 //Reposition WooCommerce related products
 function woocommerce_remove_related_products(){

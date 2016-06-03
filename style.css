@@ -1811,7 +1811,8 @@ p.demo_store {
     margin: 0;
     float: left;
     font-size: 32px;
-    font-weight: 900; }
+    font-weight: 900;
+    padding-bottom: 10px; }
 
   .archive .shop-sidebar form {
     display: block; }
