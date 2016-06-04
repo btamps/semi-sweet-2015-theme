@@ -50,5 +50,7 @@ get_header( 'shop' ); ?>
 	</div> <!-- row end -->
 </div> <!-- content-box end -->
 
+<!-- Blog Posts -->
+<?php get_template_part( 'content', 'recent-blog' ); ?>
 
 <?php get_footer( 'shop' ); ?>

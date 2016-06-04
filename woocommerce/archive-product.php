@@ -17,4 +17,7 @@ get_header( 'shop' ); ?>
 
 <?php get_template_part( 'content', 'main-products' ); ?>
 
+<!-- Blog Posts -->
+<?php get_template_part( 'content', 'recent-blog' ); ?>
+
 <?php get_footer( 'shop' ); ?>
