@@ -2,6 +2,7 @@
 /*
 Template Name: Front Page
 */
+
 ?>
 <?php get_header(); ?>
 
@@ -12,13 +13,37 @@ Template Name: Front Page
           <h4>New In Shop</h4>
           <h1>Cookie Cutters</h1>
           <p>The new shop is open for business! Check out all the new custom cookie cutter designs available now.</p>
-          <p><a class="btn btn-primary btn-lg disabled" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
+          <p><a class="btn btn-primary btn-lg" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
         </div>
       </div>
     </div>
 
-    <!-- Blog Posts -->
+    <!-- Recent Products Posts -->
+    <div class="container-fluid content-box">
+      <h2 class="title"><span>Fresh From the Shop</span></h2>
+      <ul class="col-md-12 home-recent-products">
+          <?php
+              $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4 , 'orderby' =>'date','order' => 'DESC' );
+              $loop = new WP_Query( $args );
+              while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
+                  <li class="col-xs-6 col-md-3 product">
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+
+                        <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="65px" height="115px" />'; ?>
+                        <div class="caption">
+                          <h3><?php the_title(); ?></h3>
+                    	    <span class="price"><?php echo $product->get_price_html(); ?></span>
+                        </div>
+                    </a>
+                  </li><!-- /col-md-3 -->
+
+          <?php endwhile; ?>
+          <?php wp_reset_query(); ?>
+      </ul><!-- /home-recent-products -->
+    </div>
+
+    <!-- Blog Posts -->
     <div class="container-fluid content-box">
       <div class="row">
         <h2 class="title"><span>Fresh From the Blog</span></h2>

@@ -70,7 +70,7 @@ body {
   max-width: 1200px;
   margin: 0 auto; }
 
-.wrapper-bg, .post-box .thumbnail, .archive .shop-sidebar .product-categories, .product-search-field, .woocommerce ul.products li.product a {
+.wrapper-bg, .home-recent-products li a, .post-box .thumbnail, .archive .shop-sidebar .product-categories, .product-search-field, .woocommerce ul.products li.product a {
   background: white;
   box-shadow: 0 0 2px #ccc;
   overflow: hidden;
@@ -126,7 +126,8 @@ nav .container-fluid {
   background-size: 100% auto; }
 
 .nav-social {
-  display: none; }
+  display: none;
+  margin-top: 5px; }
   .nav-social li {
     position: relative;
     top: 20px;
@@ -137,10 +138,10 @@ nav .container-fluid {
     background: #b1d7e7;
     color: #53a3c6 !important;
     border-radius: 2rem;
-    width: 40px;
-    height: 40px;
-    line-height: 40px !important;
-    font-size: 22px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px !important;
+    font-size: 20px;
     text-align: center;
     padding: 0 !important; }
     .nav-social a:hover {
@@ -402,6 +403,27 @@ h2.title {
     position: relative;
     top: .5em;
     z-index: -10; }
+
+.home-recent-products {
+  list-style: none; }
+  .home-recent-products li a {
+    display: block;
+    padding: 0;
+    text-align: center; }
+    .home-recent-products li a .caption {
+      padding: 15px; }
+      .home-recent-products li a .caption h3 {
+        margin: 0 0 10px 0; }
+      .home-recent-products li a .caption .price {
+        font-weight: 900; }
+    .home-recent-products li a:hover {
+      box-shadow: 0 0 10px #ccc;
+      text-decoration: none; }
+      .home-recent-products li a:hover h3 {
+        color: #53a3c6; }
+  .home-recent-products li img {
+    width: 100%;
+    display: block; }
 
 .highlight-post {
   background: white;
@@ -1107,8 +1129,14 @@ figure.width-500 {
     width: 100%;
     height: 100%;
     padding: 30px; }
+  .newsletter h3 {
+    margin-top: 0; }
   .newsletter h4, .newsletter .woocommerce div.product form.cart .variations td.label label, .woocommerce div.product form.cart .variations td.label .newsletter label {
-    font-size: 1em; }
+    font-size: 1em;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-bottom: 20px; }
 
 .sidebar-post-box {
   margin-bottom: 30px;
