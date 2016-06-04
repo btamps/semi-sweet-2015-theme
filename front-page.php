@@ -20,132 +20,67 @@ Template Name: Front Page
 
     <!-- Recent Products Posts -->
     <div class="container-fluid content-box">
-      <h2 class="title"><span>Fresh From the Shop</span></h2>
-      <ul class="col-md-12 home-recent-products">
-          <?php
-              $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4 , 'orderby' =>'date','order' => 'DESC' );
-              $loop = new WP_Query( $args );
-              while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+      <div class="row">
+        <h2 class="title"><span>Fresh From the Shop</span></h2>
+        <ul class="home-recent-products">
+            <?php
+                $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4 , 'orderby' =>'date','order' => 'DESC' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
-                  <li class="col-xs-6 col-md-3 product">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <li class="col-xs-6 col-md-3 product">
+                      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 
-                        <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="65px" height="115px" />'; ?>
-                        <div class="caption">
-                          <h3><?php the_title(); ?></h3>
-                    	    <span class="price"><?php echo $product->get_price_html(); ?></span>
-                        </div>
-                    </a>
-                  </li><!-- /col-md-3 -->
+                          <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="65px" height="115px" />'; ?>
+                          <div class="caption">
+                            <h3><?php the_title(); ?></h3>
+                      	    <span class="price"><?php echo $product->get_price_html(); ?></span>
+                          </div>
+                      </a>
+                    </li><!-- /col-md-3 -->
 
-          <?php endwhile; ?>
-          <?php wp_reset_query(); ?>
-      </ul><!-- /home-recent-products -->
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+        </ul><!-- /home-recent-products -->
+      </div>
+      <p><a class="btn btn-more" href="<?php bloginfo('url'); ?>/shop" role="button">See All Products</a></p>
     </div>
 
     <!-- Blog Posts -->
-    <div class="container-fluid content-box">
-      <div class="row">
-        <h2 class="title"><span>Fresh From the Blog</span></h2>
+    <?php get_template_part( 'content', 'recent-blog' ); ?>
 
-        <?php
-        global $post;
-        $args = array( 'posts_per_page' => 1 );
-        $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) :
-          setup_postdata( $post ); ?>
-
-        <!-- First Post -->
-        <div class="col-sm-6 col-md-12">
-          <div class="thumbnail">
-            <div class="first-post row">
-              <a href="<?php the_permalink(); ?>" class="first-post-image col-md-6">
-                <?php the_post_thumbnail(); ?>
-              </a>
-              <div class="caption first-post-caption col-md-6">
-                <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <?php the_excerpt(); ?>
-              <p>
-                <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
-              </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <?php endforeach; wp_reset_postdata(); ?>
-
-        <?php
-        global $post;
-        $args = array( 'posts_per_page' => 3, 'offset'=> 1 );
-        $myposts = get_posts( $args );
-        foreach ( $myposts as $post ) :
-          setup_postdata( $post ); ?>
-
-        <!-- Rest of Posts -->
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <a href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail(); ?>
-            </a>
-            <div class="caption">
-              <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
-              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-              <?php the_excerpt(); ?>
-            <p>
-              <a href="<?php the_permalink(); ?>" class="btn btn-more">Read More &raquo;</a>
-            </p>
-            </div>
-          </div>
-        </div>
-        <?php endforeach; wp_reset_postdata(); ?>
-
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <a href="/blog" class="btn btn-default btn-block">All Posts &raquo;</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid basics">
+    <div class="container-fluid basics content-box">
       <div class="row">
         <h2 class="title"><span>Getting Started</span></h2>
 
           <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-              <a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">
+            <a class="thumbnail" href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">
                 <img src="https://semisweetdesigns.com/wp-content/uploads/2014/09/cookie-decorating-supplies-title.jpg" alt="A Beginner’s Guide to Cookie Decorating Supplies">
-              </a>
               <div class="caption">
-                <h4><a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">Tools</a></h4>
-                <h3><a href="https://semisweetdesigns.com/2014/02/23/cookie-decorating-supplies-beginners/">A Beginner’s Guide to Cookie Decorating Supplies</a></h3>
+                <h4>Tools</h4>
+                <h3>A Beginner’s Guide to Cookie Decorating Supplies</h3>
               </div>
-            </div>
+            </a>
           </div>
 
           <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-              <a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">
-                <img src="https://semisweetdesigns.com/wp-content/uploads/2014/08/royal-icing-recipe-title-new.jpg" alt="Royal Icing Recipe">
-              </a>
+            <a class="thumbnail" href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">
+              <img src="https://semisweetdesigns.com/wp-content/uploads/2014/08/royal-icing-recipe-title-new.jpg" alt="Royal Icing Recipe">
               <div class="caption">
-                <h4><a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">Icing</a></h4>
-                <h3><a href="https://semisweetdesigns.com/2013/10/03/updated-royal-icing-recipe/">Royal Icing Recipe</a></h3>
+                <h4>Icing</h4>
+                <h3>Royal Icing Recipe</h3>
               </div>
-            </div>
+            </a>
           </div>
 
           <div class="col-sm-4 col-md-4">
-            <div class="thumbnail">
-              <a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">
+            <a class="thumbnail" href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">
                 <img src="https://semisweetdesigns.com/wp-content/uploads/2013/09/sugar_cookie_recipe-title.jpg" alt="Roll-Out Sugar Cookie Recipe">
-              </a>
-              <div class="caption">
-                <h4><a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">Dough</a></h4>
-                <h3><a href="https://semisweetdesigns.com/2013/09/08/updated-roll-out-sugar-cookie-recipe/">Roll-Out Sugar Cookie Recipe</a></h3>
-              </div>
-            </div>
+                <div class="caption">
+                  <h4>Dough</h4>
+                  <h3>Roll-Out Sugar Cookie Recipe</h3>
+                </div>
+            </a>
           </div>
 
       </div>
