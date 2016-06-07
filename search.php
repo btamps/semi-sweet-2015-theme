@@ -16,7 +16,6 @@ get_header(); ?>
         get_sidebar( 'archive' );
       }
     ?>
-
   </div> <!-- row end -->
 </div> <!-- content-box end -->
 
