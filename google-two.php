@@ -1,6 +1,6 @@
 <div class="row ad-box">
     <div class="ad-300x250 two">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Bottom Side Bar -->
             <ins class="adsbygoogle"
             style="display:inline-block;width:300px;height:250px"

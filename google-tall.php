@@ -1,6 +1,6 @@
 <div class="row ad-box">
     <div class="ad-tall tall">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- Tall Shop Ad -->
           <ins class="adsbygoogle"
                style="display:inline-block;width:160px;height:600px"
