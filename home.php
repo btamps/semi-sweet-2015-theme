@@ -69,7 +69,7 @@ Template Name: My Blog
       <?php endwhile; ?>
 
       </div>  <!-- row end -->
-      <div class="row">
+      <div class="row pagination-wrapper">
         <?php
           global $wp_query;
 
