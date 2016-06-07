@@ -53,4 +53,6 @@ get_header( 'shop' ); ?>
 <!-- Blog Posts -->
 <?php get_template_part( 'content', 'recent-blog' ); ?>
 
+<?php get_template_part( 'google', 'bottomwide' ); ?>
+
 <?php get_footer( 'shop' ); ?>

@@ -14,10 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-
-<?php get_template_part( 'content', 'main-products' ); ?>
-
+<div class="container-fluid content-box">
+  <div class="row">
+		<?php get_template_part( 'content', 'main-products' ); ?>
+	</div>
+</div>
 <!-- Blog Posts -->
 <?php get_template_part( 'content', 'recent-blog' ); ?>
+
+<?php get_template_part( 'google', 'bottomwide' ); ?>
 
 <?php get_footer( 'shop' ); ?>
