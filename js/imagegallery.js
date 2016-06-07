@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
   // This is what will happen when you hover a product thumb
   $("a.zoom").hover(
     // Swap out the main image with the thumb
-    function(){       
+    function(){
         var photo_fullsize = $(this).attr('href');
         $('.woocommerce-main-image img').attr({ 'src': photo_fullsize, 'srcset': photo_fullsize, 'data-o_srcset': photo_fullsize });
       },
