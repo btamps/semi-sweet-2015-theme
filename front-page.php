@@ -21,7 +21,7 @@ Template Name: Front Page
     <!-- Recent Products Posts -->
     <div class="container-fluid content-box">
       <div class="row">
-        <h2 class="title"><span>Fresh From the Shop</span></h2>
+        <h2 class="title"><span>New in the Shop</span></h2>
         <ul class="home-recent-products">
             <?php
                 $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4 , 'orderby' =>'date','order' => 'DESC' );
@@ -85,4 +85,7 @@ Template Name: Front Page
 
       </div>
     </div>
+
+<?php get_template_part( 'google', 'bottomwide' ); ?>
+
 <?php get_footer(); ?>
