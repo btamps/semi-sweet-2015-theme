@@ -1,6 +1,5 @@
 
-<div class="container-fluid content-box">
-  <div class="row">
+
 		<div class="col-md-3 shop-sidebar">
 			<div class="product-search-box">
 				<i class="fa fa-search" aria-hidden="true"></i>
@@ -132,7 +131,3 @@ foreach($wcatTerms as $wcatTerm) :
 		</article>
 		</div>
 		</div>
-
-
-  </div> <!-- row end -->
-</div> <!-- content-box end -->
