@@ -5,6 +5,7 @@ function theme_styles() {
   wp_enqueue_style( 'ss_bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
   wp_enqueue_script( 'ss_bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js' );
   wp_enqueue_script( 'imagegallery', get_template_directory_uri() . '/js/imagegallery.js' );
+  wp_enqueue_script( 'wootweaks', get_template_directory_uri() . '/js/wootweaks.js' );
   wp_enqueue_style( 'main', get_template_directory_uri() . '/style.css' );
 }
 // Enable Theme CSS and JS from above
@@ -222,15 +223,37 @@ return $price;
 }
 
 
-// Redirect to a specific page when clicking on Continue Shopping in the cart
+// woocommerce Redirect to a specific page when clicking on Continue Shopping in the cart
 function wc_custom_redirect_continue_shopping() {
     return 'https://semisweetdesigns.com/shop/';
 }
 add_filter( 'woocommerce_continue_shopping_redirect', 'wc_custom_redirect_continue_shopping' );
 
+// Woocommerce - rename the "Have a Coupon?" message on the checkout page
+function woocommerce_rename_coupon_message_on_checkout() {
+	return 'Have a Promo Code?' . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'woocommerce' ) . '</a>';
+}
+add_filter( 'woocommerce_checkout_coupon_message', 'woocommerce_rename_coupon_message_on_checkout' );
+// rename the coupon field on the checkout page
+function woocommerce_rename_coupon_field_on_checkout( $translated_text, $text, $text_domain ) {
+	// bail if not modifying frontend woocommerce text
+	if ( is_admin() || 'woocommerce' !== $text_domain ) {
+		return $translated_text;
+	}
+	if ( 'Coupon code' === $text ) {
+		$translated_text = 'Promo Code';
+
+	} elseif ( 'Apply Coupon' === $text ) {
+		$translated_text = 'Apply Promo Code';
+	}
+	return $translated_text;
+}
+add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_checkout', 10, 3 );
+
 // Removes automatic br and p tags in the_content
 remove_filter( 'the_content', 'wpautop' );
 add_filter( 'the_content', 'wpautop' , 12);
+
 
 // Removes pages from search results
 function SearchFilter($query) {
