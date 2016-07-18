@@ -22,6 +22,15 @@ add_theme_support( 'post-thumbnails' );
 // Add Woocommerce Support
 add_theme_support( 'woocommerce' );
 
+// woocommerce hide coupon field on checkout page
+function hide_coupon_field_on_checkout( $enabled ) {
+	if ( is_checkout() ) {
+		$enabled = false;
+	}
+	return $enabled;
+}
+add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_checkout' );
+
 // Add Woocommerce classes to archive page
 add_filter( 'body_class', 'archive_modify_body_classes', 10, 2 );
 
@@ -113,6 +122,15 @@ add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' )
 function woo_custom_breadrumb_home_url() {
     return 'https://semisweetdesigns.com/shop/';
 }
+
+/**
+ * Add a christmas image in the store notice.
+ */
+function wc_custom_store_notice_close( $text ) {
+	return str_replace( '<p class="demo_store">', '<p class="demo_store"><i class="fa fa-times-circle" aria-hidden="true"></i>', $text );
+}
+add_filter( 'woocommerce_demo_store', 'wc_custom_store_notice_close' );
+
 
 // Woocommerce - change breadcrumbs defaults
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
