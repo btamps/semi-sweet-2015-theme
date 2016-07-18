@@ -11,4 +11,9 @@ jQuery(document).ready(function($) {
 
   // Removes extra br given to buttons
   $(".button br").remove();
+
+  // Hide Store-wide notice on click
+  $(".demo_store .fa-times-circle").click(function(){
+        $(".demo_store").hide();
+    });
 });
