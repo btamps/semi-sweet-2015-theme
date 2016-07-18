@@ -22,7 +22,8 @@
             } else {
               $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 5
+                'posts_per_page' => 5,
+                'post__not_in' => array($post->ID)
               );
             }
 

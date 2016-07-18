@@ -7,7 +7,7 @@
     <div class="col-sm-8 content-wrapper">
       <div class="row">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <article class="col-md-12 post-wrapper" itemscope itemtype="http://schema.org/Blog">
+        <article class="col-md-12 post-wrapper" itemscope itemtype="https://schema.org/Blog">
           <header>
             <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
             <meta itemprop="image" content="<?php echo $url; ?>" />

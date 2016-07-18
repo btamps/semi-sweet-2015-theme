@@ -7,14 +7,14 @@
         <ul class="social-icons">
           <li class="fb-icon"><a href="https://www.facebook.com/semisweetdesigns" title="Facebook">Facebook</a></li>
           <li class="twitter-icon"><a href="https://twitter.com/SemiSweetMike" title="Twitter">Twitter</a></li>
-          <li class="pintrest-icon"><a href="http://pinterest.com/SemiSweetMike" title="Pintrest">Pintrest</a></li>
-          <li class="instagram-icon"><a href="http://instagram.com/semisweetmike/" title="Instagram">Instagram</a></li>
-          <li class="bloglovin-icon"><a href="http://www.bloglovin.com/semisweetdesigns" title="Bloglovin’">Bloglovin'</a></li>
-          <li class="rss-icon"><a href="http://feeds.feedburner.com/semisweetdesigns/nxJT" title="RSS">RSS</a></li>
+          <li class="pintrest-icon"><a href="https://pinterest.com/SemiSweetMike" title="Pintrest">Pintrest</a></li>
+          <li class="instagram-icon"><a href="https://instagram.com/semisweetmike/" title="Instagram">Instagram</a></li>
+          <li class="bloglovin-icon"><a href="https://www.bloglovin.com/semisweetdesigns" title="Bloglovin’">Bloglovin'</a></li>
+          <li class="rss-icon"><a href="https://feeds.feedburner.com/semisweetdesigns/nxJT" title="RSS">RSS</a></li>
         </ul>
         <div class="subscribe-box">
           <h6>Recieve blog updates via email</h6>
-          <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=semisweetdesigns/nxJT', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+          <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=semisweetdesigns/nxJT', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 
             <input type="text" placeholder="Enter your email" class="subscribe-box" name="email"/>
             <input type="hidden" value="semisweetdesigns/nxJT" name="uri" />
@@ -27,7 +27,7 @@
 
       <?php get_template_part( 'google', 'ad' ); ?>
 
-      <a href="http://www.semisweetdesigns.com/archives" class="fresh-button">
+      <a href="https://www.semisweetdesigns.com/archives" class="fresh-button">
         <h4>• Fresh Posts •</h4>
         <img src="<?php bloginfo('template_url'); ?>/images/ui/ovenmit.png" alt="Fresh Posts" />
       </a>
@@ -65,7 +65,7 @@
 
       <?php get_template_part( 'sidebar', 'sponsors' ); ?>
 
-      <a href="http://www.semisweetdesigns.com/category/featured/" class="popular-button">
+      <a href="https://www.semisweetdesigns.com/category/featured/" class="popular-button">
         <h4>• Featured Posts •</h4>
         <img src="<?php bloginfo('template_url'); ?>/images/ui/three-stars.png" alt="Popular Posts" />
       </a>
@@ -100,7 +100,7 @@
       <div class="ad-300x100"></div>
       <div class="ad-300x100"></div> -->
 
-    <a href="http://www.semisweetdesigns.com/tag/the-basics/" class="tools-button">
+    <a href="https://www.semisweetdesigns.com/tag/the-basics/" class="tools-button">
       <h4>• The Basics •</h4>
       <img src="<?php bloginfo('template_url'); ?>/images/ui/header-tools.png" alt="My Tools" />
     </a>
@@ -127,9 +127,9 @@
         <?php endwhile; endif; ?>
       </ul>
 
-      <a href="http://instagram.com/semisweetmike/" class="instagram-button">
+      <a href="https://instagram.com/semisweetmike/" class="instagram-button">
         <h4>
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
              width="118.289px" height="35.564px" viewBox="0 0 118.289 35.564" enable-background="new 0 0 118.289 35.564"
              xml:space="preserve">
           <g>
@@ -278,7 +278,7 @@
         </h4>
         <img class="logo-cam" src="<?php bloginfo('template_url'); ?>/images/ui/instagram-cam.png" alt="Instagram Posts" />
       </a>
-      <p class="follow-instagram">Follow me<a href="http://instagram.com/semisweetmike/">@semisweetmike</a></p>
+      <p class="follow-instagram">Follow me<a href="https://instagram.com/semisweetmike/">@semisweetmike</a></p>
         <div class="instagram"></div>
         <script type="text/javascript">
           $(".instagram").instagram({

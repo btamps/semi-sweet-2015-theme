@@ -33,7 +33,7 @@
   <div class="row">
   <?php while(have_posts()) : the_post(); ?>
 
-    <article class="col-md-12 post-box" itemscope itemtype="http://schema.org/Blog">
+    <article class="col-md-12 post-box" itemscope itemtype="https://schema.org/Blog">
       <div class="thumbnail">
           <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
           <meta itemprop="image" content="<?php echo $url; ?>" />
