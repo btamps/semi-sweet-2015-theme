@@ -10,8 +10,10 @@ get_header(); ?>
     <?php
       $classes = get_body_class();
       if (in_array('archive',$classes)) {
-          get_template_part( 'content', 'main-products' );
+        // shop results
+        get_template_part( 'content', 'main-products' );
       } else {
+        // blog results
         get_template_part( 'content', 'results-blog' );
         get_sidebar( 'archive' );
       }

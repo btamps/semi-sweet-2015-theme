@@ -10,7 +10,9 @@
     </form>
   </div>
 
-  <h2 class="page-title"><?php printf( __( 'Search Results for: “%s”', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+  <h2 class="page-title">
+    <?php printf( __( 'Search Results for: “%s”', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?>
+  </h2>
   <?php
     $current_cat = single_cat_title("", false);
     echo "<h2 class='cat-result'>Category: “{$current_cat}”</h2>";
@@ -19,18 +21,17 @@
     $current_tag = single_tag_title("", false);
     echo "<h2 class='tag-result'>All posts tagged with: “{$current_tag}”</h2>";
   ?>
-
+  </div>
+  <div class="row">
   <?php
 
     if($pagename == 'archive') {
       // default page state
       // showtop 20 posts here...
-      query_posts('posts_per_page=20');
+      query_posts('posts_per_page=>-1');
     }
 
   ?>
-  </div>
-  <div class="row">
   <?php while(have_posts()) : the_post(); ?>
 
     <article class="col-md-12 post-box" itemscope itemtype="https://schema.org/Blog">
@@ -56,32 +57,5 @@
     </article>
 
   <?php endwhile; ?>
-  <?php
-    if ($pagename !== 'archive') {
-
-      global $wp_query;
-
-      $total_pages = $wp_query->max_num_pages;
-
-      if ($total_pages > 1){
-
-        $current_page = max(1, get_query_var('paged'));
-
-        echo '<div class="page_nav">';
-
-        echo paginate_links(array(
-            'base' => get_pagenum_link(1) . '%_%',
-            'format' => '/page/%#%',
-            'current' => $current_page,
-            'total' => $total_pages,
-            'prev_text' => 'Newer <em>Posts</em>',
-            'next_text' => 'Older <em>Posts</em>'
-          ));
-
-        echo '</div>';
-
-      }
-    }
-   ?>
   </div>  <!-- row end -->
 </div> <!-- content-wrapper end -->
