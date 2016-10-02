@@ -35,10 +35,10 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Noto+Serif:400,400i,700" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
     <?php wp_head(); ?>
   </head>

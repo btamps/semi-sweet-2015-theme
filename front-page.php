@@ -10,9 +10,9 @@ Template Name: Front Page
     <div class="jumbotron">
       <div class="container-fluid">
         <div class="hero-message-box">
-          <h4>New In Shop</h4>
-          <h1>Cookie Cutters</h1>
-          <p>The new shop is open for business! Check out all the new custom cookie cutter designs available now.</p>
+          <h4>Shop Now</h4>
+          <h1>Cookie Cutters &amp; More</h1>
+          <p>New cookie cutters are added weekly. Visit the shop and check out the latest designs.</p>
           <p><a class="btn btn-primary btn-lg" href="<?php bloginfo('url'); ?>/shop" role="button">Shop Now</a></p>
         </div>
       </div>

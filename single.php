@@ -14,10 +14,16 @@
             <figure class="feature-image">
               <?php the_post_thumbnail(); ?>
             </figure>
+            <h4><?php
+              $categories = get_the_category();
+                if ( ! empty( $categories ) ) {
+                    echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                }
+            ?></h4>
             <h1 itemprop="name">
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h1>
-            <p>By <a href="">Mike Tamplin</a> on <?php echo get_the_date( 'M j, Y' ); ?></p>
+            <p>Written by <a href="">Mike Tamplin</a> <span>•</span> <?php echo get_the_date( 'M j, Y' ); ?></p>
             <p class="comment-count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
           </header>
           <?php the_content(); ?>
