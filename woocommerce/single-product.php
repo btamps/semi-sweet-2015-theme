@@ -55,4 +55,4 @@ get_header( 'shop' ); ?>
 
 <?php get_template_part( 'google', 'bottomwide' ); ?>
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer( ); ?>

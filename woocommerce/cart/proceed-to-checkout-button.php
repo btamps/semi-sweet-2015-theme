@@ -21,4 +21,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
-<a href="<?php echo esc_url( wc_get_checkout_url() ) ;?>" class="checkout-button button alt wc-forward"><br><span><?php echo __( 'Proceed to Checkout', 'woocommerce' ); ?></span></a>
+<a href="<?php echo esc_url( wc_get_checkout_url() ) ;?>" class="checkout-button button alt wc-forward"><span><?php echo __( 'Proceed to Checkout', 'woocommerce' ); ?></span></a>
