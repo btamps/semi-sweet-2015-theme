@@ -280,6 +280,7 @@ $query->set('post_type', 'post');
 }
 return $query;
 }
+add_filter('pre_get_posts','SearchFilter');
 
 // Add Nav Menus
 function register_my_menus() {
@@ -306,7 +307,7 @@ function featured_image_in_feed( $content ) {
 }
 
 
-add_filter('pre_get_posts','SearchFilter');
+
 
 // Removes the width and height attributes in the image tag
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
