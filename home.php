@@ -10,11 +10,11 @@ Template Name: My Blog
 
     <!-- Content Wrapper -->
     <div class="col-sm-8 content-wrapper">
-      <div class="row">
+      <div class="row feed">
 
         <?php
           $query_args = array(
-          'showposts'     => 1 // here you can add limit by categry etc
+          'posts_per_page' => 20
           );
           $query = new WP_Query( $query_args );
           $query->the_post();
@@ -24,7 +24,8 @@ Template Name: My Blog
         ?>
         <?php if ($post->ID == $recent_post_ID) : ?>
 
-        <article class="col-md-12 post-box" itemscope itemtype="https://schema.org/Blog">
+        <!-- Single out the most-recent post -->
+        <article class="most-recent post-box" itemscope itemtype="https://schema.org/Blog">
           <div class="thumbnail">
               <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
               <meta itemprop="image" content="<?php echo $url; ?>" />
@@ -38,14 +39,13 @@ Template Name: My Blog
                 <h2 itemprop="name">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-                <?php the_content( 'Read More', TRUE ); ?>
               </div>
           </div>
         </article>
 
         <?php else : ?>
 
-          <article class="col-md-12 post-box" itemscope itemtype="https://schema.org/Blog">
+          <article class="post-box" itemscope itemtype="https://schema.org/Blog">
           <div class="thumbnail">
               <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
               <meta itemprop="image" content="<?php echo $url; ?>" />
@@ -59,7 +59,6 @@ Template Name: My Blog
                 <h2 itemprop="name">
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
-                <?php the_content( 'Read More', TRUE ); ?>
               </div>
           </div>
         </article>

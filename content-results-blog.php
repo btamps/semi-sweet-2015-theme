@@ -1,14 +1,6 @@
 <!-- Content Wrapper -->
 <div class="col-sm-8 content-wrapper">
   <div class="row">
-  <div class="archive-search-box">
-    <h1>Search Archive</h1>
-
-    <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
-      <label for="search-input"><i class="fa fa-search"></i></label>
-      <input type="search" id="search-input" class="form-control search-field" placeholder="Search all posts" value="" name="s" title="Search" />
-    </form>
-  </div>
 
   <h2 class="page-title">
     <?php printf( __( 'Search Results for: “%s”', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?>

@@ -120,17 +120,29 @@ figure {
   padding-bottom: 0 !important; }
   .brand-box .row {
     margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
-    /* works with row or column */
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
     -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
     align-items: center;
     -webkit-justify-content: center;
-    justify-content: center; }
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
   .brand-box .branding {
+    -webkit-box-flex: 2 0 0;
+    -moz-box-flex: 2 0 0;
     -webkit-flex: 2 0 0;
+    -ms-flex: 2 0 0;
     flex: 2 0 0; }
   .brand-box .logo {
     display: inline-block;
@@ -148,7 +160,10 @@ figure {
     text-align: center; }
   .brand-box .search-box {
     display: none;
+    -webkit-box-flex: 1 0 0;
+    -moz-box-flex: 1 0 0;
     -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
     flex: 1 0 0; }
 
 .search-box {
@@ -252,8 +267,6 @@ nav .container-fluid {
       color: #78B6D7; }
 
   .navbar-collapse {
-    margin-left: 30px !important;
-    margin-right: 30px !important;
     max-width: 1140px; }
     .navbar-collapse .navbar-nav {
       text-align: left;
@@ -268,6 +281,8 @@ nav .container-fluid {
   .navbar-collapse .navbar-nav li.current_page_item {
     height: 50px;
     border-bottom: 4px solid #78B6D7; }
+    .navbar-collapse .navbar-nav li.current_page_item a {
+      color: #78B6D7; }
 
   .brand-box {
     margin-top: 30px; }
@@ -283,6 +298,10 @@ nav .container-fluid {
     .brand-box .search-box {
       display: block; } }
 @media (min-width: 1190px) {
+  .navbar-collapse {
+    margin-left: 30px !important;
+    margin-right: 30px !important; }
+
   .navbar .container-fluid {
     padding: 0; } }
 .jumbotron {
@@ -341,7 +360,7 @@ nav .container-fluid {
     .hero-message-box p {
       font-family: "Noto Serif", georgia, times, serif;
       font-size: 16px; } }
-.btn, .post-box .thumbnail .more-link, .comment-respond .submit, .woocommerce #respond input#submit,
+.btn, .comment-respond .submit, .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button, .woocommerce-checkout input#place_order {
@@ -358,7 +377,7 @@ nav .container-fluid {
   height: 44px;
   line-height: 1.6;
   background: transparent; }
-  .btn.btn-primary, .post-box .thumbnail .btn-primary.more-link, .post-box .thumbnail .comment-respond .more-link.submit, .comment-respond .post-box .thumbnail .more-link.submit, .comment-respond .submit, .woocommerce #respond input.btn-primary#submit, .woocommerce #respond .comment-respond input#submit.submit, .comment-respond .woocommerce #respond input#submit.submit,
+  .btn.btn-primary, .comment-respond .submit, .woocommerce #respond input.btn-primary#submit, .woocommerce #respond .comment-respond input#submit.submit, .comment-respond .woocommerce #respond input#submit.submit,
   .woocommerce a.btn-primary.button,
   .woocommerce .comment-respond a.button.submit,
   .comment-respond .woocommerce a.button.submit,
@@ -371,19 +390,19 @@ nav .container-fluid {
     background: #FF5352;
     color: white;
     padding: 11px 18px 12px; }
-    .btn.btn-primary:hover, .post-box .thumbnail .btn-primary.more-link:hover, .comment-respond .submit:hover, .woocommerce #respond input.btn-primary#submit:hover, .woocommerce #respond .comment-respond input#submit.submit:hover, .comment-respond .woocommerce #respond input#submit.submit:hover,
+    .btn.btn-primary:hover, .comment-respond .submit:hover, .woocommerce #respond input.btn-primary#submit:hover, .woocommerce #respond .comment-respond input#submit.submit:hover, .comment-respond .woocommerce #respond input#submit.submit:hover,
     .woocommerce a.btn-primary.button:hover,
     .woocommerce button.btn-primary.button:hover,
     .woocommerce input.btn-primary.button:hover, .woocommerce-checkout input.btn-primary#place_order:hover, .woocommerce-checkout .comment-respond input#place_order.submit:hover, .comment-respond .woocommerce-checkout input#place_order.submit:hover {
       background: #F44336;
       border-color: #F44336; }
 
-.btn-more, .post-box .thumbnail .more-link {
+.btn-more {
   text-align: center;
   display: block;
   margin: 10px auto;
   max-width: 200px; }
-  .btn-more:hover, .post-box .thumbnail .more-link:hover {
+  .btn-more:hover {
     background: #F44336;
     border-color: #F44336;
     color: white;
@@ -545,7 +564,7 @@ h2.title {
     top: .5em;
     z-index: -10; }
 
-.home .btn-more, .home .post-box .thumbnail .more-link, .post-box .thumbnail .home .more-link {
+.home .btn-more {
   display: block;
   width: 200px;
   margin: 0 auto; }
@@ -579,7 +598,7 @@ h2.title {
 .caption .date {
   margin-bottom: 5px;
   display: block;
-  color: #CDBFBA; }
+  color: #A2887E; }
 .caption h3 {
   margin-bottom: .5em;
   font-weight: 700;
@@ -651,7 +670,7 @@ h2.title {
     margin: 0 auto 20px;
     text-align: center;
     float: none; }
-  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .post-box .thumbnail .more-link, .post-box .thumbnail .newsletter-box .form-inline .more-link, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
   .newsletter-box .form-inline .woocommerce a.button,
   .woocommerce .newsletter-box .form-inline a.button,
   .newsletter-box .form-inline .woocommerce button.button,
@@ -682,7 +701,7 @@ h2.title {
     height: auto;
     margin-bottom: 20px; }
 
-  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .post-box .thumbnail .more-link, .post-box .thumbnail .newsletter-box .form-inline .more-link, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
+  .newsletter-box .form-inline .btn, .newsletter-box .form-inline .comment-respond .submit, .comment-respond .newsletter-box .form-inline .submit, .newsletter-box .form-inline .woocommerce #respond input#submit, .woocommerce #respond .newsletter-box .form-inline input#submit,
   .newsletter-box .form-inline .woocommerce a.button,
   .woocommerce .newsletter-box .form-inline a.button,
   .newsletter-box .form-inline .woocommerce button.button,
@@ -783,6 +802,27 @@ h2.title {
   box-shadow: 0 0 2px #ccc;
   padding: 30px; }
 
+.feed {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 10px; }
+  .feed article {
+    width: 48%; }
+    .feed article:nth-child(odd) {
+      margin-right: 3%; }
+
 .post-wrapper {
   padding: 0 15px 15px;
   margin-bottom: 30px; }
@@ -825,7 +865,7 @@ h2.title {
   .post-wrapper header p, .post-wrapper header p a,
   .product-wrapper header p,
   .product-wrapper header p a {
-    color: #CDBFBA;
+    color: #A2887E;
     font-size: 1em;
     font-family: "Noto Serif", georgia, times, serif;
     font-style: italic;
@@ -881,13 +921,17 @@ h2.title {
     color: #CDBFBA;
     line-height: 1.5; }
 
-.post-box .thumbnail {
+.post-box {
   padding: 0; }
-  .post-box .thumbnail .more-link {
-    display: block;
-    margin: 2em auto 0 !important;
-    width: 180px;
-    text-align: center; }
+  .post-box .thumbnail {
+    padding: 0; }
+    .post-box .thumbnail .caption {
+      padding: 15px; }
+      .post-box .thumbnail .caption h2 {
+        font-size: 1em;
+        margin-bottom: 0; }
+        .post-box .thumbnail .caption h2 a {
+          font-weight: 700; }
 
 .sidebar {
   margin-top: 2.5em;
@@ -895,8 +939,8 @@ h2.title {
   margin-right: 15px; }
 
 .date {
-  font-size: .9em;
-  color: #A2887E; }
+  font-size: .85em;
+  color: #5D4037; }
 
 figure.width-300 {
   max-width: 300px;
@@ -931,7 +975,7 @@ figure.width-500 {
     content: "<i class=" fa fa-search "></i>";
     display: block; }
 .page-template-archive h2, .archive h2, .search-results h2 {
-  margin: 1em 0; }
+  margin: 0 0 1em 0; }
 
 .page-template-archive .recent-result, .page-template-archive .cat-result, .page-template-archive .tag-result,
 .archive .recent-result,
@@ -1141,9 +1185,6 @@ figure.width-500 {
 .single.blog .content-box {
   padding-top: 0; }
 
-.post-box .thumbnail .caption {
-  padding: 30px 20px; }
-
 .recent-blog-box {
   background: white; }
   .recent-blog-box .title span {
@@ -1193,6 +1234,16 @@ figure.width-500 {
   .content-wrapper {
     margin-top: 2.5em; }
 
+  .feed {
+    padding: 0; }
+
+  .post-box {
+    padding: 0; }
+    .post-box .thumbnail .caption {
+      padding: 20px; }
+      .post-box .thumbnail .caption h2 {
+        font-size: 1.2em; }
+
   .blog .content-box {
     padding-top: 0;
     padding-left: 30px;
@@ -1213,21 +1264,6 @@ figure.width-500 {
   .archive.woocommerce.tag .content-wrapper {
     padding-right: 45px;
     padding-left: 15px; }
-
-  .home .content-wrapper .feature-image,
-  .page-template-archive .content-wrapper .feature-image,
-  .search .content-wrapper .feature-image {
-    height: 300px;
-    overflow: hidden;
-    text-align: center; }
-    .home .content-wrapper .feature-image img,
-    .page-template-archive .content-wrapper .feature-image img,
-    .search .content-wrapper .feature-image img {
-      position: relative;
-      left: 100%;
-      margin-left: -200%;
-      top: 100%;
-      margin-top: -60%; }
 
   .product-wrapper {
     margin-top: 0;
@@ -1262,13 +1298,6 @@ figure.width-500 {
   .search .cat-result,
   .search .tag-result {
     margin-left: 0; }
-
-  .post-box {
-    padding: 0; }
-    .post-box .thumbnail .caption {
-      padding: 40px 50px 30px; }
-      .post-box .thumbnail .caption h2 {
-        font-size: 2em; }
 
   .comments-area {
     padding-left: 0;
@@ -2045,7 +2074,7 @@ p.demo_store {
     background: #1C8FCD !important;
     border-color: #1C8FCD !important; }
 
-.archive.woocommerce .btn-more, .archive.woocommerce .post-box .thumbnail .more-link, .post-box .thumbnail .archive.woocommerce .more-link, .single-product.woocommerce .btn-more, .single-product.woocommerce .post-box .thumbnail .more-link, .post-box .thumbnail .single-product.woocommerce .more-link {
+.archive.woocommerce .btn-more, .single-product.woocommerce .btn-more {
   display: none !important; }
 
 .sku_wrapper {
