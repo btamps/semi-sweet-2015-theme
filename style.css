@@ -1138,7 +1138,7 @@ figure.width-500 {
   .comment-respond textarea, .comment-respond input[type='text'] {
     width: 100%;
     border-radius: 4px;
-    border: 1px solid #f8f6f5;
+    border: 1px solid #CDBFBA;
     font-family: "Lato", helvetica, verdana, sans-serif;
     padding: .25em 10px; }
   .comment-respond .submit {
