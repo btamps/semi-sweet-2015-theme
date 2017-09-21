@@ -2,63 +2,83 @@
 <div class="col-sm-8 content-wrapper">
   <div class="row">
     <div class="archive-search-box">
-      <h1>Search Archive</h1>
-
-      <form role="search" method="get" class="search-form archive-search-bar" action="<?php echo home_url(); ?>">
-        <label for="search-input"><i class="fa fa-search"></i></label>
-        <input type="search" id="search-input" class="form-control search-field" placeholder="Search all posts" value="" name="s" title="Search" />
-      </form>
-      <ul class="years archive-list">
+      <h2>Narrow Your Search:</h2>
+      <ul class="list-tags">
       <?php
-        $all_posts = get_posts(array(
-          'posts_per_page' => -1 // to show all posts
-        ));
-
-        // this variable will contain all the posts in a associative array
-        // with three levels, for every year, month and posts.
-
-        $ordered_posts = array();
-
-        foreach ($all_posts as $single) {
-
-          $year  = mysql2date('Y', $single->post_date);
-          $month = mysql2date('F', $single->post_date);
-
-          // specifies the position of the current post
-          $ordered_posts[$year][$month][] = $single;
-
-        }
-
-        // iterates the years
-        foreach ($ordered_posts as $year => $months) { ?>
-          <li>
-
-            <h3><?php echo $year ?></h3>
-
-            <ul class="months">
-            <?php foreach ($months as $month => $posts ) { // iterates the moths ?>
-              <li>
-                <h3><?php printf("%s", $month) ?></h3>
-
-                <ul class="posts">
-                  <?php foreach ($posts as $single ) { // iterates the posts ?>
-
-                    <li>
-                      <a href="<?php echo get_permalink($single->ID); ?>"><?php echo get_the_title($single->ID); ?></a></li>
-                    </li>
-
-                  <?php } // ends foreach $posts ?>
-                </ul> <!-- ul.posts -->
-
-              </li>
-            <?php } // ends foreach for $months ?>
-            </ul> <!-- ul.months -->
-
-          </li> <?php
-        } // ends foreach for $ordered_posts
-        ?>
-        </ul><!-- ul.years -->
-
+          $tags = get_tags();
+          foreach ( $tags as $tag ) {
+              $tag_link = get_tag_link( $tag->term_id );
+              echo "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>{$tag->name}</a></li>";
+          }
+      ?>
+      </ul>
     </div>
   </div>  <!-- row end -->
+
+  <div class="row feed">
+
+    <?php
+      $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+      $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 20,
+        'paged' => $paged
+      );
+      $the_query = new WP_Query( $args );
+    ?>
+    <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+    <article class="post-box" itemscope itemtype="https://schema.org/Blog">
+      <div class="thumbnail">
+          <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
+          <meta itemprop="image" content="<?php echo $url; ?>" />
+          <a href="<?php the_permalink(); ?>">
+            <figure class="feature-image">
+              <img src="<?php the_field('square_featured_image'); ?>" alt="<?php the_title(); ?>">              
+            </figure>
+          </a>
+          <div class="caption">
+            <a href="<?php the_permalink(); ?>" class="date"><?php echo get_the_date( 'M j, Y' ); ?></a>
+            <h2 itemprop="name">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h2>
+          </div>
+      </div>
+    </article>
+
+  <?php endwhile; ?>
+
+<?php else: ?>
+  <article>
+    <h1>Sorry...</h1>
+    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+  </article>
+  <?php endif; ?>
+
+  </div> <!-- row end -->
+  <?php
+
+    $total_pages = $the_query->max_num_pages;
+
+    if ($total_pages > 1){
+
+      $current_page = max(1, get_query_var('paged'));
+
+      echo '<div class="page_nav">';
+
+      echo paginate_links(array(
+          'base' => get_pagenum_link(1) . '%_%',
+          'format' => 'page/%#%',
+          'current' => $current_page,
+          'total' => $total_pages,
+          'mid_size' => 1,
+          'prev_text' => '&laquo;',
+          'next_text' => '&raquo;'
+        ));
+
+      echo '</div>';
+
+    }
+   ?>
+
 </div> <!-- content-wrapper end -->
