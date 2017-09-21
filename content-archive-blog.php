@@ -8,7 +8,7 @@
           $tags = get_tags();
           foreach ( $tags as $tag ) {
               $tag_link = get_tag_link( $tag->term_id );
-              echo "<li><a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>{$tag->name}</a></li>";
+              echo "<li><a href='{$tag_link}' title='{$tag->name}' class='{$tag->slug}'>{$tag->name}</a></li>";
           }
       ?>
       </ul>
@@ -34,7 +34,7 @@
           <meta itemprop="image" content="<?php echo $url; ?>" />
           <a href="<?php the_permalink(); ?>">
             <figure class="feature-image">
-              <img src="<?php the_field('square_featured_image'); ?>" alt="<?php the_title(); ?>">              
+              <img src="<?php the_field('square_featured_image'); ?>" alt="<?php the_title(); ?>">
             </figure>
           </a>
           <div class="caption">
