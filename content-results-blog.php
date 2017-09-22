@@ -14,19 +14,13 @@
     echo "<h2 class='tag-result'>All posts tagged with: “{$current_tag}”</h2>";
   ?>
   </div>
-  <div class="row">
+  <div class="row feed">
   <?php
-
-    if($pagename == 'archive') {
-      // default page state
-      // showtop 20 posts here...
-      query_posts('posts_per_page=>-1');
-    }
-
+    global $wp_query;
   ?>
   <?php while(have_posts()) : the_post(); ?>
 
-    <article class="col-md-12 post-box" itemscope itemtype="https://schema.org/Blog">
+    <article class="post-box" itemscope itemtype="https://schema.org/Blog">
       <div class="thumbnail">
           <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>
           <meta itemprop="image" content="<?php echo $url; ?>" />
@@ -40,14 +34,22 @@
             <h2 itemprop="name">
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
-            <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
-            <p>
-              <a href="<?php the_permalink(); ?>" Class="btn btn-more">Read More &raquo;</a>
-            </p>
           </div>
       </div>
     </article>
 
   <?php endwhile; ?>
   </div>  <!-- row end -->
+  <?php
+global $wp_query;
+
+$big = 999999999; // need an unlikely integer
+
+echo paginate_links( array(
+	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	'format' => '?paged=%#%',
+	'current' => max( 1, get_query_var('paged') ),
+	'total' => $wp_query->max_num_pages
+) );
+?>
 </div> <!-- content-wrapper end -->
