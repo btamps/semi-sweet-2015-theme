@@ -282,6 +282,17 @@ return $query;
 }
 add_filter('pre_get_posts','SearchFilter');
 
+// Sorts search results in by newest first
+add_filter('posts_orderby','my_sort_custom',10,2);
+function my_sort_custom( $orderby, $query ){
+    global $wpdb;
+
+    if(!is_admin() && is_search())
+        $orderby =  $wpdb->prefix."posts.post_type ASC, {$wpdb->prefix}posts.post_date DESC";
+
+    return  $orderby;
+}
+
 // Add Nav Menus
 function register_my_menus() {
   register_nav_menus(
