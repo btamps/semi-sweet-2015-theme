@@ -14,10 +14,9 @@
     echo "<h2 class='tag-result'>All posts tagged with: “{$current_tag}”</h2>";
   ?>
   </div>
+
   <div class="row feed">
-  <?php
-    global $wp_query;
-  ?>
+
   <?php while(have_posts()) : the_post(); ?>
 
     <article class="post-box" itemscope itemtype="https://schema.org/Blog">
@@ -39,17 +38,33 @@
     </article>
 
   <?php endwhile; ?>
+
   </div>  <!-- row end -->
+
   <?php
-global $wp_query;
+    global $the_query;
 
-$big = 999999999; // need an unlikely integer
+    $total_pages = $the_query->max_num_pages;
 
-echo paginate_links( array(
-	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-	'format' => '?paged=%#%',
-	'current' => max( 1, get_query_var('paged') ),
-	'total' => $wp_query->max_num_pages
-) );
-?>
+    if ($total_pages > 1){
+
+      $big = 999999999; // need an unlikely integer
+
+      echo '<div class="pagination-row">';
+      echo '<div class="pagination-nav">';
+
+      echo paginate_links( array(
+      	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+      	'format' => '?paged=%#%',
+      	'current' => max( 1, get_query_var('paged') ),
+      	'total' => $the_query->max_num_pages,
+        'prev_text' => __('Prev'),
+      	'next_text' => __('Next'),
+        'mid_size' => 1
+      ) );
+
+      echo '</div>';
+      echo '</div>';
+    }
+  ?>
 </div> <!-- content-wrapper end -->

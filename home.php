@@ -68,39 +68,36 @@ Template Name: My Blog
       <?php endwhile; ?>
 
       </div>  <!-- row end -->
-      <div class="row pagination-wrapper">
         <?php
-          global $wp_query;
-
-          $total_pages = $wp_query->max_num_pages;
+          $total_pages = $query->max_num_pages;
 
           if ($total_pages > 1){
 
-            $current_page = max(1, get_query_var('paged'));
+            $big = 999999999; // need an unlikely integer
 
-            echo '<div class="page_nav">';
+            echo '<div class="pagination-row">';
+            echo '<div class="pagination-nav">';
 
-            echo paginate_links(array(
-                'base' => get_pagenum_link(1) . '%_%',
-                'format' => '/page/%#%',
-                'current' => $current_page,
-                'total' => $total_pages,
-                'mid_size' => 1,
-                'prev_text' => '&laquo;',
-                'next_text' => '&raquo;'
-              ));
+            echo paginate_links( array(
+            	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            	'format' => '?paged=%#%',
+            	'current' => max( 1, get_query_var('paged') ),
+            	'total' => $query->max_num_pages,
+              'prev_text' => __('Prev'),
+            	'next_text' => __('Next'),
+              'mid_size' => 1
+            ) );
 
             echo '</div>';
-
+            echo '</div>';
           }
-         ?>
+        ?>
 
         <?php else: ?>
 
           <p>There are no posts or pages here.</p>
 
         <?php endif; ?>
-        </div> <!-- row end -->
     </div> <!-- content-wrapper end -->
 
     <?php get_sidebar( 'home' ); ?>

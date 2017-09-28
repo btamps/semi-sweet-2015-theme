@@ -48,37 +48,40 @@
 
   <?php endwhile; ?>
 
-<?php else: ?>
+  <?php else: ?>
+
   <article>
     <h1>Sorry...</h1>
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
   </article>
+
   <?php endif; ?>
 
   </div> <!-- row end -->
-  <?php
 
+  <?php
     $total_pages = $the_query->max_num_pages;
 
     if ($total_pages > 1){
 
-      $current_page = max(1, get_query_var('paged'));
+      $big = 999999999; // need an unlikely integer
 
-      echo '<div class="page_nav">';
+      echo '<div class="pagination-row">';
+      echo '<div class="pagination-nav">';
 
-      echo paginate_links(array(
-          'base' => get_pagenum_link(1) . '%_%',
-          'format' => 'page/%#%',
-          'current' => $current_page,
-          'total' => $total_pages,
-          'mid_size' => 1,
-          'prev_text' => '&laquo;',
-          'next_text' => '&raquo;'
-        ));
+      echo paginate_links( array(
+      	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+      	'format' => '?paged=%#%',
+      	'current' => max( 1, get_query_var('paged') ),
+      	'total' => $the_query->max_num_pages,
+        'prev_text' => __('Prev'),
+      	'next_text' => __('Next'),
+        'mid_size' => 1
+      ) );
 
       echo '</div>';
-
+      echo '</div>';
     }
-   ?>
+  ?>
 
 </div> <!-- content-wrapper end -->

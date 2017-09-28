@@ -801,7 +801,7 @@ h2.title {
   .content-wrapper .feature-image img {
     width: 100%; }
 
-.box-wrapper, .post-wrapper, .product-wrapper, .archive-search-box, .woocommerce .woocommerce-info,
+.box-wrapper, .post-wrapper, .product-wrapper, .archive-search-box, .pagination-nav, .woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message,
 .woocommerce .woocommerce-error, .woocommerce-cart .woocommerce > form, .woocommerce-checkout form.checkout_coupon,
 .woocommerce-checkout form.login,
@@ -1150,35 +1150,47 @@ figure.width-500 {
   .reply i {
     font-size: .85em; }
 
-.pagination-wrapper {
-  overflow: hidden; }
+.pagination-row {
+  text-align: center; }
 
-.page_nav {
+.pagination-nav {
   text-align: center;
   margin: 0 auto;
-  display: block;
-  position: relative;
-  left: 50%;
-  float: left; }
-  .page_nav a, .page_nav span {
-    float: left;
-    background: white;
-    padding: 6px 12px;
-    margin-left: 10px;
-    border: 1px solid #ccc;
+  padding: 7px 10px;
+  border-radius: 2em;
+  display: inline-block; }
+  .pagination-nav a:hover {
+    background-color: #FF5352;
+    color: white; }
+  .pagination-nav a, .pagination-nav span {
+    display: inline-block;
     text-decoration: none;
-    line-height: 1.4; }
-    .page_nav a.prev, .page_nav a.next, .page_nav span.prev, .page_nav span.next {
-      display: block;
-      font-family: FontAwesome; }
-  .page_nav .page-numbers {
-    display: block;
-    position: relative;
-    float: left;
-    right: 50%; }
-    .page_nav .page-numbers:first-child {
+    border-radius: 2em;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    color: #A2887E;
+    margin: 0 6px; }
+    .pagination-nav a:first-child, .pagination-nav span:first-child {
       margin-left: 0; }
-  .page_nav .dots {
+  .pagination-nav a.prev, .pagination-nav a.next {
+    width: auto; }
+  .pagination-nav a.prev, .pagination-nav a.next {
+    text-indent: -200%;
+    overflow: hidden;
+    width: 13px;
+    height: 20px;
+    margin: 0 6px -4px 6px; }
+    .pagination-nav a.prev:hover, .pagination-nav a.next:hover {
+      background-color: white;
+      color: #FF5352; }
+  .pagination-nav a.prev {
+    padding-left: 22px;
+    background: url(ui/arrow-prev.svg) no-repeat left center; }
+  .pagination-nav a.next {
+    padding-right: 22px;
+    background: url(ui/arrow-next.svg) no-repeat right center; }
+  .pagination-nav .dots {
     color: #CDBFBA;
     background: transparent;
     border: 0;
@@ -1186,13 +1198,9 @@ figure.width-500 {
     padding-left: 0;
     padding-right: 0;
     text-align: center; }
-  .page_nav .current {
-    background: none;
-    color: #CDBFBA; }
-  .page_nav a:hover {
-    background: #FF5352;
-    color: white;
-    border-color: #FF5352; }
+  .pagination-nav .current {
+    background: #CDBFBA;
+    color: white; }
 
 .blog .content-box {
   padding-top: 20px;
