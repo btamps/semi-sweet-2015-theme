@@ -214,26 +214,26 @@ nav .container-fluid {
     .navbar-collapse .search-box input {
       margin: 0;
       background-color: #78B6D7;
-      border-color: rgba(255, 255, 255, 0.5);
+      border-color: #eaf4f9;
       color: white; }
       .navbar-collapse .search-box input::-webkit-input-placeholder {
-        color: rgba(255, 255, 255, 0.5); }
+        color: #eaf4f9; }
       .navbar-collapse .search-box input:-moz-placeholder {
         /* Firefox 18- */
-        color: rgba(255, 255, 255, 0.5); }
+        color: #eaf4f9; }
       .navbar-collapse .search-box input::-moz-placeholder {
         /* Firefox 19+ */
-        color: rgba(255, 255, 255, 0.5); }
+        color: #eaf4f9; }
       .navbar-collapse .search-box input:-ms-input-placeholder {
-        color: rgba(255, 255, 255, 0.5); }
+        color: #eaf4f9; }
     .navbar-collapse .search-box i {
-      color: rgba(255, 255, 255, 0.5); }
+      color: #eaf4f9; }
   .navbar-collapse .navbar-nav {
     text-align: center;
     height: 100vh;
     margin: 0; }
     .navbar-collapse .navbar-nav li {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+      border-bottom: 1px solid #eaf4f9; }
 
 .navbar-inverse .navbar-nav > li > a {
   color: white;
@@ -671,7 +671,7 @@ h2.title {
     margin-bottom: .25em;
     font-size: 1.75em; }
     .newsletter-box h2 i {
-      color: rgba(255, 255, 255, 0.5); }
+      color: #eaf4f9; }
   .newsletter-box p {
     font-family: "Lato", helvetica, verdana, sans-serif;
     color: #eee;
@@ -918,22 +918,23 @@ h2.title {
   margin-bottom: 2em; }
 
 .sidenote {
-  border: 1px solid #EFEBE9;
+  border: 1px solid #A2887E;
   padding: 0 20px;
   border-radius: 6px;
   margin-bottom: 1em; }
   .sidenote h3 {
     font-size: 1.25em;
-    color: #CDBFBA;
+    color: #A2887E;
     font-weight: 400; }
   .sidenote p {
     font-family: "Lato", helvetica, verdana, sans-serif;
-    color: #CDBFBA;
+    color: #A2887E;
     line-height: 1.5; }
 
 .post-box {
   padding: 0; }
   .post-box .thumbnail {
+    border-radius: 4px;
     padding: 0; }
     .post-box .thumbnail .caption {
       padding: 15px; }
@@ -1410,24 +1411,55 @@ figure.width-500 {
     padding-right: 15px; } }
 .newsletter {
   margin-bottom: 30px;
-  background-image: repeating-linear-gradient(135deg, #ff8685 0px, #ff8685 30px, transparent 30px, transparent 50px, #78B6D7 50px, #78B6D7 80px, transparent 80px, transparent 100px);
-  padding: 10px;
-  text-align: center; }
-  .newsletter .inner {
-    background: white;
+  background: #eaf4f9;
+  padding: 24px;
+  text-align: center;
+  border-radius: 4px; }
+  .newsletter img {
     width: 100%;
-    height: 100%;
-    padding: 30px; }
+    max-width: 273px; }
+  .newsletter h2 {
+    text-indent: -200%;
+    margin: 15px auto 2px;
+    width: 200px;
+    height: 40px;
+    overflow: hidden;
+    background: url(ui/stay-in-the-mix-title.svg) no-repeat top left; }
   .newsletter h3 {
-    color: #5D4037;
+    color: #A2887E;
     font-weight: 700;
-    margin-top: 0; }
-  .newsletter h4, .newsletter .woocommerce div.product form.cart .variations td.label label, .woocommerce div.product form.cart .variations td.label .newsletter label {
-    font-size: 1em;
+    margin-top: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  .newsletter p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Lato", helvetica, verdana, sans-serif;
     text-transform: none;
-    letter-spacing: 0;
     font-weight: 400;
-    margin-bottom: 20px; }
+    margin: 0 auto 20px;
+    color: #939598;
+    max-width: 280px; }
+  .newsletter input.email {
+    position: relative;
+    border-color: #78B6D7;
+    color: #78B6D7; }
+    .newsletter input.email::-webkit-input-placeholder {
+      color: #ccc; }
+    .newsletter input.email:-moz-placeholder {
+      /* Firefox 18- */
+      color: #ccc; }
+    .newsletter input.email::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #ccc; }
+    .newsletter input.email:-ms-input-placeholder {
+      color: #ccc; }
+  .newsletter .form-inline button {
+    background: none;
+    color: #78B6D7;
+    font-size: 24px;
+    padding: 0; }
 
 .sidebar-post-box {
   margin-bottom: 30px;
@@ -1475,7 +1507,7 @@ figure.width-500 {
   margin-top: 2.2em;
   padding-left: 0; }
   .archive .shop-sidebar .menu-title {
-    background: #CDBFBA;
+    background: #A2887E;
     padding: 0 0	0 20px;
     line-height: 50px;
     text-transform: uppercase;
@@ -1513,7 +1545,7 @@ figure.width-500 {
         .archive .shop-sidebar ul > li.sub-level:last-child a {
           padding-bottom: 20px; }
     .archive .shop-sidebar ul a {
-      color: #CDBFBA;
+      color: #A2887E;
       display: block; }
       .archive .shop-sidebar ul a:hover {
         color: #FF5352; }
